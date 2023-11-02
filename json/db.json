@@ -9,7 +9,33 @@
     "trainings": [],
     "trainTargets": [],
     "trainGroups": [],
-    "muscleImgs": [],
+    "muscleImgs": [
+        {
+            "id": 1,
+            "imgName": "手正面",
+            "imgLink": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/muscleImgs/handFront.png"
+        },{
+            "id": 2,
+            "imgName": "手背面",
+            "imgLink": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/muscleImgs/handBack.png"
+        },{
+            "id": 3,
+            "imgName": "腿正面",
+            "imgLink": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/muscleImgs/legFront.png"
+        },{
+            "id": 4,
+            "imgName": "腿背面",
+            "imgLink": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/muscleImgs/legBack.png"
+        },{
+            "id": 5,
+            "imgName": "身體正面",
+            "imgLink": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/muscleImgs/bodyFront.png"
+        },{
+            "id": 6,
+            "imgName": "身體背面",
+            "imgLink": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/muscleImgs/bodyBack.png"
+        }
+    ],
     "trainWeeks": [],
     "trainHistories": []
 }
