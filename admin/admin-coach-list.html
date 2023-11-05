@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>admin-article-list</title>
+    
+    <script type="module" crossorigin src="/fitnee-36/assets/main-651b013a.js"></script>
+    <link rel="stylesheet" href="/fitnee-36/assets/main-440c55c6.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold py-4" href="admin-article-list.html">FitNee </a><span class="fs61">後台管理</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">    
+        <div id="adminUI" class="ms-11 d-flex align-items-center">             
+            
+            <a class="mx-4" href="admin-article-list.html">回到前台</a>
+            <a class="mx-4" href="admin-article-list.html">文章管理</a>
+            <a class="mx-4" href="admin-member-list.html">會員管理</a>
+            <a class="mx-4" href="admin-coach-list.html">教練管理</a>
+            <a class="mx-4" href="admin-service-list.html">網站問題回報</a>           
+            
+        </div>
+        <div class="ms-auto">
+            <a class="mx-1" href="admin-article-list.html">回到前台</a>
+            <span class="fs-6 px-5">管理員 admin666</span>
+            <a id="adminLogout" class="btn btn-outline-primary ml-2" href="admin-signin.html">登出</a>
+        </div>
+        </div>
+    </div>
+    </nav>    
+    <div class="container">
+      <h2 class="fw-bold fs-2 mt-11 mb-10">會員管理</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">會員名稱</th>
+            <th scope="col">性別</th>
+            <th scope="col">電子郵件</th>
+            <th scope="col">聯絡電話</th>
+            <th scope="col" class="text-center">身份組</th>
+            <th scope="col" class="text-center">管理操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>李明</td>
+            <td>男</td>
+            <td>john.doe123@gmail.com</td>
+            <td>0987-123-456</td>
+            <td class="text-center">一般會員</td>
+            <td class="text-center"><a href="">查看</a></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>林雅文</td>
+            <td>女</td>
+            <td>emily.smith456@yahoo.com </td>
+            <td>0921-987-654</td>
+            <td class="text-center">教練</td>
+            <td class="text-center"><a href="">查看</a></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>陳韋婷</td>
+            <td>女</td>
+            <td>johnson789@hotmail.com</td>
+            <td>0921-987-654</td>
+            <td class="text-center">一般會員</td>
+            <td class="text-center"><a href="">查看</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <footer class="py-2 fs-6 text-center bg-secondary">copyright © 2023</footer>
+    
+  </body>
+</html>
