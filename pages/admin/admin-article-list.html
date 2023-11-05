@@ -5,12 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>admin-article-list</title>
+    
   </head>
   <body>
-    <%- include('./layout/header'); -%>
-    <h1>admin-article-list</h1>
-    <%- include('./layout/footer'); -%>
+    <%- include('././layout/admin-header'); -%>
+    
+    <div class="container">
+      <h2 class="fw-bold fs-2 mt-11 mb-10">文章管理</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">文章標題</th>
+            <th scope="col">文章分類</th>
+            <th scope="col">作者</th>
+            <th scope="col" class="text-center">發布時間</th>
+            <th scope="col" class="text-center">文章狀態</th>
+            <th scope="col" class="text-center">管理操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>增肌秘訣 - 有效訓練計畫</td>
+            <td>增肌減脂</td>
+            <td>(William) 賴威廉</td>
+            <td class="text-center">2022/04/15</td>
+            <td class="text-center">公開</td>
+            <td class="text-center"><a href="">編輯</a> / <a href="">刪除</a></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>燃燒脂肪：重訓的力量</td>
+            <td>增肌減脂</td>
+            <td>王敏達</td>
+            <td class="text-center">2023/07/29</td>
+            <td class="text-center">公開</td>
+            <td class="text-center"><a href="">編輯</a> / <a href="">刪除</a></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>女性重訓是健身新趨勢</td>
+            <td>體態調整</td>
+            <td>黃強教練</td>
+            <td class="text-center">2021/10/08</td>
+            <td class="text-center">公開</td>
+            <td class="text-center"><a href="">編輯</a> / <a href="">刪除</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-    <script type="module" src="../main.js"></script>
+    <%- include('././layout/admin-footer'); -%>
+
+    <script type="module" src="/./main.js"></script>
   </body>
 </html>

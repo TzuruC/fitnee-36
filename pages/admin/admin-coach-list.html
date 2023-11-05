@@ -4,13 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>admin-coach-list</title>
+    <title>admin-article-list</title>
+    
   </head>
   <body>
-    <%- include('./layout/header'); -%>
-    <h1>admin-coach-list</h1>
-    <%- include('./layout/footer'); -%>
+    <%- include('././layout/admin-header'); -%>
+    
+    <div class="container">
+      <h2 class="fw-bold fs-2 mt-11 mb-10">會員管理</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">會員名稱</th>
+            <th scope="col">性別</th>
+            <th scope="col">電子郵件</th>
+            <th scope="col">聯絡電話</th>
+            <th scope="col" class="text-center">身份組</th>
+            <th scope="col" class="text-center">管理操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>李明</td>
+            <td>男</td>
+            <td>john.doe123@gmail.com</td>
+            <td>0987-123-456</td>
+            <td class="text-center">一般會員</td>
+            <td class="text-center"><a href="">查看</a></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>林雅文</td>
+            <td>女</td>
+            <td>emily.smith456@yahoo.com </td>
+            <td>0921-987-654</td>
+            <td class="text-center">教練</td>
+            <td class="text-center"><a href="">查看</a></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>陳韋婷</td>
+            <td>女</td>
+            <td>johnson789@hotmail.com</td>
+            <td>0921-987-654</td>
+            <td class="text-center">一般會員</td>
+            <td class="text-center"><a href="">查看</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-    <script type="module" src="../main.js"></script>
+    <%- include('././layout/admin-footer'); -%>
+
+    <script type="module" src="/./main.js"></script>
   </body>
 </html>
