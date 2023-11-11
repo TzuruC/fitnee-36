@@ -8,14 +8,19 @@
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
+$gray-200: #F2F2F2 !default; //* customized 
+// $gray-200: #e9ecef !default;
+$gray-300: #E5E5E5 !default; //* customized
+// $gray-300: #dee2e6 !default;
+$gray-400: #BDBDBD !default; //* customized
+// $gray-400: #ced4da !default; 
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-800: #555555 !default; //* customized
+// $gray-800: #343a40 !default;
+$gray-900: #222222 !default; //* customized
+// $gray-900: #212529 !default;
 $black:    #000 !default;
 // scss-docs-end gray-color-variables
 
@@ -42,7 +47,8 @@ $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
+$yellow:  #D79C05 !default; //* customized
+// $yellow:  #ffc107 !default;
 $green:   #198754 !default;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
@@ -140,9 +146,12 @@ $yellow-100: tint-color($yellow, 80%) !default;
 $yellow-200: tint-color($yellow, 60%) !default;
 $yellow-300: tint-color($yellow, 40%) !default;
 $yellow-400: tint-color($yellow, 20%) !default;
-$yellow-500: $yellow !default;
-$yellow-600: shade-color($yellow, 20%) !default;
-$yellow-700: shade-color($yellow, 40%) !default;
+$yellow-500: #F6BD2C !default; //* customized
+// $yellow-500: $yellow !default;
+$yellow-600: $yellow !default; //* customized
+// $yellow-600: shade-color($yellow, 20%) !default;
+$yellow-700: #996F05 !default; //* customized
+// $yellow-700: shade-color($yellow, 40%) !default;
 $yellow-800: shade-color($yellow, 60%) !default;
 $yellow-900: shade-color($yellow, 80%) !default;
 
@@ -298,7 +307,8 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
+$primary:       $yellow !default; //*customized
+// $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -583,12 +593,20 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
+//*customized
+
+$h1-font-size:                40px !default;
+$h2-font-size:                32px !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h5-font-size:                20px !default;
 $h6-font-size:                $font-size-base !default;
+// $h1-font-size:                $font-size-base * 2.5 !default;
+// $h2-font-size:                $font-size-base * 2 !default;
+// $h3-font-size:                $font-size-base * 1.75 !default;
+// $h4-font-size:                $font-size-base * 1.5 !default;
+// $h5-font-size:                $font-size-base * 1.25 !default;
+// $h6-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -615,10 +633,10 @@ $headings-color:              null !default;
 $display-font-sizes: (
   1: 5rem, //*customized
   2: 4.5rem,
-  3: 4rem,
-  4: 3.5rem,
-  5: 3rem,
-  6: 2.5rem
+  3: 28px,
+  4: 24px,
+  5: 20px,
+  6: 16px
   // 1: 5rem,
   // 2: 4.5rem,
   // 3: 4rem,

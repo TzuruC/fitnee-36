@@ -1,0 +1,41 @@
+@mixin pad{
+@media(max-width:768px){
+    @content;
+}
+}
+@mixin mobile{
+@media(max-width:375px){
+    @content;
+}
+}
+
+
+.container{
+    min-height: calc(100vh - 136px);
+}
+
+.hero{
+    font-size: 72px;
+    line-height: 120%;
+    font-weight: bold;
+    @include mobile{
+        font-size: 32px;
+    }
+}
+.title{
+    font-size: 72px;
+    line-height: 120%;
+    font-weight: normal;
+    letter-spacing: 7.68px;
+    @include mobile{
+        font-size: 28 px;
+    }
+}
+.slogan{
+    font-size: 56px;
+    line-height: 120%;
+    font-weight: bold;
+    @include mobile{
+        font-size: 32px;
+    }
+}
