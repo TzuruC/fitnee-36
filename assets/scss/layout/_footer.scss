@@ -2,3 +2,13 @@
   background: #69F0AE;
   font-size: 64px;
 }
+.logo-footer{
+  text-align: left;
+  @include mobile{
+    text-align: center;
+  }
+  img{
+    width: 278px;
+  } 
+  
+}

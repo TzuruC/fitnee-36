@@ -396,7 +396,8 @@ $spacers: (
   10: $spacer * 3, // 48px
   11: $spacer * 4, // 64px
   12: $spacer * 6, // 96px
-  13: $spacer * 10, // 160px
+  13: $spacer * 7.5, // 120px
+  14: $spacer * 10, // 160px
   // 0: 0,
   // 1: $spacer * .25, 
   // 2: $spacer * .5, 
@@ -686,7 +687,8 @@ $legend-font-weight:          null !default;
 
 $dt-font-weight:              $font-weight-bold !default;
 
-$list-inline-padding:         .5rem !default;
+$list-inline-padding:         .0 !default; //* customized
+// $list-inline-padding:         .5rem !default;
 
 $mark-padding:                .1875em !default;
 $mark-bg:                     $yellow-100 !default;
@@ -1513,7 +1515,8 @@ $list-group-border-color:           rgba($black, .125) !default;
 $list-group-border-width:           $border-width !default;
 $list-group-border-radius:          $border-radius !default;
 
-$list-group-item-padding-y:         $spacer * .5 !default;
+$list-group-item-padding-y:         0 !default; //*customized
+// $list-group-item-padding-y:         $spacer * .5 !default;
 $list-group-item-padding-x:         $spacer !default;
 $list-group-item-bg-scale:          -80% !default;
 $list-group-item-color-scale:       40% !default;
