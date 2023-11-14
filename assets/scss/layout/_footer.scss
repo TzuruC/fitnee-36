@@ -1,14 +1,16 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+.footer {
+    background: #69f0ae;
+    font-size: 64px;
 }
-.logo-footer{
-  text-align: left;
-  @include mobile{
-    text-align: center;
-  }
-  img{
-    width: 278px;
-  } 
-  
+.logo-footer {
+    text-align: left;
+    @include mobile {
+        text-align: center;
+    }
+    img {
+        width: 278px;
+        @include mobile {
+            width: 170px;
+        }
+    }
 }

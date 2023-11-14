@@ -1,8 +1,25 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.header {
+    background: #69f0ae;
+    font-size: 64px;
 }
 
-.logo-header{
-  width:  278px;
+.logo-header {
+    width: 278px;
+}
+
+.btn-outline-primary:hover {
+    color: white !important;
+}
+
+.logo-header {
+    text-align: left;
+    @include mobile {
+        text-align: center;
+    }
+    img {
+        width: 278px;
+        @include mobile {
+            width: 170px;
+        }
+    }
 }
