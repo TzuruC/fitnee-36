@@ -1,3 +1,14 @@
+@mixin pad {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media screen and (max-width: 375px) {
+        @content;
+    }
+}
+
 .header {
     background: #69f0ae;
     font-size: 64px;
@@ -5,6 +16,9 @@
 
 .logo-header {
     width: 278px;
+    @include pad {
+        width: 170px;
+    }
 }
 
 .btn-outline-primary:hover {
@@ -16,10 +30,28 @@
     @include mobile {
         text-align: center;
     }
-    img {
-        width: 278px;
-        @include mobile {
-            width: 170px;
-        }
-    }
+}
+
+.navbar-toggler,
+.navbar-toggler:active,
+.navbar-toggler:focus,
+.navbar-toggler-icon:focus {
+    border: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+button.navbar-toggler.ml-auto.hidden-sm-up.float-xs-right:focus {
+    outline: none !important;
+}
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focusring-color;
+}
+
+.nav-group {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
