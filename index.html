@@ -1,106 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>#36 FitNee 訓練助理</title>
-    <script type="module" crossorigin src="/fitnee-36/assets/main-7d171a07.js"></script>
-    <link rel="stylesheet" href="/fitnee-36/assets/main-71648cb8.css">
-  </head>
-  <body>
-<div class="wrapper">
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="container d-md-block">
-            <div class="d-md-flex justify-content-between align-items-center">
-                <a class="navbar-brand" href="#">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>#36 FitNee 訓練助理</title>
+      <script type="module" crossorigin src="/fitnee-36/assets/main-9743ec5f.js"></script>
+      <link rel="stylesheet" href="/fitnee-36/assets/main-b653b25c.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="fixed-top bg-dark">
+    <div class="container d-flex d-lg-block justify-content-between align-items-center">
+        <div class="py-9 d-flex justify-content-between flex-column flex-lg-row">
+            <div class="logo">
+                <a class="navbar-brand m-0 p-0" href="#">
                     <img
                         class="align-self-center logo-header"
                         src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/logo.png"
                         alt="logo"
                     />
                 </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                        <li class="nav-item mx-5">
+            </div>
+            <div
+                id="navGroup"
+                class="nav-group d-none d-lg-flex flex-column flex-lg-row fixed-md-top justify-content-between bg-dark"
+            >
+                <nav class="nav me-lg-14">
+                    <ul class="d-flex m-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-5 text-center fs-4">
                             <a class="nav-link link-light active" aria-current="page" href="#">專業教練</a>
                         </li>
-                        <li class="nav-item mx-5">
+                        <li class="nav-item mx-5 text-center fs-4">
                             <a class="nav-link link-light" href="#">訓練幫手</a>
                         </li>
-                        <li class="nav-item mx-5">
+                        <li class="nav-item mx-5 text-center fs-4">
                             <a class="nav-link link-light" href="#">教練資格</a>
                         </li>
                     </ul>
-                </div>
-                <div class="d-grid gap-2 d-md-block">
-                    <button class="btn mx-1 btn-outline-primary rounded-1" type="button">登入</button>
-                    <button class="btn mx-1 btn-outline-primary rounded-1" type="button">註冊</button>
+                </nav>
+                <div class="nav-btn d-flex">
+                    <button class="btn ms-2 btn-outline-primary rounded-1 fs-4" type="button">登入</button>
+                    <button class="btn ms-2 btn-outline-primary rounded-1 fs-4" type="button">註冊</button>
                 </div>
             </div>
         </div>
-    </nav>
+        <div class="nav-toggler d-lg-none" role="button">
+            <span class="material-symbols-outlined fs-1 m-2 text-white"> menu </span>
+        </div>
+    </div>
 </header>
 
 <!-- <header>
-<nav class="navbar">
-    <a href="#" class="logo">Logo</a>
-    <ul class="nav-menu">
-    <li class="nav-item">
-        <a href="#" class="nav-link">Home</a>
-    </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link">About</a>
-    </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link">Work</a>
-    </li>
-    <li class="nav-item">
-        <a href="#" class="nav-link">Contact</a>
-    </li>
-    </ul>
-    <div class="hamburger">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-    </div>
-</nav>
-</header> -->
-  
-  <!-- <section class="hero">
-
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">      
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/hero-lg.png" class="d-block w-100" alt="banner">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div>
+    <nav class="navbar py-6 navbar-expand-lg navbar-light bg-dark">
+        <div class="container">
+            <div class="">
+                <a class="navbar-brand m-0 p-0" href="#">
+                    <img
+                        class="align-self-center logo-header"
+                        src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/logo.png"
+                        alt="logo"
+                    />
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-5 text-center fs-4">
+                            <a class="nav-link link-light active" aria-current="page" href="#">專業教練</a>
+                        </li>
+                        <li class="nav-item mx-5 text-center fs-4">
+                            <a class="nav-link link-light" href="#">訓練幫手</a>
+                        </li>
+                        <li class="nav-item mx-5 text-center fs-4">
+                            <a class="nav-link link-light" href="#">教練資格</a>
+                        </li>
+                    </ul>
+                    <div class="ms-lg-auto d-md-block">
+                        <button class="btn ms-2 btn-outline-primary rounded-1 fs-4" type="button">登入</button>
+                        <button class="btn ms-2 btn-outline-primary rounded-1 fs-4" type="button">註冊</button>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="navbar-toggler ms-auto text-white p-0 m-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="material-symbols-outlined fs-1 m-2"> menu </span>
+            </button>
         </div>
-      </div>
-    </div>
-  </section> -->
+    </nav>
+</header> -->
 
-  <section class="coach"></section>
+            <section class="hero">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img
+                                src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/hero-lg.png"
+                                class="d-block w-100"
+                                alt="banner"
+                            />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>健身訓練不只是習慣</h5>
+                                <p>更是生活態度</p>
+                                承續您追求健康的堅持 FITNEE訓練助理 助您打造合適訓練品質
+                            </div>
+                            <div class="btn">立刻諮詢</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-  <section class="fitneehelper"></section>
+            <section class="coach">
+                <div class="container">
+                    <h3>專業教練</h3>
+                    <span>挑戰自我，我們一路支持您</span>
+                </div>
+            </section>
 
-  <section class="article"></section> 
+            <section class="fitneehelper">
+                <div class="container">
+                    <h3>訓練幫手</h3>
+                    <span>幫助您輕鬆組織有效訓練</span>
+                </div>
+            </section>
 
-  <footer><div class="sitemap bg-dark">
+            <section class="article">
+                <div class="container">
+                    <h3>精選文章</h3>
+                    <span>掌握訓練品質，給您最多元的支持</span>
+                    <ul class="article-filter">
+                        <li>最新消息</li>
+                        <li>訓練知識</li>
+                        <li>學員心得</li>
+                    </ul>
+                    <ul class="article-cards">
+                        <li>
+                            <img src="" alt="" />
+                            <h4></h4>
+                            <p></p>
+                            <p></p>
+                        </li>
+                        <li>
+                            <img src="" alt="" />
+                            <h4></h4>
+                            <p></p>
+                            <p></p>
+                        </li>
+                        <li>
+                            <img src="" alt="" />
+                            <h4></h4>
+                            <p></p>
+                            <p></p>
+                        </li>
+                        <li>
+                            <img src="" alt="" />
+                            <h4></h4>
+                            <p></p>
+                            <p></p>
+                        </li>
+                    </ul>
+                    <div class="btn">更多精選文章</div>
+                </div>
+            </section>
+
+            <footer><div class="sitemap bg-dark">
     <div class="container">
         <div class="row d-md-flex align-items-center">
             <div class="logo-footer col-md-6 text-center text-md-start mt-9 mt-md-0">
@@ -140,13 +208,16 @@
 <div class="copyright p-4 bg-secondary text-white text-center fs-6">
     copyright ©2023 all rights reserve. </br> 僅作為學習用途，無商業行為
 </div></footer>
-</div><!-- end .wrapper -->
+        </div>
+        <!-- end .wrapper -->
 
-    <!-- aos-animation -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>      AOS.init();    </script>
+        <!-- aos-animation -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <!-- customized js -->
         
-    <!-- customized js -->
-    
-  </body>
+    </body>
 </html>
