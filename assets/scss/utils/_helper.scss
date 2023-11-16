@@ -9,33 +9,33 @@
 }
 }
 
+$app-lg: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/app-lg.png';
+$app-sm: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/app-sm.png';
+
+$article1: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article1.png';
+$article2: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article2.png';
+$article3: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article3.png';
+$article4: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article4.png';
+
+$coach1: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach1.png';
+$coach2: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach2.png';
+$coach3: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach3.png';
+$coach4: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach4.png';
+
+$helper-lg: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/helper-lg.png';
+$helper-sm: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/helper-sm.png';
+
+$hero-lg: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/hero-lg.png';
+$hero-sm: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/hero-sm.png';
+
+$slogan-lg: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/slogan-lg.png';
+$slogan-sm: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/slogan-sm.png';
+
+$tab-active: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/tab-active.png';
+$tab-default: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/tab-default.png';
+
+
 
 .container-min-h{
     min-height: calc(100vh - 136px);
-}
-
-.hero{
-    font-size: 72px;
-    line-height: 120%;
-    font-weight: bold;
-    @include mobile{
-        font-size: 32px;
-    }
-}
-.title{
-    font-size: 72px;
-    line-height: 120%;
-    font-weight: normal;
-    letter-spacing: 7.68px;
-    @include mobile{
-        font-size: 28 px;
-    }
-}
-.slogan{
-    font-size: 56px;
-    line-height: 120%;
-    font-weight: bold;
-    @include mobile{
-        font-size: 32px;
-    }
 }

@@ -378,34 +378,22 @@ $gradient: linear-gradient(180deg, rgba($white, 0.15), rgba($white, 0)) !default
 $spacer: 1rem !default; // 16px
 $spacers: (
     0: 0,
-    1: $spacer * 0.25,
-    // 4px
-    2: $spacer * 0.5,
-    // 8px
-    3: $spacer * 0.75,
-    // 12px//*custumize
-    4: $spacer,
-    // 16px
-    5: $spacer * 1.25,
-    // 20px
-    6: $spacer * 1.5,
-    // 24px
-    7: $spacer * 2,
-    // 32px
-    8: $spacer * 2.25,
-    // 36px
-    9: $spacer * 2.5,
-    // 40px
-    10: $spacer * 3,
-    // 48px
-    11: $spacer * 4,
-    // 64px
-    12: $spacer * 6,
-    // 96px
-    13: $spacer * 7.5,
-    // 120px
-    14: $spacer * 10,
-    // 160px
+    1: $spacer * 0.25,    // 4px
+    2: $spacer * 0.5,    // 8px
+    3: $spacer * 0.75,    // 12px//*custumize
+    4: $spacer,    // 16px
+    5: $spacer * 1.25,    // 20px
+    6: $spacer * 1.5,    // 24px
+    7: $spacer * 2,    // 32px
+    8: $spacer * 2.25,    // 36px
+    9: $spacer * 2.5,    // 40px
+    10: $spacer * 3,    // 48px
+    11: $spacer * 4,    // 64px
+    12: $spacer * 6,    // 96px
+    13: $spacer * 7.5,    // 120px
+    14: $spacer * 8,    // 128px
+    15: $spacer * 8.25,    // 132px
+    16: $spacer * 10,    // 160px
     // 0: 0,
     // 1: $spacer * .25,
     // 2: $spacer * .5,
@@ -638,13 +626,14 @@ $headings-color: null !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
-$display-font-sizes: (
-    1: 5rem,
-    //*customized 2: 4.5rem,
+$display-font-sizes: (//*customized
+    1: 40px,
+    2: 32px,
     3: 28px,
     4: 24px,
     5: 20px,
-    6: 16px // 1: 5rem,
+    6: 16px 
+    // 1: 5rem,
     // 2: 4.5rem,
     // 3: 4rem,
     // 4: 3.5rem,

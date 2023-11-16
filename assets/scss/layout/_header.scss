@@ -1,13 +1,15 @@
-@mixin pad {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
-}
-@mixin mobile {
-    @media screen and (max-width: 375px) {
-        @content;
-    }
-}
+// @mixin pad {
+//     @media screen and (max-width: 768px) {
+//         @content;
+//     }
+// }
+// @mixin mobile {
+//     @media screen and (max-width: 375px) {
+//         @content;
+//     }
+// }
+
+
 
 .header {
     background: #69f0ae;
@@ -54,4 +56,85 @@ button:focus {
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+}
+
+.carousel-caption {
+    top: 240px;
+    bottom: auto;
+    @include pad {
+        top: 96px;
+    }
+    @include mobile{
+        top: 36 px;
+    }
+}
+
+.hero{
+    font-size: 72px;
+    line-height: 120%;
+    font-weight: bold;
+    @include pad{
+        font-size: 32px;
+    }
+}
+.title-group{
+    margin-bottom: 120px;
+}
+.title{
+    font-size: 48px;
+    line-height: 120%;
+    font-weight: normal;
+    letter-spacing: 7.68px;
+    position: relative;
+    @include mobile{
+        font-size: 28 px;
+    }
+    &::after{
+        content: ' ';
+        width: 56px;
+        height: 8px;
+        position: absolute;
+        top: 78px;
+        left: 48%;
+        background: $yellow-500;
+    }
+}
+.slogan{
+    font-size: 56px;
+    line-height: 120%;
+    font-weight: bold;
+    @include mobile{
+        font-size: 32px;
+    }
+}
+
+
+.banner-slogan-1 span {
+    position: relative;
+    &::after {
+        content: ' ';
+        width: 56px;
+        height: 8px;
+        position: absolute;
+        top: 100px;
+        left: 9px;
+        background: $yellow-500;
+    }
+    
+}
+
+.sitemap-footer a:hover,
+.nav-item a:hover{
+    color: #F6BD2C !important;
+}
+
+.coach-slogan{
+    font-size: 56px;
+    line-height: 67px;
+    font-weight: 700;
+    background-image: url($slogan-lg);
+}
+
+.fitneehelper{
+    background-image: url($helper-lg);
 }
