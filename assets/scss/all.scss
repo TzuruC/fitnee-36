@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
 @import url('https://unpkg.com/aos@next/dist/aos.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
 @import './utils/variables';
 @import './utils/helper';
@@ -13,78 +14,6 @@
 
 @import '../../node_modules/bootstrap';
 
-// li {
-//     list-style: none;
-// }
-// .navbar {
-//     height: 70px;
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     padding: 0 5%;
-// }
-// .nav-menu {
-//     display: flex;
-//     align-items: center;
-// }
-// .nav-branding {
-//     font-size: 2rem;
-// }
-// /* transition for links */
-// .nav-link {
-//     transition: 0.5s ease;
-// }
-// .nav-link:hover {
-//     color: dodgerblue;
-// }
-// .hamburger {
-//     display: none;
-//     cursor: pointer;
-// }
-// .bar {
-//     width: 25px;
-//     height: 3px;
-//     margin: 5px auto;
-//     -webkit-transition: all 0.3s ease-in-out;
-//     transition: all 0.3s ease-in-out;
-//     background: white;
-// }
-// .nav-item {
-//     padding: 0 1.5rem;
-// }
-
-// @media (max-width: 760px) {
-//     .bar {
-//         display: block;
-//     }
-//     .hamburger {
-//         display: block;
-//     }
-//     .hamburger.active .bar:nth-child(2) {
-//         opacity: 0;
-//     }
-//     .hamburger.active .bar:nth-child(1) {
-//         transform: rotate(45deg) translateY(11.5px);
-//     }
-//     .hamburger.active .bar:nth-child(3) {
-//         transform: rotate(-45deg) translateY(-11.5px);
-//     }
-//     .nav-menu {
-//         position: fixed;
-//         right: -100%;
-//         top: 70px;
-//         flex-direction: column;
-//         width: 100%;
-//         text-align: center;
-//         background: black;
-//         transition: 0.3s;
-//     }
-//     .nav-item {
-//         padding: 1.5rem 0;
-//     }
-
-//     .nav-menu.active {
-//         right: 0;
-//     }
-// }
+.container{
+    max-width: 1296px !important;
+}
