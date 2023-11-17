@@ -22,8 +22,8 @@ $coach2: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/
 $coach3: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach3.png';
 $coach4: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach4.png';
 
-$helper-lg: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/helper-lg.png';
-$helper-sm: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/helper-sm.png';
+$helper-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/helper-lg-fixed.png');
+$helper-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/helper-sm.png');
 
 $hero-lg: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/hero-lg.png';
 $hero-sm: 'https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/hero-sm.png';
@@ -39,3 +39,4 @@ $tab-default: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/asset
 .container-min-h{
     min-height: calc(100vh - 136px);
 }
+

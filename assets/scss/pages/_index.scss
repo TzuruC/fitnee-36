@@ -1,3 +1,199 @@
 .index-title {
   font-size: 100px;
 }
+
+.carousel-caption {
+  top: 240px;
+  bottom: auto;
+  @include pad {
+      top: 96px;
+  }
+  @include mobile{
+      top: 36 px;
+  }
+}
+
+.hero{
+  font-size: 72px;
+  line-height: 120%;
+  font-weight: bold;
+  @include pad{
+      font-size: 32px;
+  }
+}
+.title-group{
+  margin-bottom: 120px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+}
+.title{
+  font-size: 48px;
+  line-height: 120%;
+  font-weight: normal;
+  letter-spacing: 7.68px;
+  position: relative;
+  @include mobile{
+      font-size: 28 px;
+  }
+  &::after{
+      content: ' ';
+      width: 56px;
+      height: 8px;
+      position: absolute;
+      top: 78px;
+      left: 40%;
+      background: $yellow-500;
+  }
+}
+.slogan{
+  font-size: 56px;
+  line-height: 120%;
+  font-weight: bold;
+  @include mobile{
+      font-size: 32px;
+  }
+}
+
+.banner-slogan-1 span {
+  position: relative;
+  &::after {
+      content: ' ';
+      width: 56px;
+      height: 8px;
+      position: absolute;
+      top: 100px;
+      left: 9px;
+      background: $yellow-500;
+  }    
+}
+
+.coach-slogan{
+  font-size: 56px;
+  line-height: 67px;
+  font-weight: 700;
+  background-image: $slogan-lg;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  @include mobile{
+      font-size: 32px;
+      line-height: 38px;
+      background-image: $slogan-sm;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+  }
+}
+
+.fitneehelper{
+  background-image: $helper-lg;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.filter-btn{
+  margin-right: -15px;
+  padding: 12px 31px;
+  font-size: 32px;
+  line-height: 40px;
+  background: $tab-default no-repeat; 
+  background-size: contain;
+  &.active{
+      background: $tab-active no-repeat; 
+      background-size: contain;
+  }
+}
+
+.coach-filter-system{
+  border-bottom: 4px solid $gray-300;
+}
+
+.search-box{
+  position: relative;
+  span{
+      position: absolute;
+      left: 8px;
+      color: $gray-800;
+  }
+  input{
+      width: 260px;
+      margin-bottom: 6px;
+      padding: 16px 16px 16px 36px;
+      border-radius: 0;
+      font-size: 20px;
+      border: 1px solid $gray-300;
+  }
+}
+
+.coach-caption{
+  margin-top: -48px;
+  position: relative;
+}
+.coach-title{
+  color: $yellow-500;
+}
+
+$gradient-start: rgba(0,0,0,0);
+$gradient-end: rgba(0,0,0,.7);
+$gradient-hover-start: rgba(255, 241, 211, 0.2);
+$gradient-hover-end: rgba(0,0,0,.5);
+
+.img-gradient{
+  position:relative;
+  display:inline-block;    
+  &::after{
+      content:'';
+      position:absolute;
+      left:0; top:0;
+      width:100%; height:100%;
+      display:inline-block;   
+      background: -moz-linear-gradient(top, $gradient-start 0%, $gradient-end 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$gradient-end), color-stop(100%,$gradient-start)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, $gradient-start 0%,$gradient-end 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, $gradient-start 0%,$gradient-end 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, $gradient-start 0%,$gradient-end 100%); /* IE10+ */
+      background: linear-gradient(to bottom, $gradient-start 0%,$gradient-end 100%); /* W3C */
+      // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+      border: 1px solid #fff;
+  }
+  &:hover{        
+      transition: background linear-gradient .7s;
+      &::after{        
+      background: -moz-linear-gradient(top, $gradient-hover-start 30%, $gradient-hover-end 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$gradient-hover-end), color-stop(100%,$gradient-hover-start)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, $gradient-hover-start 30%,$gradient-hover-end 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, $gradient-hover-start 30%,$gradient-hover-end 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, $gradient-hover-start 30%,$gradient-hover-end 100%); /* IE10+ */
+      background: linear-gradient(to bottom, $gradient-hover-start 30%,$gradient-hover-end 100%); /* W3C */
+      border: 3px solid #ffcf55;
+      background-blend-mode: luminosity;
+      }
+  }
+}  
+
+
+.fitneehelper .material-symbols-outlined{
+  margin-right: 4px;
+  font-size: 40px;
+}
+
+
+.article-filter{
+  margin-bottom: 60px;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  li{        
+      padding: 0 51px;
+      border-color: $gray-400 !important;
+      a{
+          color: $gray-800;
+      }
+      a:hover{            
+          color: $primary;
+      }
+  }
+  .active{        
+      color: $primary;
+      font-weight: 700;
+  }
+}
