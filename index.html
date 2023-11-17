@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>#36 FitNee 訓練助理</title>
-      <script type="module" crossorigin src="/fitnee-36/assets/main-4465d509.js"></script>
-      <link rel="stylesheet" href="/fitnee-36/assets/main-d7f07254.css">
+      <script type="module" crossorigin src="/fitnee-36/assets/main-c3989a54.js"></script>
+      <link rel="stylesheet" href="/fitnee-36/assets/main-cc739d6c.css">
     </head>
     <body>
         <div class="wrapper">
@@ -14,7 +14,7 @@
     <div class="container d-flex d-lg-block justify-content-between align-items-center">
         <div class="py-4 d-flex justify-content-between align-items-center flex-lg-row">
             <div class="logo-wrap">
-                <a class="navbar-brand m-0 p-0" href="#">
+                <a class="navbar-brand m-0 p-0" href="index.html">
                     <img
                         class="align-self-center logo-header"
                         src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/logo.png"
@@ -53,6 +53,7 @@
 
 
 
+            <!-- Hero -->
             <section class="hero">
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -65,8 +66,8 @@
                             <div class="carousel-caption">
                                 <div class="hero banner-slogan-1 mb-14">
                                     健身訓練不只是習慣&nbsp;&nbsp;&nbsp;
-                                    <div class="d-lg-inline d-block">更是<span>生</span><span>活</span><span>態</span
-                                    ><span>度</span></div>
+                                    <span class="d-lg-inline d-block">更是<span>生</span><span>活</span><span>態</span
+                                    ><span>度</span></span>
                                 </div>
                                 <div class="fs-1 mb-7">承續您追求健康的堅持</div>
                                 <div class="fs-4 mb-11">FITNEE訓練助理&nbsp;&nbsp;&nbsp;助您打造合適訓練品質</div>
@@ -80,13 +81,14 @@
                 </div>
             </section>
 
-            <section class="coach py-13">
-                <div class="container">
+            <!-- Coach -->
+            <section class="coach py-14">
+                <div class="container d-flex flex-column align-items-center">
                     <div class="title-group">
                         <h3 class="title text-center mb-10">專業教練</h3>
-                        <p class="text-center fs-5">挑戰自我，我們一路支持您</p>
+                        <p class="m-0 text-center fs-5">挑戰自我，我們一路支持您</p>
                     </div>
-                    <div class="coach-filter-system mb-6 d-md-flex justify-content-between align-items-center">
+                    <div class="coach-filter-system w-100 mb-6 d-md-flex flex-row justify-content-between align-items-center">
                         <ul class="coach-filter list-unstyled d-md-flex m-0">
                             <li class="filter-btn text-white active">體態調整</li>
                             <li class="filter-btn text-white ">增肌減脂</li>
@@ -99,8 +101,9 @@
                             <input type="search" class="form-control" placeholder="搜尋" aria-label="Search" aria-describedby="search-addon" />
                         </div>
                     </div>
-                    <ul class="coach-cards list-unstyled d-md-flex justify-content-between">
-                        <li class="">
+                    <ul class="coach-cards w-100 list-unstyled d-md-flex justify-content-between">
+                        <li class="coach-card">
+                            <a href="#">
                             <div class="img-gradient">
                                 <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach1.png" alt="coach1" />
                             </div>
@@ -108,8 +111,10 @@
                                 <h4 class="coach-name m-0 text-white fs-3 text-right">Kevin</h4>
                             <p class="coach-title m-0 fs-5">連鎖健身房教練</p>    
                             </div>
+                            </a>
                         </li>
-                        <li class="">
+                        <li class="coach-card">
+                            <a href="#">
                             <div class="img-gradient">
                                 <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach2.png" alt="coach2" />
                             </div>
@@ -117,8 +122,10 @@
                                 <h4 class="coach-name m-0 text-white fs-3 text-right">Anny</h4>
                             <p class="coach-title m-0 fs-5">私人健體顧問</p>
                             </div>
+                            </a>
                         </li>
-                        <li class="">
+                        <li class="coach-card">
+                            <a href="#">
                             <div class="img-gradient">
                                 <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach3.png" alt="coach3" />
                             </div>
@@ -126,8 +133,10 @@
                                 <h4 class="coach-name m-0 text-white fs-3 text-right">Leo</h4>
                             <p class="coach-title m-0 fs-5">私人教練</p>
                             </div>
+                            </a>
                         </li>
-                        <li class="">
+                        <li class="coach-card">
+                            <a href="#">
                             <div class="img-gradient">
                                 <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach4.png" alt="coach4" />
                             </div>
@@ -135,6 +144,7 @@
                                 <h4 class="coach-name m-0 text-white fs-3 text-right">Ting</h4>
                             <p class="coach-title m-0 fs-5">空中瑜伽老師</p>
                             </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -145,50 +155,99 @@
                 </div>
             </section>
 
-            <section class="fitneehelper py-13">
-                <div class="container">
+            <!-- FitNee Helper -->
+            <section class="fitneehelper pt-14">
+                <div class="container d-flex flex-column align-items-center">
                     <div class="title-group">
                         <h3 class="title text-center text-white mb-10">訓練幫手</h3>
-                        <p class="text-center fs-5 text-white">幫助您輕鬆組織有效訓練</p>
+                        <p class="m-0 text-center fs-5 text-white">幫助您輕鬆組織有效訓練</p>
+                    </div>
+                    <div class="w-100 d-flex justify-content-between align-items-center">
+                        <div class="fitnee-content">
+                            <ul class="list-unstyled">
+                                <li class="mb-10 d-flex">
+                                    <span class="material-symbols-outlined text-primary">done</span> 
+                                    <p class="text-primary fs-4">
+                                        快速建立訓練菜單<span class="mt-2 d-block text-white">全自定義的訓練項目，自主訓練不卡卡</span>
+                                    </p>                                    
+                                </li>
+                                <li class="mb-10 d-flex">
+                                    <span class="material-symbols-outlined text-primary">done</span> 
+                                    <p class="text-primary fs-4">
+                                        維持訓練專注品質<span class="mt-2 d-block text-white">重量組數輕鬆記，組間休息輕鬆設定</span>
+                                    </p>                                    
+                                </li>
+                                <li class="mb-10 d-flex">
+                                    <span class="material-symbols-outlined text-primary">done</span>
+                                    <p class="text-primary fs-4">
+                                        安排訓練有效率<span class="mt-2 d-block text-white">視圖檢視訓練肌群，訓練重點清晰好懂</span>
+                                    </p>                                    
+                                </li>                                
+                                <div class="text-center">
+                                    <div class="btn ms-2 btn-outline-primary rounded-1 fs-4 px-9 py-3">立即免費體驗</div>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="fitnee-demo">
+                            <img class="d-md-block d-none" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/app-lg.png" alt="fitnee-demo">
+                            <img class="d-md-none d-block" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/app-sm.png" alt="fitnee-demo">
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="article py-13">
-                <div class="container">
+            <!-- Article -->
+            <section class="article py-14">
+                <div class="container d-flex flex-column align-items-center">
                     <div class="title-group">
                         <h3 class="title text-center mb-10">精選文章</h3>
-                        <p class="text-center fs-5">掌握訓練品質，給您最多元的支持</p>
+                        <p class="m-0 text-center fs-5">掌握訓練品質，給您最多元的支持</p>
                     </div>
-                    <ul class="article-filter list-unstyled d-md-flex">
-                        <li>最新消息</li>
-                        <li>訓練知識</li>
-                        <li>學員心得</li>
+                    <ul class="article-filter list-unstyled d-md-flex text-center">
+                        <li class="border-end"><a class="link-primary active" href="#">最新消息</a></li>
+                        <li class="border-end"><a class="" href="#">訓練知識</a></li>
+                        <li class=""><a class="" href="#">學員心得</a></li>
                     </ul>
-                    <ul class="article-cards list-unstyled d-md-flex justify-content-between">
-                        <li class="coach-card">
-                            <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article1.png" alt="article1" />
-                            <h4>重訓新手菜單規劃要點</h4>
-                            <p>重訓對新手來說是一個激勵人心的開始。這裡有幾個關鍵要點，協...</p>
-                            <p>2023/11/27</p>                      
+                    <ul class="article-cards mb-12 list-unstyled d-md-flex justify-content-between">
+                        <li class="article-card">
+                            <a href="#">
+                                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article1.png" alt="article1" />
+                                <div class="article-caption mt-6">
+                                <h4 class="mb-2 fs-4 link-dark">重訓新手菜單規劃要點</h4>
+                                <p class="mb-2 fs-5 text-dark">重訓對新手來說是一個激勵人心的開始。這裡有幾個關鍵要點，協...</p>
+                                <p class="fs-5 text-dark">2023/11/27</p>            
+                                </div>          
+                            </a>
                         </li>
-                        <li class="coach-card">
-                            <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article2.png" alt="article2" />
-                            <h4>增肌減脂五個重要步驟</h4>
-                            <p>增肌減脂是健身的重要目標之一，這需要一個綜合的方法。以下是...</p>
-                            <p>2023/11/25</p>                         
+                        <li class="article-card">
+                            <a href="#">
+                                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article2.png" alt="article2" />
+                                <div class="article-caption mt-6">
+                                <h4 class="mb-2 fs-4 link-dark">增肌減脂五個重要步驟</h4>
+                                <p class="mb-2 fs-5 text-dark">增肌減脂是健身的重要目標之一，這需要一個綜合的方法。以下是...</p>
+                                <p class="fs-5 text-dark">2023/11/25</p>            
+                                </div>             
+                            </a>
                         </li>
-                        <li class="coach-card">
-                            <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article3.png" alt="article3" />  
-                            <h4>重訓減肥的迷思</h4>
-                            <p>重訓減肥是一種有效的健身方式，但它充滿了許多常見的迷思。解...</p>
-                            <p>2023/11/20</p>                      
+                        <li class="article-card">
+                            <a href="#">
+                                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article3.png" alt="article3" />  
+                                <div class="article-caption mt-6">
+                                <h4 class="mb-2 fs-4 link-dark">重訓減肥的迷思</h4>
+                                <p class="mb-2 fs-5 text-dark">重訓減肥是一種有效的健身方式，但它充滿了許多常見的迷思。解...</p>
+                                <p class="fs-5 text-dark">2023/11/20</p>            
+                            </div>          
+                            </a>
                         </li>
-                        <li class="coach-card">
-                            <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article4.png" alt="article4" />
-                            <h4>先重訓還是先有氧</h4>
-                            <p>是先重訓還是先進行有氧運動？這個問題經常讓人困惑。答案並不...</p>
-                            <p>2023/11/11</p>                          
+                        <li class="article-card">
+                            <a href="#">
+                                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article4.png" alt="article4" />
+                                <div class="article-caption mt-6">
+                                <h4 class="mb-2 fs-4 link-dark">先重訓還是先有氧</h4>
+                                <p class="mb-2 fs-5 text-dark">是先重訓還是先進行有氧運動？這個問題經常讓人困惑。答案並不...</p>
+                                <p class="fs-5 text-dark">2023/11/11</p>            
+                                </div>    
+                            </a>          
                         </li>
                     </ul>
                     <div class="text-center">
@@ -201,7 +260,7 @@
     <div class="container">
         <div class="row d-md-flex align-items-center">
             <div class="logo-footer col-md-6 text-center text-md-start mt-9 mt-md-0">
-                <img class="" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/logo.png" alt="logo">        
+                <a href="index.html"><img class="" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/logo.png" alt="logo"></a>
             </div>
             <div class="sitemap-footer col-md-6 py-9 d-md-flex justify-content-between">                 
                 <div class="sitemap-g1 text-center text-md-start">
