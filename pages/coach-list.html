@@ -4,13 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>coach-list</title>
+    <title>#36 FitNee - 專業教練</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%>
-    <h1>coach-list</h1>
-    <%- include('./layout/footer'); -%>
+    <div class="wrapper">
+      <%- include('./layout/header'); -%>
+      <div class="page-banner pt-12 pb-5 px-5 justify-content-between">
+        <h2 class="fs-5 text-white">專業教練</h2>
+        <p class="fs-6 text-white text-end">
+          堅持不懈自己的選擇
+          <span class="d-block">讓身體追上你心理的強悍</span>
+        </p>
+      </div>
 
+      <section>
+        <div class="filter-group">
+          <h3>請選擇篩選條件</h3>
+
+          <label for="">教練專長項目</label>
+          <checkbox>體態調整</checkbox>
+          <checkbox>增肌減脂</checkbox>
+          <checkbox>運動訓練</checkbox>
+        </div>
+
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select> 
+
+        <div class="render-cards">
+
+        </div>
+
+      </section>
+
+      <div class="fitnee-ad">
+        <div class="slogan"></div>
+        <div class="action"></div>
+      </div>      
+      <%- include('./layout/footer'); -%>
+    </div>
+    <!-- aos-animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();            
+    </script>
+
+    <!-- customized js -->
     <script type="module" src="../main.js"></script>
   </body>
 </html>

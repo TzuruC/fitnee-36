@@ -34,9 +34,70 @@ $slogan-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/
 $tab-active: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/tab-active.png');
 $tab-default: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/tab-default.png');
 
+$page1-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/1b.png');
+$page1-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/1b-sm.png');
+$page2-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/2b.png');
+$page2-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/2b-sm.png');
+$page3-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/3b.png');
+$page3-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/3b-sm.png');
+$page4-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/4b.png');
+$page4-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/4b-sm.png');
+$page5-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/5b.png');
+$page5-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/5b-sm.png');
+
+
 
 
 .container-min-h{
     min-height: calc(100vh - 136px);
 }
 
+@keyframes breath-light {
+    0%{
+        color: $white;
+        background: rgba(215,156,5,.8);
+    }
+    50%{
+        color: $white;
+        background: rgba(215,156,5,.1);
+    }
+    55%{
+        color: $white;
+        background: rgba(215,156,5,.1);
+    }
+    100%{
+        color: $white;
+        background: rgba(215,156,5,.8);
+    }    
+}
+
+.totop-btn{   
+    padding: 6px 8px; 
+    position: fixed;     
+    right: 120px;   
+    bottom: 50px;   
+    z-index: 3;    
+    cursor: pointer;
+    background: $primary;    
+    transition-duration: .5s;  
+    animation-timing-function: ease-in-out;
+    opacity: .7;
+    -webkit-box-shadow: 0px 0px 2px 0px $gray-300;
+    -moz-box-shadow: 0px 0px 2px 0px $gray-300;
+    box-shadow: 0px 0px 2px 0px $gray-300;
+    .material-symbols-outlined {        
+    font-size: 56px;     
+    color: $white;    
+    position: relative;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    }
+    &:hover{   
+        transition-duration: .3s;  
+        animation-timing-function: ease-in-out;
+        opacity: 1;
+    }
+}
