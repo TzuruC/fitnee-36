@@ -21,8 +21,10 @@
     "bootstrap": "^5.2.3",
     "gh-pages": "^5.0.0",
     "glob": "^10.2.2",
+    "hamburgers": "^1.2.1",
     "sass": "^1.61.0",
     "sass-loader": "^13.2.2",
+    "swiper": "^11.0.4",
     "vite-plugin-live-reload": "^3.0.2"
   }
 }
