@@ -633,7 +633,8 @@ $display-font-sizes: (//*customized
     3: 28px,
     4: 24px,
     5: 20px,
-    6: 16px 
+    6: 16px,
+    7: 14px 
     // 1: 5rem,
     // 2: 4.5rem,
     // 3: 4rem,
@@ -1230,10 +1231,13 @@ $pagination-font-size: $font-size-base !default;
 
 $pagination-color: var(--#{$prefix}link-color) !default;
 $pagination-bg: $white !default;
-$pagination-border-radius: $border-radius !default;
-$pagination-border-width: $border-width !default;
+$pagination-border-radius: 0 !default;  //*customized
+// $pagination-border-radius: $border-radius !default;
+$pagination-border-width: 0 !default;  //*customized
+// $pagination-border-width: $border-width !default;
 $pagination-margin-start: ($pagination-border-width * -1) !default;
-$pagination-border-color: $gray-300 !default;
+$pagination-border-color: $primary !default; //*customized
+// $pagination-border-color: $gray-300 !default;
 
 $pagination-focus-color: var(--#{$prefix}link-hover-color) !default;
 $pagination-focus-bg: $gray-200 !default;
@@ -1242,8 +1246,10 @@ $pagination-focus-outline: 0 !default;
 
 $pagination-hover-color: $white !default; //*customized
 // $pagination-hover-color:            var(--#{$prefix}link-hover-color) !default;
-$pagination-hover-bg: $gray-200 !default;
-$pagination-hover-border-color: $gray-300 !default;
+$pagination-hover-bg: $primary !default; //*customized
+// $pagination-hover-bg: $gray-200 !default;
+$pagination-hover-border-color: $primary !default; //*customized
+// $pagination-hover-border-color: $gray-300 !default;
 
 $pagination-active-color: $component-active-color !default;
 $pagination-active-bg: $component-active-bg !default;

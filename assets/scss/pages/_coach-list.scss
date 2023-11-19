@@ -1,3 +1,42 @@
 .page-banner{
     background: $page2-sm;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-search-box{
+    position: relative;
+    span{
+        position: absolute;
+        left: 8px;
+        color: $gray-800;
+    }
+    input{
+        padding: 4px 16px 4px 36px;
+        border-radius: 0;
+        font-size: 16px;
+        border: 1px solid $gray-300;
+    }
+}
+
+.coach-card img{
+    width: 100%;
+}
+
+.fitnee-ad{
+    background: $helper-lg;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include mobile{
+        background: $helper-sm;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.pagination {
+    line-height: 40px !important;
+    .page-link{
+        line-height: 40px !important;
+    }
 }

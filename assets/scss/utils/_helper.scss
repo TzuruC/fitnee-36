@@ -34,16 +34,16 @@ $slogan-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/
 $tab-active: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/tab-active.png');
 $tab-default: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/tab-default.png');
 
-$page1-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/1b.png');
-$page1-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/1b-sm.png');
-$page2-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/2b.png');
-$page2-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/2b-sm.png');
-$page3-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/3b.png');
-$page3-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/3b-sm.png');
-$page4-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/4b.png');
-$page4-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/4b-sm.png');
-$page5-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/5b.png');
-$page5-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/5b-sm.png');
+$page1-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/1.png');
+$page1-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/1-sm.png');
+$page2-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/2.png');
+$page2-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/2-sm.png');
+$page3-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/3.png');
+$page3-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/3-sm.png');
+$page4-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/4.png');
+$page4-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/4-sm.png');
+$page5-lg: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/5.png');
+$page5-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/5-sm.png');
 
 
 
@@ -59,11 +59,11 @@ $page5-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/i
     }
     50%{
         color: $white;
-        background: rgba(215,156,5,.1);
+        background: rgba(215,156,5,.3);
     }
     55%{
         color: $white;
-        background: rgba(215,156,5,.1);
+        background: rgba(215,156,5,.3);
     }
     100%{
         color: $white;
@@ -94,10 +94,17 @@ $page5-sm: url('https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/i
     'wght' 400,
     'GRAD' 0,
     'opsz' 24;
+        @include pad{
+            font-size: 32px;   
+        }
     }
     &:hover{   
         transition-duration: .3s;  
         animation-timing-function: ease-in-out;
         opacity: 1;
+    }
+    @include pad{
+        right: 20px;   
+        bottom: 40px;   
     }
 }
