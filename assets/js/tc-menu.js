@@ -12,8 +12,8 @@ navToggler.addEventListener('click', () => {
     navGroup.classList.toggle('d-none');
     navGroup.classList.toggle('fixed-top');
     navGroup.classList.add('bg-dark');    
-    navGroup.setAttribute('style', 'top:58px'); 
-    navGroup.setAttribute('transition', 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out'); 
+    navGroup.setAttribute('style', 'top:58px; height:100vh; transition: top 3s;'); 
+    // navGroup.setAttribute('transition', 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out'); 
     navToggler.textContent = (navToggler.textContent === 'close') ? 'menu' : 'close';    
 });
 

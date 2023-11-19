@@ -53,6 +53,9 @@ button:focus {
     background-color: rgba($color: #222222, $alpha: .9);
 }
 
-#navGroup {
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+#navGroup {    
+    @include pad{
+        height: 0;
+        transition: height 0.3s;
+    }
 }

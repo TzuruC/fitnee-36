@@ -7,9 +7,11 @@
     <title>#36 FitNee - 專業教練</title>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="page-wrapper">
+    
       <%- include('./layout/header'); -%>
-
+    
+      <!-- To Top Btn -->
       <div class="totop-btn d-none">
         <a href="#">
         <span class="material-symbols-outlined">
@@ -18,186 +20,277 @@
         </a>
     </div> 
 
-      <div class="page-banner container pt-12 pb-5 justify-content-between">
-        <h2 class="fs-5 text-primary">專業教練 <span class="fs-5">/</span></h2>
-        <p class="fs-6 text-white text-end">
-          堅持不懈自己的選擇
-          <span class="d-block">讓身體追上你心理的強悍</span>
-        </p>
+    <!-- Page Banner -->
+    <div class="page-banner pt-12 pb-5 justify-content-between">
+      <div class="container py-lg-11">
+        <div class="d-lg-flex d-block justify-content-between">
+      <h2 class="fs-3 text-primary">專業教練 <span class="fs-5">/</span></h2>
+      <p class="fs-6 text-white text-end">
+        堅持不懈自己的選擇
+        <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
+      </p>
+        </div>
+      <div class="page-search-box d-flex d-lg-none justify-content-between align-items-center">
+        <span class="material-symbols-outlined">
+            search
+            </span>
+        <input type="search" class="form-control" placeholder="搜尋專業教練" aria-label="Search" aria-describedby="search-addon" />
+        
+      </div>
+    </div>
+    </div>
 
-        <div class="page-search-box d-flex justify-content-between align-items-center" data-aos="fade-left" data-aos-delay="150" data-aos-once="true" data-aos-duration="780">
-          <span class="material-symbols-outlined">
+    <!-- Main -->
+    <section class="page-list-section container my-lg-13 d-lg-block d-lg-flex">
+
+      <!-- pc filter -->
+      <div class="filter-group-lg d-lg-block d-none col-lg-2">
+        <h3 class="mb-7">請選擇篩選條件</h3>
+      
+        <div class="filter-opt-group0 mb-7">
+          <div class="mb-5 d-block fw-bold" for="">教練關鍵字搜尋</div>
+          <div class="aside-search-box mb-3 d-flex justify-content-between align-items-center">
+            <span class="material-symbols-outlined">
               search
-              </span>
-          <input type="search" class="form-control" placeholder="搜尋專業教練" aria-label="Search" aria-describedby="search-addon" />
+            </span>
+            <input type="search" class="form-control" placeholder="搜尋專業教練" aria-label="Search"
+              aria-describedby="search-addon" />
+          </div>
         </div>
 
+        <div class="filter-opt-group1 mb-7">
+          <div class="mb-5 d-block fw-bold" for="">教練專長項目</div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="c1">
+            <label class="form-check-label" for="c1">
+              體態調整
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="c2">
+            <label class="form-check-label" for="c2">
+              增肌減脂
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="c3">
+            <label class="form-check-label" for="c3">
+              運動訓練
+            </label>
+          </div>
+        </div>
+      
+        <div class="filter-opt-group2 mb-7">
+          <div class="mb-5 d-block fw-bold" for="">教練服務地區</div>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>未選擇</option>
+            <option value="1">北部</option>
+            <option value="2">中部</option>
+            <option value="3">南部</option>
+          </select>
+        </div>
+      
+        <div class="filter-opt-group3 mb-7">
+          <div class="mb-5 d-block fw-bold" for="">教練服務時間</div>
+          <select class="form-select mb-3" aria-label="Default select example">
+            <option selected>每天</option>
+            <option value="1">星期一</option>
+            <option value="2">星期二</option>
+            <option value="3">星期三</option>
+            <option value="3">星期四</option>
+            <option value="3">星期五</option>
+            <option value="3">星期六</option>
+            <option value="3">星期日</option>
+          </select>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="c4">
+            <label class="form-check-label" for="c4">
+              早上 6:00 ~ 12:00
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="c5">
+            <label class="form-check-label" for="c5">
+              下午 12:00 ~ 18:00
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="c6">
+            <label class="form-check-label" for="c6">
+              晚上 18:00 ~ 0:00
+            </label>
+          </div>
+      
+        </div>
+      
+        <div class="text-center">
+          <div class="btn btn-primary text-white rounded-1 px-9 w-100">搜尋</div>
+        </div>
+      
+      </div>
+      <!-- mobile filter -->
+      <div class="mb-5 pt-6 filter-group-sm d-lg-none d-block">
+        <h3>教練專長</h3>
+        <ul class="list-unstyled d-flex">
+          <li class="me-6"><a class="me-1 link-dark" href="">體態調整</a></li>
+          <li class="me-6"><a class="me-1 link-dark" href="">增肌減脂</a></li>
+          <li class="me-6"><a class="me-1 link-dark" href="">運動訓練</a></li>
+        </ul>  
+      </div>        
+
+      <!-- coach cards -->
+      <div class="render-cards ms-auto col-lg-8 offset-lg-2">
+
+        <!-- Sort filter -->
+        <div class="coach-sort filter-opt-group4 mb-7 d-lg-block d-none">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>- 排列順序 -</option>
+            <option value="1">資歷從高至低</option>
+            <option value="2">體驗課費用從低至高</option>
+            <option value="3">體驗課費用從高至低</option>
+          </select>
+        </div>
+
+        <!-- Cards -->
+        <ul class="list-unstyled pb-lg-7">
+          <div class="row">
+          <li class="coach-card mb-5">
+            <a class="row align-items-center" href="#">
+              <div class="coach-photo col-lg-3 col-4">
+                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach1.png" alt="coach1" />              
+              </div>
+              <div class="coach-content col-lg-9 col-8">
+                <div class="coach-info d-flex justify-content-between">  
+                  <div>
+                    <h4 class="coach-name fs-4 text-right link-dark">Kevin</h4>
+                    <p class="coach-title fs-6">連鎖健身房教練</p>
+                  </div>
+                  <div class="coach-price">
+                    <span class="d-block fs-5 text-end link-dark">NT 800</span> 
+                    <span class="d-block fs-6 text-end link-dark">/ 體驗課</span>
+                  </div>  
+                </div>
+                <div class="coach-intro link-dark fs-6">
+                  專注於為學生提供最佳的健身教練服務。我能夠設計個性化的訓練計劃 ...
+                </div>    
+                
+              </div>              
+            </a>
+          </li>
+          <li class="coach-card mb-5">
+            <a class="row align-items-center" href="#">
+              <div class="coach-photo col-lg-3 col-4">
+                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach2.png" alt="coach1" />              
+              </div>
+              <div class="coach-content col-lg-9 col-8">
+                <div class="coach-info d-flex justify-content-between">  
+                  <div>
+                    <h4 class="coach-name fs-4 text-right link-dark">Kevin</h4>
+                    <p class="coach-title fs-6">連鎖健身房教練</p>
+                  </div>
+                  <div class="coach-price">
+                    <span class="d-block fs-5 text-end link-dark">NT 800</span> 
+                    <span class="d-block fs-6 text-end link-dark">/ 體驗課</span>
+                  </div>  
+                </div>
+                <div class="coach-intro link-dark fs-6">
+                  專注於為學生提供最佳的健身教練服務。我能夠設計個性化的訓練計劃 ...
+                </div>    
+                
+              </div>              
+            </a>
+          </li>
+          <li class="coach-card mb-5">
+            <a class="row align-items-center" href="#">
+              <div class="coach-photo col-lg-3 col-4">
+                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach3.png" alt="coach1" />              
+              </div>
+              <div class="coach-content col-lg-9 col-8">
+                <div class="coach-info d-flex justify-content-between">  
+                  <div>
+                    <h4 class="coach-name fs-4 text-right link-dark">Kevin</h4>
+                    <p class="coach-title fs-6">連鎖健身房教練</p>
+                  </div>
+                  <div class="coach-price">
+                    <span class="d-block fs-5 text-end link-dark">NT 800</span> 
+                    <span class="d-block fs-6 text-end link-dark">/ 體驗課</span>
+                  </div>  
+                </div>
+                <div class="coach-intro link-dark fs-6">
+                  專注於為學生提供最佳的健身教練服務。我能夠設計個性化的訓練計劃 ...
+                </div>    
+                
+              </div>              
+            </a>
+          </li>
+          <li class="coach-card mb-5">
+            <a class="row align-items-center" href="#">
+              <div class="coach-photo col-lg-3 col-4">
+                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach4.png" alt="coach1" />              
+              </div>
+              <div class="coach-content col-lg-9 col-8">
+                <div class="coach-info d-flex justify-content-between">  
+                  <div>
+                    <h4 class="coach-name fs-4 text-right link-dark">Kevin</h4>
+                    <p class="coach-title fs-6">連鎖健身房教練</p>
+                  </div>
+                  <div class="coach-price">
+                    <span class="d-block fs-5 text-end link-dark">NT 800</span> 
+                    <span class="d-block fs-6 text-end link-dark">/ 體驗課</span>
+                  </div>  
+                </div>
+                <div class="coach-intro link-dark fs-6">
+                  專注於為學生提供最佳的健身教練服務。我能夠設計個性化的訓練計劃 ...
+                </div>    
+                
+              </div>              
+            </a>
+          </li>      
+          </div>      
+        </ul>
+        
+        <nav aria-label="Page navigation example col-lg-12">
+          <ul class="pagination m-lg-0 py-lg-0 py-7 justify-content-center align-items-center">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span class="material-symbols-outlined align-text-bottom">
+                  chevron_left
+                  </span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link mx-1" href="#">1</a></li>
+            <li class="page-item"><a class="page-link mx-1" href="#">2</a></li>
+            <li class="page-item"><a class="page-link mx-1" href="#">...</a></li>
+            <li class="page-item"><a class="page-link mx-1" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span class="material-symbols-outlined align-text-bottom">
+                  chevron_right
+                  </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
 
-      <section class="container">
-        <div class="filter-group-lg d-none">
-          <h3>請選擇篩選條件</h3>
-
-          <label for="">教練專長項目</label>
-          <checkbox>體態調整</checkbox>
-          <checkbox>增肌減脂</checkbox>
-          <checkbox>運動訓練</checkbox>
-
-          <label for="cars">Choose a car:</label>
-          <select name="cars" id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-          </select> 
-        </div>
-        
-        <div class="mb-5 pt-6 filter-group-sm d-block">
-          <h3>教練專長</h3>
-          <ul class="list-unstyled d-flex">
-            <li class="me-6"><a class="me-1 link-dark" href="">體態調整</a></li>
-            <li class="me-6"><a class="me-1 link-dark" href="">增肌減脂</a></li>
-            <li class="me-6"><a class="me-1 link-dark" href="">運動訓練</a></li>
-          </ul>  
-        </div>        
-
-        <div class="render-cards">
-          <ul class="list-unstyled">
-            <li class="coach-card mb-5" data-aos="fade-up" data-aos-delay="50" data-aos-once="true">
-              <a class="row align-items-center" href="#">
-                <div class="coach-photo col-4">
-                  <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach1.png" alt="coach1" />              
-                </div>
-                <div class="coach-content col-8">
-                  <div class="coach-info d-flex justify-content-between">  
-                    <div>
-                      <h4 class="coach-name fs-4 text-right link-dark">Kevin</h4>
-                      <p class="coach-title fs-6">連鎖健身房教練</p>
-                    </div>
-                    <div class="coach-price">
-                      <span class="d-block fs-5 text-end link-dark">NT 800</span> 
-                      <span class="d-block fs-6 text-end link-dark">/ 體驗課</span>
-                    </div>  
-                  </div>
-                  <div class="coach-intro link-dark fs-6">
-                    專注於為學生提供最佳的健身教練服務。我能夠設計個性化的訓練計劃 ...
-                  </div>    
-                  
-                </div>              
-              </a>
-            </li>
-            <li class="coach-card mb-5" data-aos="fade-up" data-aos-delay="50" data-aos-once="true">
-              <a class="row align-items-center" href="#">
-                <div class="coach-photo col-4">
-                  <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach2.png" alt="coach1" />              
-                </div>
-                <div class="coach-content col-8">
-                  <div class="coach-info d-flex justify-content-between">  
-                    <div>
-                      <h4 class="coach-name fs-4 text-right link-dark">Kevin</h4>
-                      <p class="coach-title fs-6">連鎖健身房教練</p>
-                    </div>
-                    <div class="coach-price">
-                      <span class="d-block fs-5 text-end link-dark">NT 800</span> 
-                      <span class="d-block fs-6 text-end link-dark">/ 體驗課</span>
-                    </div>  
-                  </div>
-                  <div class="coach-intro link-dark fs-6">
-                    專注於為學生提供最佳的健身教練服務。我能夠設計個性化的訓練計劃 ...
-                  </div>    
-                  
-                </div>              
-              </a>
-            </li>
-            <li class="coach-card mb-5" data-aos="fade-up" data-aos-delay="50" data-aos-once="true">
-              <a class="row align-items-center" href="#">
-                <div class="coach-photo col-4">
-                  <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach3.png" alt="coach1" />              
-                </div>
-                <div class="coach-content col-8">
-                  <div class="coach-info d-flex justify-content-between">  
-                    <div>
-                      <h4 class="coach-name fs-4 text-right link-dark">Kevin</h4>
-                      <p class="coach-title fs-6">連鎖健身房教練</p>
-                    </div>
-                    <div class="coach-price">
-                      <span class="d-block fs-5 text-end link-dark">NT 800</span> 
-                      <span class="d-block fs-6 text-end link-dark">/ 體驗課</span>
-                    </div>  
-                  </div>
-                  <div class="coach-intro link-dark fs-6">
-                    專注於為學生提供最佳的健身教練服務。我能夠設計個性化的訓練計劃 ...
-                  </div>    
-                  
-                </div>              
-              </a>
-            </li>
-            <li class="coach-card mb-5" data-aos="fade-up" data-aos-delay="50" data-aos-once="true">
-              <a class="row align-items-center" href="#">
-                <div class="coach-photo col-4">
-                  <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach4.png" alt="coach1" />              
-                </div>
-                <div class="coach-content col-8">
-                  <div class="coach-info d-flex justify-content-between">  
-                    <div>
-                      <h4 class="coach-name fs-4 text-right link-dark">Kevin</h4>
-                      <p class="coach-title fs-6">連鎖健身房教練</p>
-                    </div>
-                    <div class="coach-price">
-                      <span class="d-block fs-5 text-end link-dark">NT 800</span> 
-                      <span class="d-block fs-6 text-end link-dark">/ 體驗課</span>
-                    </div>  
-                  </div>
-                  <div class="coach-intro link-dark fs-6">
-                    專注於為學生提供最佳的健身教練服務。我能夠設計個性化的訓練計劃 ...
-                  </div>    
-                  
-                </div>              
-              </a>
-            </li>            
-          </ul>
-        </div>
-      </section>
-
       
-      <nav aria-label="Page navigation example">
-        <ul class="pagination py-7 justify-content-center align-items-center">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span class="material-symbols-outlined align-text-bottom">
-                chevron_left
-                </span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span class="material-symbols-outlined align-text-bottom">
-                chevron_right
-                </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      
+    </section>
 
-
-      <div class="fitnee-ad py-9">
-        <div class="container text-white">
-          <div class="page-slogan mb-5 text-center">
-            <span class="d-block fs-2">訓練幫手 免費體驗</span>
-            <span class="d-block fs-6">幫助您輕鬆組織有效訓練</span>
-          </div>
-          <div class="page-action">
-            <div class="text-center">
-              <div class="btn ms-2 mb-5 btn-outline-primary rounded-1 fs-4 px-9 py-3">立即免費體驗</div>
-            </div>
-            <span class="d-block text-center">掌握訓練品質精確，讓我們為您準備</span>
-          </div>
+    <div class="fitnee-ad py-10">
+      <div class="container text-white">
+        <div class="page-slogan mb-lg-7 mb-5 text-center">
+          <span class="d-block mb-lg-3 mb-0 fs-2">訓練幫手 免費體驗</span>
+          <span class="d-block fs-6">幫助您輕鬆組織有效訓練</span>
         </div>
-      </div>      
+        <div class="page-action">
+          <div class="text-center">
+            <div class="btn ms-2 mb-lg-7 mb-5 btn-outline-primary rounded-1 fs-4 px-9 py-3">立即免費體驗</div>
+          </div>
+          <span class="d-block text-center">掌握訓練品質精確，讓我們為您準備</span>
+        </div>
+      </div>
+    </div>      
+
       <%- include('./layout/footer'); -%>
     </div>
     <!-- aos-animation -->

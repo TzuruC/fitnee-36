@@ -1,7 +1,12 @@
 .page-banner{
+    background: $page2-lg;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include pad{
     background: $page2-sm;
     background-repeat: no-repeat;
     background-size: cover;
+    }
 }
 
 .page-search-box{
@@ -18,7 +23,20 @@
         border: 1px solid $gray-300;
     }
 }
-
+.aside-search-box{
+    position: relative;
+    span{
+        position: absolute;
+        left: 8px;
+        color: $gray-800;
+    }
+    input{
+        padding: 4px 16px 4px 36px;
+        border-radius: 0;
+        font-size: 16px;
+        border: 1px solid $gray-300;
+    }
+}
 .coach-card img{
     width: 100%;
 }
@@ -38,5 +56,17 @@
     line-height: 40px !important;
     .page-link{
         line-height: 40px !important;
+    }
+}
+
+
+.form-select{
+    width: auto;
+}
+.coach-sort{
+    margin-left: auto;
+    width: 190px;
+    @include mobile{
+        width: 100%;
     }
 }
