@@ -4,10 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>about</title>
+    <title>關於我們</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
+    <!-- Page Banner -->
+    <div class="page-banner pt-12 pb-5 justify-content-between">
+      <div class="container py-lg-11">
+        <div class="d-lg-flex d-block justify-content-between">
+      <h2 class="fs-3 text-primary">關於我們 <span class="fs-5">/</span></h2>
+      <p class="fs-6 text-white text-end">
+        堅持不懈自己的選擇
+        <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
+      </p>
+        </div>
+      <div class="page-search-box d-flex d-lg-none justify-content-between align-items-center">
+        <span class="material-symbols-outlined">
+            search
+            </span>
+        <input type="search" class="form-control" placeholder="搜尋專業教練" aria-label="Search" aria-describedby="search-addon" />
+        
+      </div>
+    </div>
+    </div>
     <h1>我是about</h1>
     <%- include('./layout/footer'); -%>
 

@@ -1,0 +1,68 @@
+.login-caution{
+    font-size: 14px;
+}
+
+/* UI Design */
+.ui-underline{
+    border-color: 1px solid $gray-300;
+    outline: none;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    color: #555;
+}
+
+.ui-form-white, .ui-form-white .ui-placeholder span{
+    color: $dark;
+}
+
+.ui-form-white input::placeholder, .ui-form-white textarea::placeholder{
+    color: $dark;
+    opacity: 0.5;
+}
+
+
+.ui-form-white .ui-underline{
+    color: $dark;
+}
+
+.ui-placeholder{
+    position: relative;
+    perspective: 100px;
+}
+
+.ui-placeholder input, .ui-placeholder textarea{
+    width: 100%;
+    background-color: transparent;
+}
+
+.ui-placeholder input ~ span, .ui-placeholder textarea ~ span{
+    visibility: visible;
+    position: absolute;
+    opacity: 0;
+    display: inline-block;
+    transition: all 1s cubic-bezier(.08,.86,.35,.94);
+    font-size: 14px;
+    color: #999;
+}
+
+.ui-placeholder input:not(:placeholder-shown) ~ span, .ui-placeholder textarea:not(:placeholder-shown) ~ span{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* perspective origin */
+.ui-placeholder.ui-leftTop{ perspective-origin: left top; }
+
+/* set position */
+.ui-placeholder.ui-leftTop input ~ span, .ui-placeholder.ui-leftTop textarea ~ span{ bottom: 100%; left: 0; }
+
+/* slide effects */
+/**************************************************************/
+.ui-placeholder.ui-leftTop.ui-slide textarea ~ span,
+.ui-placeholder.ui-leftTop.ui-slide input ~ span{ bottom: 90%; }
+
+.ui-placeholder.ui-leftTop.ui-slide textarea:not(:placeholder-shown) ~ span,
+.ui-placeholder.ui-leftTop.ui-slide input:not(:placeholder-shown) ~ span{ bottom: 100%; }
+
