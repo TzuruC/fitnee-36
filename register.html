@@ -89,21 +89,44 @@
         </div>
         <div class="ui-form-white my-5">
           <div class="ui-placeholder ui-leftTop">
-            <input id="loginMail" class="form-control ui-underline mb-7" name="email" type="text" placeholder="帳號 ( Email 信箱 )"><span>帳號</span>
+            <input id="loginMail" class="form-control ui-underline mb-7" name="email" type="text" placeholder="*姓名"><span>*姓名</span>
             <span id="alertEmail" class="alert-span text-danger d-block fs-6"></span>
           </div>
         </div>
         <div class="ui-form-white my-5">
           <div class="ui-placeholder ui-leftTop">            
-            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="密碼"><span>密碼</span>
+            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="text" placeholder="暱稱"><span>暱稱</span>
             <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
           </div>
-        </div>       
+        </div>   
+        <div class="ui-form-white my-5">
+          <div class="ui-placeholder ui-leftTop">            
+            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*電子信箱 ( 將成為您的帳號 )"><span>*電子信箱 ( 將成為您的帳號 )</span>
+            <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
+          </div>
+        </div>  
+        <div class="ui-form-white my-5">
+          <div class="ui-placeholder ui-leftTop">            
+            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="tel" placeholder="*聯絡電話"><span>*聯絡電話</span>
+            <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
+          </div>
+        </div>  
+        <div class="ui-form-white my-5">
+          <div class="ui-placeholder ui-leftTop">            
+            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*密碼"><span>*密碼</span>
+            <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
+          </div>
+        </div>  
+        <div class="ui-form-white my-5">
+          <div class="ui-placeholder ui-leftTop">            
+            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*確認密碼"><span>*確認密碼</span>
+            <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
+          </div>
+        </div>      
 
         <div class="text-center">
-          <a id="loginBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">登入</a>
+          <a id="loginBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">立即加入</a>
           <span class="login-caution">繼續即表示您同意我們的 <a class="link-primary" href="">條款和條件</a> 以及 <a class="link-primary" href="">隱私權政策</a> 。</span>
-          <a type="button" class="d-block my-7 link-primary" href="admin-signin.html">- 管理員登入 -</a>
         </div>
       </div>
       
@@ -129,8 +152,8 @@
                 <div class="sitemap-g2 text-center text-md-start">
                     <h5 class="pb-4 fs-5 text-primary">客服與系統</h5>
                     <ul class="p-0">
-                    <li class="pb-2"><a class="fs-6 link-light" href=".html">錯誤回報</a></li>
-                    <li class="pb-2"><a class="fs-6 link-light" href=".html">網站後台管理</a></li>
+                    <li class="pb-2"><a class="fs-6 link-light" href="service.html">錯誤回報</a></li>
+                    <li class="pb-2"><a class="fs-6 link-light" href="admin/admin-login.html">網站後台管理</a></li>
                     </ul>
                 </div>
                 <div class="sitemap-g3 text-center text-md-start">
@@ -151,7 +174,8 @@
 </div>
 
     
-</footer>
+</footer>    <!-- validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     
   </body>
 </html>
