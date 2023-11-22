@@ -28,14 +28,14 @@
     </div>
     </div>
     
-    <section class="page-list-section container my-lg-13 d-lg-block d-lg-flex col-lg-3 col-md-6 col-10">
-      <div class="to-coach container my-lg-5 my-13">
+    <section class="container my-lg-13 d-lg-block col-lg-4 col-md-6 col-10">
+      <div class="to-coach my-13">
         <p>親愛的健身教練，</p>
         <p>
           感謝您對我們平台的興趣，我們非常期待您的加入。為了讓平台上的學員能更全面地瞭解您的專業背景和經歷，我們需要您提供相關資訊，在通過審核後，我們將特別為您準備一個展示平台，讓需要您協助的學員能更容易找到您。</p>
       </div>
 
-      <div id="loginForm" class="container my-lg-5 my-13">
+      <div id="loginForm" class="my-13">
         <div class="text-center">
           <h2 class="fw-bold mb-5">請先登入會員</h2>
           <p class="mb-10">還不是會員？ <a class="link-primary" href="register.html">免費註冊</a></p>
@@ -59,7 +59,7 @@
         </div>
       </div>     
 
-      <div id="coachAuditForm" class="container my-lg-5 my-13">
+      <div id="coachAuditForm" class="my-13">
         <div class="text-center">
           <h2 class="fw-bold mb-5">請協助填入以下資料</h2>
           <p class="text-start mb-10">以下填入資料將作為您的教練基本資料使用，待審核通過，您可以在教練中心編輯修改這些資料。</p>
@@ -77,11 +77,69 @@
           </div>
         </div>    
 
+        <h6 class="mt-5 mb-3">您的服務地區︰</h6>
+        <div class="form-check form-check-inline my-2">          
+          <input class="form-check-input" type="checkbox" id="region1" value="region1">
+          <label class="form-check-label" for="region1">北部</label>
+        </div>
+        <div class="form-check form-check-inline my-2">
+          <input class="form-check-input" type="checkbox" id="region2" value="region2">
+          <label class="form-check-label" for="region2">中部</label>
+        </div>
+        <div class="form-check form-check-inline my-2">
+          <input class="form-check-input" type="checkbox" id="region3" value="region3">
+          <label class="form-check-label" for="region3">南部</label>
+        </div>
+
+        <h6 class="mt-5 mb-3">相關證照︰</h6>
+        <div class="form-check form-check-inline my-2">          
+          <input class="form-check-input" type="checkbox" id="lisence1" value="lisence1">
+          <label class="form-check-label" for="lisence1">美國證照</label>
+        </div>
+        <div class="form-check form-check-inline my-2">
+          <input class="form-check-input" type="checkbox" id="lisence2" value="lisence2">
+          <label class="form-check-label" for="lisence2">中華民國證照</label>
+        </div>
+        <div class="form-check form-check-inline my-2">
+          <input class="form-check-input" type="checkbox" id="lisence3" value="lisence3">
+          <label class="form-check-label" for="lisence3">CPR 證照</label>
+        </div>
+        <div class="form-check form-check-inline my-2">
+          <input class="form-check-input" type="checkbox" id="lisence4" value="lisence4">
+          <label class="form-check-label" for="lisence4">AED 證照</label>
+        </div>        
+        <div class="form-check form-check-inline my-2">
+          <input class="form-check-input" type="checkbox" id="lisence5" value="lisence5">
+          <label class="form-check-label" for="lisence5">其他</label>
+        </div>
+
+        <h6 class="mt-5 mb-3">上傳證照影本︰</h6>
+        <div class="mb-3">
+          <input class="form-control" type="file" id="formFile">
+        </div>
+        
+        <h6 class="mt-5 mb-3">上傳教練形象照片︰</h6>
+        <div class="mb-3">
+          <input class="form-control" type="file" id="formFile">
+        </div>
+
+        <h6 class="mt-5 mb-3">教練簡介內容︰<span class="d-block fs-6 fw-normal">請提供200字以內的自我介紹，讓學生能夠快速認識您</span></h6>
+        
+        <div class="mb-3">
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2"></label>
+          </div>
+        </div>
+
+
         <div class="text-center">
-          <a id="loginBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">登入</a>
+          <a id="loginBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">確認送出</a>
           <span class="login-caution">繼續即表示您同意我們的 <a class="link-primary" href="">條款和條件</a> 以及 <a class="link-primary" href="">隱私權政策</a> 。</span>
         </div>
+        
       </div>    
+      
       
 
     </section>
