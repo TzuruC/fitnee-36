@@ -1,0 +1,14 @@
+.article-title{
+    font-size: 36px !important;
+    @include pad{
+        font-size: 20px !important;
+    }
+}
+.article-content{
+    line-height: 2;
+    font-size: 20px;
+    letter-spacing: 2px;
+    @include pad{
+        font-size: 16px;
+    }
+}
