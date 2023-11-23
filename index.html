@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>#36 FitNee 訓練助理</title>
-      <script type="module" crossorigin src="/fitnee-36/assets/main-98d541b3.js"></script>
-      <link rel="stylesheet" href="/fitnee-36/assets/main-9133c55a.css">
+      <script type="module" crossorigin src="/fitnee-36/assets/main-ebf5bc01.js"></script>
+      <link rel="stylesheet" href="/fitnee-36/assets/main-c6b91075.css">
     </head>
     <body>
         <div class="wrapper">
@@ -70,13 +70,13 @@
                             <img class="d-none d-sm-block"
                                 src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/hero-lg.png" alt="banner-bg"/>
                             <img class="d-sm-none d-block" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/hero-sm.png" alt="banner-bg">
-                            <div class="carousel-caption">
-                                <div class="hero banner-slogan-1 mb-md-14 mb-10" data-aos="fade-up" data-aos-duration="800">
-                                    <span class="fw-bold mb-4d-lg-inline d-block" data-aos="fade-up" data-aos-duration="500">健身訓練不只是習慣</span>
-                                    <span class="fw-bold d-lg-inline d-block ms-lg-11" data-aos-delay="100">更是<span class="heilights">生</span><span class="heilights">活</span><span class="heilights">態</span><span class="heilights">度</span></span>
+                            <div class="carousel-caption p-0">
+                                <div class="hero banner-slogan-1 mb-md-14 mb-10" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
+                                    <span class="fw-bold mb-4d-lg-inline d-block" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">健身訓練不只是習慣</span>
+                                    <span class="fw-bold d-lg-inline d-block ms-lg-11" data-aos-delay="100" data-aos-once="true">更是<span class="heilights">生</span><span class="heilights">活</span><span class="heilights">態</span><span class="heilights">度</span></span>
                                 </div>
-                                <div data-aos="fade-up" class="fs-1 fs-md-5 mb-md-7 mb-0">承續您追求健康的堅持</div>
-                                <div data-aos="fade-up" class="fs-md-4 fs-6 mb-md-11 mb-6">FITNEE訓練助理 <span class="ms-md-0 ms-4 d-inline">助您打造合適訓練品質</span></div>
+                                <div data-aos="fade-up" data-aos-once="true" class="banner-slogan-2 mb-md-7 mb-4">承續您追求健康的堅持</div>
+                                <div data-aos="fade-up" data-aos-once="true" class="banner-slogan-3 mb-md-11 mb-6">FITNEE訓練助理 <span class="banner-slogan-3 ms-lg-4 d-inline">助您打造合適訓練品質</span></div>
                                 <div data-aos="fade-up" class="text-center">
                                     <div class="breath-light btn btn-outline-primary rounded-1 fs-4 px-9 py-3">立刻諮詢</div>
                                 </div>
@@ -88,27 +88,35 @@
             </section>
 
             <!-- Coach -->
-            <section data-aos="fade-up" data-aos-once="true" class="coach py-14">
+            <section data-aos="fade-up" data-aos-once="true" class="coach py-lg-14 py-9">
                 <div class="container d-flex flex-column align-items-center">
                     <div class="title-group">
-                        <h3 class="title text-center mb-10" data-aos="fade-up" data-aos-once="true">專業教練</h3>
-                        <p class="m-0 text-center fs-5" data-aos="fade-up" data-aos-once="true" data-aos-duration="500">挑戰自我，我們一路支持您</p>
+                        <h3 class="title text-center mb-lg-10 mb-7" data-aos="fade-up" data-aos-once="true">專業教練</h3>
+                        <p class="m-0 text-center fs-lg-5 fs-6" data-aos="fade-up" data-aos-once="true" data-aos-duration="500">挑戰自我，我們一路支持您</p>
                     </div>
-                    <div class="coach-filter-system w-100 mb-6 d-md-flex flex-row justify-content-between align-items-center">
-                        <ul class="coach-filter list-unstyled d-md-flex m-0">
-                            <li data-aos="fade-left" data-aos-delay="50" data-aos-once="true" class="filter-btn text-white active">體態調整</li>
-                            <li data-aos="fade-left" data-aos-delay="100" data-aos-once="true" data-aos-duration="500" class="filter-btn text-white ">增肌減脂</li>
-                            <li data-aos="fade-left" data-aos-delay="150" data-aos-once="true" data-aos-duration="750" class="filter-btn text-white ">運動訓練</li>
-                        </ul>
-                        <div class="search-box d-flex justify-content-between align-items-center" data-aos="fade-left" data-aos-delay="150" data-aos-once="true" data-aos-duration="780">
+
+                    <div class="coach-filter-system mb-lg-6 mb-lg-5 d-lg-flex justify-content-between align-items-center">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper ms-lg-0 me-lg-auto">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide filter-btn text-white active" data-aos="fade-left" data-aos-delay="50" data-aos-once="true">體態調整</div>
+                                <div class="swiper-slide filter-btn text-white" data-aos="fade-left" data-aos-delay="100" data-aos-once="true" data-aos-duration="500">增肌減脂</div>
+                                <div class="swiper-slide filter-btn text-white" data-aos="fade-left" data-aos-delay="150" data-aos-once="true" data-aos-duration="750">運動訓練</div>
+                                <div class="swiper-slide"></div>
+                                <div class="swiper-slide"></div>
+                            </div>
+                        </div>
+                        <!-- 搜尋欄 -->
+                        <div class="search-box mb-5 mb-lg-0 d-flex justify-content-between align-items-center" data-aos="fade-left" data-aos-delay="150" data-aos-once="true" data-aos-duration="780">
                             <span class="material-symbols-outlined">
                                 search
                                 </span>
-                            <input type="search" class="form-control" placeholder="搜尋" aria-label="Search" aria-describedby="search-addon" />
+                            <input type="search" class="form-control mb-0" placeholder="搜尋" aria-label="Search" aria-describedby="search-addon" />
                         </div>
-                    </div>
-                    <ul class="coach-cards w-100 list-unstyled d-md-flex justify-content-between">
-                        <li class="coach-card" data-aos="flip-left" data-aos-delay="50" data-aos-once="true">
+                    </div>                    
+
+                    <ul class="coach-cards w-100 list-unstyled d-flex justify-content-between flex-lg-row flex-column">
+                        <li class="coach-card mb-lg-0 mb-7" data-aos="flip-left" data-aos-delay="50" data-aos-once="true">
                             <a href="#">
                             <div class="img-gradient">
                                 <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach1.png" alt="coach1" />
@@ -119,7 +127,7 @@
                             </div>
                             </a>
                         </li>
-                        <li class="coach-card" data-aos="flip-left" data-aos-delay="150" data-aos-once="true">
+                        <li class="coach-card mb-lg-0 mb-7" data-aos="flip-left" data-aos-delay="150" data-aos-once="true">
                             <a href="#">
                             <div class="img-gradient">
                                 <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach2.png" alt="coach2" />
@@ -130,7 +138,7 @@
                             </div>
                             </a>
                         </li>
-                        <li class="coach-card" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
+                        <li class="coach-card mb-lg-0 mb-7" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
                             <a href="#">
                             <div class="img-gradient">
                                 <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach3.png" alt="coach3" />
@@ -141,7 +149,7 @@
                             </div>
                             </a>
                         </li>
-                        <li class="coach-card" data-aos="flip-left" data-aos-delay="350" data-aos-once="true">
+                        <li class="coach-card mb-lg-0 mb-7" data-aos="flip-left" data-aos-delay="350" data-aos-once="true">
                             <a href="#">
                             <div class="img-gradient">
                                 <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach4.png" alt="coach4" />
@@ -156,41 +164,41 @@
                 </div>
             </section>
             <section class="coach-slogan">
-                <div class="container text-white text-center py-14" data-aos="fade-up" data-aos-once="true" data-aos="fade-up" data-aos-duration="800">
-                    <span class="px-5 d-lg-inline d-block">堅持不懈自己的選擇</span><span class="px-5 d-lg-inline d-block">讓身體追上心裡的強悍</span>
+                <div class="container text-white text-center py-lg-14 py-9" data-aos="fade-up" data-aos-once="true" data-aos="fade-up" data-aos-duration="800">
+                    <span class="mb-7 mb-lg-0 d-lg-inline d-block">堅持不懈自己的選擇</span><span class="ms-lg-9 d-lg-inline d-block">讓身體追上心裡的強悍</span>
                 </div>
             </section>
 
             <!-- FitNee Helper -->
-            <section class="fitneehelper pt-14">
+            <section class="fitneehelper pt-lg-14 pt-9">
                 <div class="container d-flex flex-column align-items-center">
                     <div class="title-group">
-                        <h3 class="title text-center text-white mb-10" data-aos="fade-up" data-aos-once="true">訓練幫手</h3>
-                        <p class="m-0 text-center fs-5 text-white" data-aos="fade-up" data-aos-once="true" data-aos-duration="500">幫助您輕鬆組織有效訓練</p>
+                        <h3 class="title text-center text-white mb-lg-10 mb-7" data-aos="fade-up" data-aos-once="true">訓練幫手</h3>
+                        <p class="m-0 text-center text-white" data-aos="fade-up" data-aos-once="true" data-aos-duration="500">幫助您輕鬆組織有效訓練</p>
                     </div>
-                    <div class="w-100 d-flex justify-content-between align-items-center">
+                    <div class="w-100 px-lg-0 px-7 d-flex justify-content-between align-items-center flex-lg-row flex-column">
                         <div class="fitnee-content">
                             <ul class="list-unstyled">
-                                <li class="mb-10 d-flex" data-aos="fade-left" data-aos-delay="50" data-aos-once="true" data-aos-anchor=".fitnee-content">
+                                <li class="mb-lg-10 mb-5 d-flex" data-aos="fade-left" data-aos-delay="50" data-aos-once="true" data-aos-anchor=".fitnee-content">
                                     <span class="material-symbols-outlined text-primary">done</span> 
-                                    <p class="text-primary fs-4">
+                                    <p class="text-primary mb-0">
                                         快速建立訓練菜單<span class="mt-2 d-block text-white">全自定義的訓練項目，自主訓練不卡卡</span>
                                     </p>                                    
                                 </li>
-                                <li class="mb-10 d-flex" data-aos="fade-left" data-aos-delay="150" data-aos-once="true" data-aos-anchor=".fitnee-content">
+                                <li class="mb-lg-10 mb-5 d-flex" data-aos="fade-left" data-aos-delay="150" data-aos-once="true" data-aos-anchor=".fitnee-content">
                                     <span class="material-symbols-outlined text-primary">done</span> 
-                                    <p class="text-primary fs-4">
+                                    <p class="text-primary mb-0">
                                         維持訓練專注品質<span class="mt-2 d-block text-white">重量組數輕鬆記，組間休息輕鬆設定</span>
                                     </p>                                    
                                 </li>
-                                <li class="mb-10 d-flex" data-aos="fade-left" data-aos-delay="250" data-aos-once="true" data-aos-anchor=".fitnee-content">
+                                <li class="mb-lg-10 mb-5 d-flex" data-aos="fade-left" data-aos-delay="250" data-aos-once="true" data-aos-anchor=".fitnee-content">
                                     <span class="material-symbols-outlined text-primary">done</span>
-                                    <p class="text-primary fs-4">
+                                    <p class="text-primary mb-0">
                                         安排訓練有效率<span class="mt-2 d-block text-white">視圖檢視訓練肌群，訓練重點清晰好懂</span>
                                     </p>                                    
                                 </li>                                
                                 <div class="text-center">
-                                    <div class="btn ms-2 btn-outline-primary rounded-1 fs-4 px-9 py-3">立即免費體驗</div>
+                                    <div class="btn ms-2 btn-outline-primary rounded-1 fs-4 px-9 py-3 my-lg-0 my-5">立即免費體驗</div>
                                 </div>
                             </ul>
                         </div>
@@ -203,45 +211,45 @@
             </section>
 
             <!-- Article -->
-            <section data-aos="fade-up" data-aos-once="true" class="article py-14">
+            <section data-aos="fade-up" data-aos-once="true" class="article py-lg-14 py-9">
                 <div class="container d-flex flex-column align-items-center">
                     <div class="title-group">
-                        <h3 class="title text-center mb-10" data-aos="fade-up" data-aos-once="true">精選文章</h3>
-                        <p class="m-0 text-center fs-5" data-aos="fade-up" data-aos-once="true" data-aos-duration="500">掌握訓練品質，給您最多元的支持</p>
+                        <h3 class="title text-center mb-lg-10 mb-7" data-aos="fade-up" data-aos-once="true">精選文章</h3>
+                        <p class="m-0 text-center fs-lg-5 fs-6" data-aos="fade-up" data-aos-once="true" data-aos-duration="500">掌握訓練品質，給您最多元的支持</p>
                     </div>
-                    <ul class="article-filter list-unstyled d-md-flex text-center">
+                    <ul class="article-filter list-unstyled d-flex text-center">
                         <li class="border-end" data-aos="fade-left" data-aos-delay="50" data-aos-once="true"><a class="link-primary active" href="#">最新消息</a></li>
                         <li class="border-end" data-aos="fade-left" data-aos-delay="100" data-aos-once="true" data-aos-duration="500"><a class="" href="#">訓練知識</a></li>
                         <li class="" data-aos="fade-left" data-aos-delay="150" data-aos-once="true" data-aos-duration="750"><a class="" href="#">學員心得</a></li>
                     </ul>
-                    <ul class="article-cards mb-12 list-unstyled d-md-flex justify-content-between">
-                        <li class="article-card" data-aos="flip-left" data-aos-delay="50" data-aos-once="true">
+                    <ul class="article-cards mb-lg-12 mb-9 list-unstyled d-md-flex justify-content-between">
+                        <li class="article-card mb-7" data-aos="flip-left" data-aos-delay="50" data-aos-once="true">
                             <a href="#">
-                                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article1.png" alt="article1" />
+                                <img class="" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article1.png" alt="article1" />
                                 <div class="article-caption mt-6">
                                 <h4 class="mb-2 fs-4 link-dark">重訓新手菜單規劃要點</h4>
                                 <p class="mb-2 fs-5 text-dark">重訓對新手來說是一個激勵人心的開始。這裡有幾個關鍵要點，協...</p>
-                                <p class="fs-5 text-dark">2023/11/27</p>            
+                                <p class="fs-5 text-dark mb-0">2023/11/27</p>            
                                 </div>          
                             </a>
                         </li>
-                        <li class="article-card" data-aos="flip-left" data-aos-delay="150" data-aos-once="true">
+                        <li class="article-card mb-7" data-aos="flip-left" data-aos-delay="150" data-aos-once="true">
                             <a href="#">
-                                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article2.png" alt="article2" />
+                                <img class="" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article2.png" alt="article2" />
                                 <div class="article-caption mt-6">
                                 <h4 class="mb-2 fs-4 link-dark">增肌減脂五個重要步驟</h4>
                                 <p class="mb-2 fs-5 text-dark">增肌減脂是健身的重要目標之一，這需要一個綜合的方法。以下是...</p>
-                                <p class="fs-5 text-dark">2023/11/25</p>            
+                                <p class="fs-5 text-dark mb-0">2023/11/25</p>            
                                 </div>             
                             </a>
                         </li>
-                        <li class="article-card" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
+                        <li class="article-card mb-7" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
                             <a href="#">
-                                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article3.png" alt="article3" />  
+                                <img class="" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article3.png" alt="article3" />  
                                 <div class="article-caption mt-6">
                                 <h4 class="mb-2 fs-4 link-dark">重訓減肥的迷思</h4>
                                 <p class="mb-2 fs-5 text-dark">重訓減肥是一種有效的健身方式，但它充滿了許多常見的迷思。解...</p>
-                                <p class="fs-5 text-dark">2023/11/20</p>            
+                                <p class="fs-5 text-dark mb-0">2023/11/20</p>            
                             </div>          
                             </a>
                         </li>
@@ -251,7 +259,7 @@
                                 <div class="article-caption mt-6">
                                 <h4 class="mb-2 fs-4 link-dark">先重訓還是先有氧</h4>
                                 <p class="mb-2 fs-5 text-dark">是先重訓還是先進行有氧運動？這個問題經常讓人困惑。答案並不...</p>
-                                <p class="fs-5 text-dark">2023/11/11</p>            
+                                <p class="fs-5 text-dark mb-0">2023/11/11</p>            
                                 </div>    
                             </a>          
                         </li>
@@ -314,7 +322,15 @@
         <script>
             AOS.init();            
         </script>
-
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+            watchSlidesProgress: true,
+            slidesPerView: 3,
+            });
+        </script>
         <!-- customized js -->
         
     </body>
