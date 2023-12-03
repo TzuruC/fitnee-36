@@ -1,128 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>#36 FitNee - 訓練幫手</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
-    <!-- Page Banner -->
-    <div class="page-banner pt-12 pb-5 justify-content-between">
-      <div class="container py-lg-11">
-        <div class="d-lg-flex d-block justify-content-between">
-      <h2 class="fs-3 text-primary">專業教練 <span class="fs-5">/</span></h2>
-      <p class="fs-6 text-white text-end">
-        堅持不懈自己的選擇
-        <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
-      </p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>#36 FitNee - 訓練幫手</title>
+    </head>
+    <body>
+        <%- include('./layout/header'); -%>
+        <!-- Page Banner -->
+        <div class="page-banner pt-12 pb-5 justify-content-between">
+            <div class="container py-lg-11">
+                <div class="d-lg-flex d-block justify-content-between">
+                    <h2 class="fs-3 text-primary">專業教練 <span class="fs-5">/</span></h2>
+                    <p class="fs-6 text-white text-end">
+                        堅持不懈自己的選擇
+                        <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
+                    </p>
+                </div>
+                <div class="page-search-box d-flex d-lg-none justify-content-between align-items-center">
+                    <span class="material-symbols-outlined"> search </span>
+                    <input
+                        type="search"
+                        class="form-control"
+                        placeholder="搜尋專業教練"
+                        aria-label="Search"
+                        aria-describedby="search-addon"
+                    />
+                </div>
+            </div>
         </div>
-      <div class="page-search-box d-flex d-lg-none justify-content-between align-items-center">
-        <span class="material-symbols-outlined">
-            search
-            </span>
-        <input type="search" class="form-control" placeholder="搜尋專業教練" aria-label="Search" aria-describedby="search-addon" />
-      </div>
-    </div>
-    </div>
 
-    <!-- Fitnee App -->
-    <div class="container">
-      <div id="fitneehelper" class="fitneehelper-app text-center">
+        <!-- Fitnee App -->
+        <div class="container">
+            <div id="fitneehelper" class="fitneehelper-app text-center">
+                <!-- ##1 welcome -->
+                <!-- <div class="fn-welcome py-13">
+                    <span class="d-block fs-4">歡迎使用</span><span class="d-block mb-7 fs-4">FitNee</span>
+                    <h3 class="mb-10 welcome">訓練幫手</h3>
+                    <span class="d-block mb-10 fs-6">輕鬆組織您的訓練內容</span>
+                    <span class="d-block date-today">今天日期︰2023/11/02</span>
+                    <a id="loginBtn" type="button" class="my-3 py-5 btn btn-primary text-white col-8" href="index.html">立即開始訓練</a>
+                  </div> -->
 
-        <!-- ##1 welcome -->
-        <!-- <div class="fn-welcome py-13">
-          <span class="d-block fs-4">歡迎使用</span><span class="d-block mb-7 fs-4">FitNee</span>
-          <h3 class="mb-10 welcome">訓練幫手</h3>
-          <span class="d-block mb-10 fs-6">輕鬆組織您的訓練內容</span>
-          <span class="d-block date-today">今天日期︰2023/11/02</span>
-          <a id="loginBtn" type="button" class="my-3 py-5 btn btn-primary text-white col-8" href="index.html">立即開始訓練</a>
-        </div> -->
-
-        <!-- ##2 新增 -->
-        <!-- <div class="fn-on-traning py-6">
-          <h3 class="text-start mb-5">訓練幫手</h3>
-          <div id="fitneehelperApp" class="fitneehelper-app text-center">
-            <div class="no-train">
-              <span class="mb-5 d-block fs-12">目前沒有訓練項目</span>
-              <a id="loginBtn" type="button" class="my-3 fs-6 py-2 btn btn-outline-primary rounded-pill col-12" href="index.html">+ 新增訓練項目</a>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- ##3 正在新增 -->
-        <div class="fn-add-new-traning py-6">
-          <h3 class="text-start mb-5">訓練幫手</h3>
-          <div id="fitneehelperApp" class="fitneehelper-app">
-            <div class="add-new-train p-3 border border-secondary rounded-3">
-              <span class="mb-3 d-block fs-6 text-start">+ 新的訓練項目</span>
-              <!-- 名稱 -->
-              <input class="mb-3 form-control" type="text" placeholder="訓練項目名稱">
-              <!-- 訓練部位 -->
-              <div class="row">
-                <div class="col-6 mb-3">
-                  <label class="visually-hidden" for="specificSizeSelect">Preference</label>
-                  <select class="form-select" id="specificSizeSelect">
-                    <option selected>選擇訓練部位</option>
-                    <option value="1">手部</option>
-                    <option value="2">腿部</option>
-                    <option value="3">核心</option>
-                    <option value="4">- 刪除 -</option>
-                  </select>
-                </div>
-                <div class="col-6 mb-3">
-                  <label class="visually-hidden" for="specificSizeSelect">Preference</label>
-                  <select class="form-select" id="specificSizeSelect">
-                    <option selected>選擇訓練部位</option>
-                    <option value="1">手部</option>
-                    <option value="2">腿部</option>
-                    <option value="3">核心</option>
-                    <option value="4">- 刪除 -</option>
-                  </select>
-                </div>
-
-
-                <form class="row gx-3 gy-2 align-items-center">
-                  <div class="col-2">
-                    <label class="form-check-label text-end" for="autoSizingCheck2">
-                      每組
-                    </label>                    
-                  </div>
-                  <div class="col-3">
-                    <input type="text" class="form-control rounded-pill" id="specificSizeInputName" placeholder="">
-                  </div>
-                  <div class="col-2">
-                    <label class="form-check-label text-end" for="autoSizingCheck2">
-                      KG
-                    </label>                    
-                  </div>
-                  <div class="col-3">
-                    <input type="text" class="form-control rounded-pill" id="specificSizeInputName" placeholder="">
-                  </div>
-                  <div class="col-2">
-                    <label class="form-check-label text-end" for="autoSizingCheck2">
-                      次
-                    </label>                    
-                  </div>
-                  <div class="text-center">
-                    <button type="button" class="my-3 fs-6 py-2 btn btn-outline-primary rounded-3 col-12" href="index.html">+ 新增訓練項目</button>
-                  </div>
-                </form>
-
-
-              </div>
-            </div>
-            <a id="loginBtn" type="button" class="my-3 fs-6 py-2 btn btn-outline-primary rounded-pill col-12" href="index.html">+ 新增訓練項目</a>
-          </div>
+                <!-- ##2 新增 -->
+                <!-- <div class="fn-on-traning py-6">
+      <h3 class="text-start mb-5">訓練幫手</h3>
+      <div id="fitneehelperApp" class="fitneehelper-app text-center">
+        <div class="no-train">
+          <span class="mb-5 d-block fs-12">目前沒有訓練項目</span>
+          <a id="loginBtn" type="button" class="my-3 fs-6 py-2 btn btn-outline-primary rounded-pill col-12" href="index.html">+ 新增訓練項目</a>
         </div>
       </div>
-    </div>
+    </div> -->
 
+                <!-- ##3 正在新增 -->
+                <div class="fn-add-new-traning py-6">
+                    <h3 class="text-start mb-5">訓練幫手</h3>
+                    <div id="fitneehelperApp" class="fitneehelper-app">
+                        <div class="add-new-train p-3 border border-secondary rounded-3">
+                            <span class="mb-3 d-block fs-6 text-start">+ 新的訓練項目</span>
+                            <!-- 名稱 -->
+                            <input class="mb-3 form-control" type="text" placeholder="訓練項目名稱" />
+                            <!-- 訓練部位 -->
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+                                    <select class="form-select" id="specificSizeSelect">
+                                        <option selected>選擇訓練部位</option>
+                                        <option value="1">手部</option>
+                                        <option value="2">腿部</option>
+                                        <option value="3">核心</option>
+                                        <option value="4">- 刪除 -</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+                                    <select class="form-select" id="specificSizeSelect">
+                                        <option selected>選擇訓練部位</option>
+                                        <option value="1">手部</option>
+                                        <option value="2">腿部</option>
+                                        <option value="3">核心</option>
+                                        <option value="4">- 刪除 -</option>
+                                    </select>
+                                </div>
 
+                                <form class="row gx-3 gy-2 align-items-center">
+                                    <div class="col-2">
+                                        <label class="form-check-label text-end" for="autoSizingCheck2"> 每組 </label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input
+                                            type="text"
+                                            class="form-control rounded-pill"
+                                            id="specificSizeInputName"
+                                            placeholder=""
+                                        />
+                                    </div>
+                                    <div class="col-2">
+                                        <label class="form-check-label text-end" for="autoSizingCheck2"> KG </label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input
+                                            type="text"
+                                            class="form-control rounded-pill"
+                                            id="specificSizeInputName"
+                                            placeholder=""
+                                        />
+                                    </div>
+                                    <div class="col-2">
+                                        <label class="form-check-label text-end" for="autoSizingCheck2"> 次 </label>
+                                    </div>
+                                    <div class="text-center">
+                                        <button
+                                            type="button"
+                                            class="my-3 fs-6 py-2 btn btn-outline-primary rounded-3 col-12"
+                                            href="index.html"
+                                        >
+                                            + 新增訓練項目
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="add-new-train p-3 border border-secondary rounded-3">
+                            <span class="mb-3 d-block fs-6 text-start">+ 新的訓練項目</span>
+                            <!-- 名稱 -->
+                            <input class="mb-3 form-control" type="text" placeholder="訓練項目名稱" />
+                            <!-- 訓練部位 -->
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+                                    <select class="form-select" id="specificSizeSelect">
+                                        <option selected>選擇訓練部位</option>
+                                        <option value="1">手部</option>
+                                        <option value="2">腿部</option>
+                                        <option value="3">核心</option>
+                                        <option value="4">- 刪除 -</option>
+                                    </select>
+                                </div>
+                                <div class="col-6 mb-3">
+                                    <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+                                    <select class="form-select" id="specificSizeSelect">
+                                        <option selected>選擇訓練部位</option>
+                                        <option value="1">手部</option>
+                                        <option value="2">腿部</option>
+                                        <option value="3">核心</option>
+                                        <option value="4">- 刪除 -</option>
+                                    </select>
+                                </div>
 
-    <%- include('./layout/footer'); -%>
+                                <form class="row gx-3 gy-2 align-items-center">
+                                    <div class="col-2">
+                                        <label class="form-check-label text-end" for="autoSizingCheck2"> 每組 </label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input
+                                            type="text"
+                                            class="form-control rounded-pill"
+                                            id="specificSizeInputName"
+                                            placeholder=""
+                                        />
+                                    </div>
+                                    <div class="col-2">
+                                        <label class="form-check-label text-end" for="autoSizingCheck2"> KG </label>
+                                    </div>
+                                    <div class="col-3">
+                                        <input
+                                            type="text"
+                                            class="form-control rounded-pill"
+                                            id="specificSizeInputName"
+                                            placeholder=""
+                                        />
+                                    </div>
+                                    <div class="col-2">
+                                        <label class="form-check-label text-end" for="autoSizingCheck2"> 次 </label>
+                                    </div>
+                                    <div class="text-center">
+                                        <button
+                                            type="button"
+                                            class="my-3 fs-6 py-2 btn btn-outline-primary rounded-3 col-12"
+                                            href="index.html"
+                                        >
+                                            + 新增訓練項目
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <a
+                            id="loginBtn"
+                            type="button"
+                            class="my-3 fs-6 py-2 btn btn-outline-primary rounded-pill col-12"
+                            href="index.html"
+                            >+ 新增訓練項目</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+        <%- include('./layout/footer'); -%>
+
+        <script type="module" src="../main.js"></script>
+    </body>
 </html>
