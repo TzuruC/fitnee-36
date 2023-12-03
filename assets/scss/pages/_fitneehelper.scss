@@ -10,3 +10,14 @@
 .fs-12{
     font-size: 12px;
 }
+
+.input-bg-25{
+    background-color: #fff8e6;
+}
+
+.squad-unit{
+    border-top: 1px dashed $primary;
+    input{
+        width: 60px;
+    }
+}
