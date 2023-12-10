@@ -172,46 +172,20 @@
                         <li class="" data-aos="fade-left" data-aos-delay="150" data-aos-once="true" data-aos-duration="750"><a class="" href="#">學員心得</a></li>
                     </ul>
                     <ul class="article-cards mb-lg-12 mb-9 list-unstyled d-md-flex justify-content-between">
-                        <li class="article-card mb-7" data-aos="flip-left" data-aos-delay="50" data-aos-once="true">
-                            <a href="#">
-                                <img class="" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article1.png" alt="article1" />
-                                <div class="article-caption mt-6">
-                                <h4 class="mb-2 fs-4 link-dark">重訓新手菜單規劃要點</h4>
-                                <p class="mb-2 fs-5 text-dark">重訓對新手來說是一個激勵人心的開始。這裡有幾個關鍵要點，協...</p>
-                                <p class="fs-5 text-dark mb-0">2023/11/27</p>            
-                                </div>          
-                            </a>
-                        </li>
-                        <li class="article-card mb-7" data-aos="flip-left" data-aos-delay="150" data-aos-once="true">
-                            <a href="#">
-                                <img class="" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article2.png" alt="article2" />
-                                <div class="article-caption mt-6">
-                                <h4 class="mb-2 fs-4 link-dark">增肌減脂五個重要步驟</h4>
-                                <p class="mb-2 fs-5 text-dark">增肌減脂是健身的重要目標之一，這需要一個綜合的方法。以下是...</p>
-                                <p class="fs-5 text-dark mb-0">2023/11/25</p>            
-                                </div>             
-                            </a>
-                        </li>
-                        <li class="article-card mb-7" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
-                            <a href="#">
-                                <img class="" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article3.png" alt="article3" />  
-                                <div class="article-caption mt-6">
-                                <h4 class="mb-2 fs-4 link-dark">重訓減肥的迷思</h4>
-                                <p class="mb-2 fs-5 text-dark">重訓減肥是一種有效的健身方式，但它充滿了許多常見的迷思。解...</p>
-                                <p class="fs-5 text-dark mb-0">2023/11/20</p>            
-                            </div>          
-                            </a>
-                        </li>
-                        <li class="article-card" data-aos="flip-left" data-aos-delay="350" data-aos-once="true">
-                            <a href="#">
-                                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article4.png" alt="article4" />
-                                <div class="article-caption mt-6">
-                                <h4 class="mb-2 fs-4 link-dark">先重訓還是先有氧</h4>
-                                <p class="mb-2 fs-5 text-dark">是先重訓還是先進行有氧運動？這個問題經常讓人困惑。答案並不...</p>
-                                <p class="fs-5 text-dark mb-0">2023/11/11</p>            
-                                </div>    
-                            </a>          
-                        </li>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#fff;display:block;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                            <rect x="17.5" y="30" width="15" height="40" fill="#996f05">
+                              <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="18;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
+                              <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="64;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
+                            </rect>
+                            <rect x="42.5" y="30" width="15" height="40" fill="#d79c05">
+                              <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
+                              <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
+                            </rect>
+                            <rect x="67.5" y="30" width="15" height="40" fill="#f6bd2c">
+                              <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+                              <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+                            </rect>
+                            </svg>
                     </ul>
                     <div class="text-center" data-aos="fade-up" data-aos-duration="500" data-aos-anchor=".article-filter">
                         <div class="btn ms-2 btn-outline-primary rounded-1 fs-4 px-9 py-3">更多精選文章</div>
@@ -237,7 +211,10 @@
             slidesPerView: 3,
             });
         </script>
+        <!-- axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
         <!-- customized js -->
         <script type="module" src="../main.js"></script>
+        <script type="module" src="../assets/js/index.js"></script>
     </body>
 </html>

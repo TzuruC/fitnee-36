@@ -97,8 +97,21 @@
       "id": 10
     }
   ],
-  "coaches": [],
-  "admins": [],
+  "coaches": [
+    {
+      "id": 1,
+      "userId":1,
+      "conacCert":"",
+      "coachExp":"",
+      "coachTalent":"",
+      "coachName":"吳俊宏",
+      "coachContact":"",
+      "coachPricingNTD":2000,
+      "coachServeArea":"北部",
+      "coachProfile":"",
+      "coachPhoto":""
+    }
+  ],
   "fitnesses": [],
   "services": [
     {
@@ -190,7 +203,7 @@
       "articleCategory": "增肌減脂",
       "articleAuther": "(William) 賴威廉",
       "articleCreatTime": "2023/07/29",
-      "articleCoverImg": "",
+      "articleCoverImg": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article1.png",
       "articlePublic": true
     },
     {
@@ -200,7 +213,7 @@
       "articleCategory": "增肌減脂",
       "articleAuther": "王敏達",
       "articleCreatTime": "2022/04/15",
-      "articleCoverImg": "",
+      "articleCoverImg": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article2.png",
       "articlePublic": true
     },
     {
@@ -210,7 +223,7 @@
       "articleCategory": "增肌減脂",
       "articleAuther": "黃強教練",
       "articleCreatTime": "2021/10/08",
-      "articleCoverImg": "",
+      "articleCoverImg": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article3.png",
       "articlePublic": true
     },
     {
@@ -220,7 +233,7 @@
       "articleCategory": "運動訓練",
       "articleAuther": "李良明",
       "articleCreatTime": "2023/05/12",
-      "articleCoverImg": "",
+      "articleCoverImg": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article4.png",
       "articlePublic": true
     },
     {
