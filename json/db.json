@@ -112,7 +112,7 @@
       "coachPhoto":""
     }
   ],
-  "fitnesses": [],
+  "healthes": [],
   "services": [
     {
       "id": 1,
@@ -243,7 +243,7 @@
       "articleCategory": "學員心得",
       "articleAuther": "Johnny",
       "articleCreatTime": "2022/08/03",
-      "articleCoverImg": "",
+      "articleCoverImg": "https://placehold.jp/231E10/D79C05/306x260.png",
       "articlePublic": true
     },
     {
@@ -253,7 +253,7 @@
       "articleCategory": "體態調整",
       "articleAuther": "李良明",
       "articleCreatTime": "2023/11/17",
-      "articleCoverImg": "",
+      "articleCoverImg": "https://placehold.jp/231E10/D79C05/306x260.png",
       "articlePublic": true
     },
     {
@@ -263,7 +263,7 @@
       "articleCategory": "增肌減脂",
       "articleAuther": "陳志偉",
       "articleCreatTime": "2020/12/25",
-      "articleCoverImg": "",
+      "articleCoverImg": "https://placehold.jp/231E10/D79C05/306x260.png",
       "articlePublic": false
     },
     {
@@ -273,7 +273,7 @@
       "articleCategory": "運動訓練",
       "articleAuther": "李良明",
       "articleCreatTime": "2023/02/09",
-      "articleCoverImg": "",
+      "articleCoverImg": "https://placehold.jp/231E10/D79C05/306x260.png",
       "articlePublic": true
     },
     {
@@ -283,7 +283,7 @@
       "articleCategory": "強健身體",
       "articleAuther": "王妙娥",
       "articleCreatTime": "2021/06/30",
-      "articleCoverImg": "",
+      "articleCoverImg": "https://placehold.jp/231E10/D79C05/306x260.png",
       "articlePublic": true
     },
     {
@@ -293,14 +293,23 @@
       "articleCategory": "增肌減脂",
       "articleAuther": "王敏達",
       "articleCreatTime": "2022/09/21",
-      "articleCoverImg": "",
+      "articleCoverImg": "https://placehold.jp/231E10/D79C05/306x260.png",
       "articlePublic": true
     }
   ],
   "restTimes": [],
-  "trainings": [],
-  "trainTargets": [],
-  "trainGroups": [],
+  "trainings": [
+    {
+      "id":"1",
+      "userId":"1",
+      "trainName":"深蹲",
+      "trainWeight":50,
+      "trainTimesPerSet":10,
+      "trainSets":5,
+      "trainTarget":"腿部",
+      "trainCategory":"基礎訓練"
+    }
+  ],
   "muscleImgs": [
     {
       "id": 1,
