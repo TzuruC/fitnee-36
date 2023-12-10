@@ -1,5 +1,3 @@
-const { forEach } = require("json-server-auth");
-
 const api_url="http://localhost:3000";
 
 // 畫面初始化
@@ -20,6 +18,7 @@ const coachData = [];
 //     console.log(error);
 //   })
 
+
 // 取得文章列表
 const articleCards = document.querySelector('.article-cards');
 let articleData = [];
@@ -39,20 +38,13 @@ function getArticles(){
 }
 
 function renderArticleHTML(i) {
-  return `
-      <li class="article-card mb-7" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
+  return `<li class="article-card mb-7" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
         <a href="#">
-            <img class="" src="${articleData[i].articleCoverImg}" alt="${
-    articleData[i].articleName
-  }" />  
+            <img class="" src="${articleData[i].articleCoverImg}" alt="${articleData[i].articleName}" />  
             <div class="article-caption mt-6">
             <h4 class="mb-2 fs-4 link-dark">${articleData[i].articleName}</h4>
-            <p class="mb-2 fs-5 text-dark">${articleData[
-              i
-            ].articleContent.substring(0, 28)}...</p>
-            <p class="fs-5 text-dark mb-0">${
-              articleData[i].articleCreatTime
-            }</p>            
+            <p class="mb-2 fs-5 text-dark">${articleData[i].articleContent.substring(0, 28)}...</p>
+            <p class="fs-5 text-dark mb-0">${articleData[i].articleCreatTime}</p>            
         </div>          
         </a>
       </li> 
@@ -82,20 +74,15 @@ articleFilter.addEventListener('click',(e)=>{
 // 登入功能
 
 // 文章篩選動畫效果
-articleFilter.addEventListener('click',(e)=>{
+const articleFilterItems = document.querySelectorAll('.article-filter li');
+
+articleFilterItems.forEach((i) => {
+  i.addEventListener('click', (e)=> {
     e.preventDefault();
-    let str = ``;
-    articleData.forEach((i) => {
-      console.log(i.articleCategory);
-
+    articleFilterItems.forEach((i) =>  {
+      i.querySelector('a').classList.remove('link-primary', 'active');
     });
-    // console.log(e.target.nodeName);
-    // if(e.target.className == "link-primary active"){
-    //   e.target.classList.remove("link-primary");
-    //   e.target.classList.remove("active");
-    // }else{      
-    //   e.target.classList.add("link-primary");
-    //   e.target.classList.add("active");
-    // }
 
+    e.target.classList.add('link-primary', 'active');
   });
+});
