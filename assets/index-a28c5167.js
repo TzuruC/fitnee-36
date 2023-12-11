@@ -1,4 +1,4 @@
-import"./main-1f38e6a1.js";const o="http://localhost:3000";function d(){n()}d();document.querySelector(".coach-cards");const i=document.querySelector(".article-cards");let a=[];function n(){axios.get(`${o}/articles`).then(function(t){a=t.data;let e="";for(let r=0;r<4;r++)e+=s(r);i.innerHTML=e}).catch(function(t){console.log(t)})}function s(t){return`<li class="article-card mb-7" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
+import"./main-b8f35602.js";const o="http://localhost:3000";function d(){n()}d();document.querySelector(".coach-cards");const i=document.querySelector(".article-cards");let a=[];function n(){axios.get(`${o}/articles`).then(function(t){a=t.data;let e="";for(let r=0;r<4;r++)e+=s(r);i.innerHTML=e}).catch(function(t){console.log(t)})}function s(t){return`<li class="article-card mb-7" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
         <a href="#">
             <img class="rounded" src="${a[t].articleCoverImg}" alt="${a[t].articleName}" />  
             <div class="article-caption mt-6">

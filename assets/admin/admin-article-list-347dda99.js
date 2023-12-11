@@ -1,4 +1,4 @@
-import"../main-1f38e6a1.js";const d="http://localhost:3000",u="http://localhost:5173/fitnee-36";function f(){n()}f();const i=document.querySelector(".js-articleList");let c=[];function n(){axios.get(`${d}/articles`).then(function(t){c=t.data;let e="";c.forEach(a=>{e+=o(a)}),i.innerHTML=e,h(t)}).catch(function(t){console.log(t)})}function o(t){return`<tr>
+import"../main-b8f35602.js";const d="http://localhost:3000",u="http://localhost:5173/fitnee-36";function f(){n()}f();const i=document.querySelector(".js-articleList");let c=[];function n(){axios.get(`${d}/articles`).then(function(t){c=t.data;let e="";c.forEach(a=>{e+=o(a)}),i.innerHTML=e,h(t)}).catch(function(t){console.log(t)})}function o(t){return`<tr>
         <th scope="row">${t.id}</th>
         <td>${t.articleName}</td>
         <td>${t.articleCategory}</td>
