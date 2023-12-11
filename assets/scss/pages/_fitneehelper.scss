@@ -1,6 +1,8 @@
 
 .fitneehelper-app{
+    max-width: 375px !important;
     min-height: 50vh;
+    margin: 0 auto;
 }
 
 .fitneehelper-app h3.welcome{
@@ -12,7 +14,7 @@
 }
 
 .input-bg-25{
-    background-color: #fff8e6;
+    background-color: hsl(43, 100%, 95%);
 }
 
 .squad-unit{
