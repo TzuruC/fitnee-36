@@ -5,106 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>admin-member-detail</title>
-    <script type="module" crossorigin src="/fitnee-36/assets/main-edd445a5.js"></script>
-    <link rel="stylesheet" href="/fitnee-36/assets/main-b2d906eb.css">
+    <script type="module" crossorigin src="/fitnee-36/assets/main-1f38e6a1.js"></script>
+    <link rel="stylesheet" href="/fitnee-36/assets/main-bb5da965.css">
   </head>
   <body>
-    <header id="transNav"  class="fixed-top trans-nav">
-    <div class="container d-flex d-lg-block justify-content-between align-items-center">
-        <div class="py-4 d-flex justify-content-between align-items-center flex-lg-row">
-            <div class="logo-wrap">
-                <a class="navbar-brand m-0 p-0" href="index.html">
-                    <img
-                        class="align-self-center logo-header"
-                        src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/logo.png"
-                        alt="logo"
-                    />
-                </a>
-            </div>
-            <div
-                id="navGroup"
-                class="nav-group py-lg-0 py-12 d-lg-flex d-none flex-lg-row flex-column fixed-md-top justify-content-between animate__fadeInUpBig"
-            >
-                <nav class="nav me-lg-14">
-                    <ul class="d-flex flex-lg-row flex-column m-auto mb-2 mb-lg-0 list-unstyled">
-                        <li class="nav-item mb-lg-0 mb-9 mx-5 text-center fs-4">
-                            <a class="nav-link link-light active" aria-current="page" href="coach-list.html">專業教練</a>
-                        </li>
-                        <li class="nav-item mb-lg-0 mb-9 mx-5 text-center fs-4">
-                            <a class="nav-link link-light" href="fitneehelper.html">訓練幫手</a>
-                        </li>
-                        <li class="nav-item mb-lg-0 mb-9 mx-5 text-center fs-4">
-                            <a class="nav-link link-light" href="coach-audit.html">教練資格</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="nav-btn d-flex flex-lg-row flex-column align-items-center">
-                    <a class="btn ms-lg-4 mb-lg-0 mb-6 btn-outline-primary rounded-1 fs-4 col-5" href="member-login.html" type="button">登入</a>
-                    <a class="btn ms-lg-4 btn-outline-primary rounded-1 fs-4 col-5" href="register.html" type="button">註冊</a>
-                </div>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold py-4" href="admin-article-list.html">FitNee </a><span class="fs61">後台管理</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">    
+        <div id="adminUI" class="ms-11 d-flex align-items-center">             
+            
+            <a class="mx-4 link-dark" href="admin-article-list.html">回到前台</a>
+            <a class="mx-4 link-dark" href="admin-article-list.html">文章管理</a>
+            <a class="mx-4 link-dark" href="admin-member-list.html">會員管理</a>
+            <a class="mx-4 link-dark" href="admin-coach-list.html">教練管理</a>
+            <a class="mx-4 link-dark" href="admin-service-list.html">網站問題回報</a>           
+            
         </div>
-        <div class="nav-toggler d-lg-none" role="button">
-            <span class="material-symbols-outlined fs-1 m-2 text-white"> menu </span>            
+        <div class="ms-auto">
+            <a class="mx-1 link-dark" href="admin-article-list.html">回到前台</a>
+            <span class="fs-6 px-5">管理員 admin666</span>
+            <a id="adminLogout" class="btn btn-outline-primary ml-2" href="admin-login.html">登出</a>
+        </div>
         </div>
     </div>
-    <!-- To Top Btn -->
-    <div class="totop-btn d-none">
-        <a href="#">
-        <span class="material-symbols-outlined">
-            arrow_upward
-            </span>
-        </a>
-    </div> 
-
-</header>
-
-
-    <h1>admin-member-detail</h1>
-    <footer>
-    <div class="sitemap bg-dark">
-    <div class="container">
-        <div class="row d-md-flex align-items-center">
-            <div class="logo-footer col-md-6 text-center text-md-start mt-9 mt-md-0">
-                <a href="index.html"><img class="" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/logo.png" alt="logo"></a>
-            </div>
-            <div class="sitemap-footer col-md-6 py-9 d-md-flex justify-content-between">                 
-                <div class="sitemap-g1 text-center text-md-start">
-                    <h5 class="pb-4 fs-5 text-primary">網站地圖</h5>
-                    <ul class="p-0">
-                    <li class="pb-2"><a class="fs-6 link-light" href="about.html">關於我們</a></li>
-                    <li class="pb-2"><a class="fs-6 link-light" href="coach-list.html">專業教練資源</a></li>
-                    <li class="pb-2"><a class="fs-6 link-light" href="fitneehelper.html">訓練幫手</a></li>
-                    <li class="pb-2"><a class="fs-6 link-light" href="coach-audit.html">教練身份審核</a></li> 
-                    <li class="pb-2"><a class="fs-6 link-light" href="article-list.html">精選文章</a></li>                
-                    </ul>
-                </div>
-                <div class="sitemap-g2 text-center text-md-start">
-                    <h5 class="pb-4 fs-5 text-primary">客服與系統</h5>
-                    <ul class="p-0">
-                    <li class="pb-2"><a class="fs-6 link-light" href="service.html">錯誤回報</a></li>
-                    <li class="pb-2"><a class="fs-6 link-light" href="admin/admin-login.html">網站後台管理</a></li>
-                    </ul>
-                </div>
-                <div class="sitemap-g3 text-center text-md-start">
-                    <h5 class="pb-4 fs-5 text-primary">贊助商</h5>
-                    <ul class="p-0">
-                    <li class="pb-2"><a class="fs-6 link-light" href="#">Fitness 運動用品</a></li>
-                    <li class="pb-2"><a class="fs-6 link-light" href="#">Gym 健身房</a></li>
-                    </ul>
-                </div>             
-            </div>                  
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="copyright p-4 bg-secondary text-white text-center fs-6">
-    copyright ©2023 all rights reserve. </br> 僅作為學習用途，無商業行為
-</div>
-
-    
-</footer>
+    </nav>    <h1>admin-member-detail</h1>
+    <footer class="py-2 fs-6 text-center bg-secondary">copyright © 2023</footer>    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <!-- customized js -->
     
   </body>
 </html>
