@@ -4,14 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>admin-article-list</title>
+    <title>後台-文章管理</title>
     
   </head>
   <body>
     <%- include('././layout/admin-header'); -%>
     
-    <div class="container container-min-h pt-11">
-      <h2 class="fw-bold fs-2 mb-10">文章管理</h2>
+    <div class="container container-min-h pt-11 mb-12">
+      <h2 class="fw-bold fs-2 mb-4">文章管理</h2>
+      <div class="list-action text-end mb-4 d-flex justify-content-between">
+
+        <div class="admin-article-filter filter-opt-group4 btn-sm">
+          <select class="form-select" aria-label="Default select example">
+            <option>- 所有分類 -</option>
+            <option value="1">增肌減脂</option>
+            <option value="2">運動訓練</option>
+            <option value="3">學員心得</option>
+          </select>
+        </div>
+
+        <button type="button" class="btn btn-outline-warning btn-sm"> + 新增文章</button>
+
+      </div>
       <table class="table">
         <thead class=" table-secondary">
           <tr>
@@ -24,7 +38,7 @@
             <th scope="col" class="text-center">管理操作</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="js-articleList">
           <tr>
             <th scope="row">1</th>
             <td>增肌秘訣 - 有效訓練計畫</td>
@@ -54,7 +68,9 @@
           </tr>
         </tbody>
       </table>
-      <nav aria-label="Page navigation example">
+
+      <!-- 文章載入分頁 -->
+      <!-- <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
           <li class="page-item">
             <a class="page-link" href="#" aria-label="Previous">
@@ -74,11 +90,14 @@
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> -->
     </div>
 
     <%- include('././layout/admin-footer'); -%>
-
-    <script type="module" src="/./main.js"></script>
+  <!-- axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <!-- customized js -->
+  <script type="module" src="/./main.js"></script>
+  <script type="module" src="/./assets/js/admin-article-list.js"></script>
   </body>
 </html>

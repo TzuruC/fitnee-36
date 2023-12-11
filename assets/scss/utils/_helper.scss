@@ -1,3 +1,8 @@
+@mixin bigPad{
+@media(max-width:988px){
+    @content;
+}
+}
 @mixin pad{
 @media(max-width:768px){
     @content;

@@ -19,8 +19,13 @@
 @import './pages/coach-list.scss';
 @import './pages/member-login.scss';
 
+@import './pages/admin-login.scss';
+
 @import '../../node_modules/bootstrap';
 
 .container{
     max-width: 1296px !important;
+}
+.sm-h-container{
+    min-height: 84vh;
 }

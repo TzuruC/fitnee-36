@@ -3,15 +3,17 @@
 }
 
 .carousel-caption {
-  top: 240px;
-  bottom: auto;
-  @include pad {
-      top: 80px;
+  top: 240px !important;
+  bottom: auto !important;
+  @include bigPad {
+      top: 120px !important;
+      bottom: auto !important;
   }
   @include mobile{
-      top: 80px;
+      top: 80px !important;
       left: 0 !important;
       right: 0 !important;
+      bottom: auto !important;
   }
 }
 
@@ -99,6 +101,12 @@ h3.title{
       top: 100px;
       left: 9px;
       background: $yellow-500;
+      @include pad{ 
+        width: 24px;
+        height: 4px;        
+        top: 46px;
+        left: 4px;
+      }
       @include mobile{        
         width: 24px;
         height: 4px;        
@@ -277,6 +285,10 @@ $gradient-hover-end: rgba(0,0,0,.5);
       color: $primary;
       font-weight: 700;
   }
+}
+.article-card{
+  margin-right: 2px;
+  max-width: 306px;
 }
 .article-card img{
   @include pad{      
