@@ -4,6 +4,14 @@
         font-size: 20px !important;
     }
 }
+.article-brief{
+    line-height: 2;
+    font-size: 20px;
+    letter-spacing: 2px;
+    @include pad{
+        font-size: 16px;
+    }
+}
 .article-content{
     line-height: 2;
     font-size: 20px;

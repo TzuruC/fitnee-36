@@ -7,194 +7,82 @@
       "id": 1
     },
     {
-      "email": "johndoe123@gmail.com",
-      "password": "$2a$10$F49j1TbJJJsYW/C0rb5fMOjPYhgXht0ZF12NEarMp/0sP8RHdNtKG",
-      "role": "user",
-      "name": "李明",
-      "contact": "0987-123-456",
-      "coachId": "",
-      "fitnessId": "",
-      "id": 2
-    },
-    {
-      "email": "emilysmith456@yahoo.com",
-      "password": "$2a$10$ZCch.PVtLC1HvXzOMIcGwePFtIvh64ycfX/3bKh9gveJQE02x.zCi",
-      "role": "coach",
-      "name": "林雅文",
-      "contact": "0921-987-654",
-      "coachId": "",
-      "fitnessId": "",
-      "id": 3
-    },
-    {
-      "email": "michaelclark123@hotmail.com",
-      "password": "$2a$10$FlqAkKMq3jHP7vEiz3DSyuI4il7UH9.LibPjsrA6fTZGkTHRaI6by",
-      "role": "coach",
-      "name": "黃蓉",
-      "contact": "0934-567-890",
-      "coachId": "",
-      "fitnessId": "",
-      "id": 4
-    },
-    {
-      "email": "wright654@outlook.com",
-      "password": "$2a$10$m5q4UpTOAfoGhE7xEDHu7.O.R3Vwu2zhNZtbUzBzWapM.YvvriJeO",
-      "role": "coach",
-      "name": "馬志強",
-      "contact": "0956-432-109",
-      "coachId": "",
-      "fitnessId": "",
-      "id": 5
-    },
-    {
-      "email": "rown987@yahoo.com",
-      "password": "$2a$10$FrCKVu6lHWNF6ekNdN7SXO3hEwLIQO5uAP0Rz3JGBfuy/ce633V42",
-      "role": "coach",
-      "name": "吳俊傑",
-      "contact": "0912-654-987",
-      "coachId": "",
-      "fitnessId": "",
-      "id": 6
-    },
-    {
-      "email": "ohnson789@hotmail.com",
-      "password": "$2a$10$qyqWiF2dkInsnu.3pl3.uuSP10P8rsjLWj/oCHEzUeJ/T/CXgWUCi",
-      "role": "user",
-      "name": "陳韋婷",
-      "contact": "0963-456-789",
-      "coachId": "",
-      "fitnessId": "",
-      "id": 7
-    },
-    {
-      "email": "miller321@outlook.com",
-      "password": "$2a$10$A9wp12dhFxXJbNKFKrNTje02TFmPI2tiTnaV7ITAXtOcTysZaj8bK",
-      "role": "user",
-      "name": "王偉",
-      "contact": "0978-321-654",
-      "coachId": "",
-      "fitnessId": "",
-      "id": 8
-    },
-    {
-      "email": "anderson789@gmail.com",
-      "password": "$2a$10$EfedP4V8ov2MXynjw4HFqufdk//9zUWremadhHzYuCbyGTyprJIWe",
-      "role": "user",
-      "name": "蔡蕙芳",
-      "contact": "0980-321-654",
-      "coachId": "",
-      "fitnessId": "",
-      "id": 9
-    },
-    {
-      "email": "laura456@yahoo.com",
-      "password": "$2a$10$RnE.I4gSmtDUbK7/a.7ptO9YfnvxCHSDPbX1F1u/tiZFSSYG.vY/e",
-      "role": "user",
-      "name": "陳韻如",
-      "contact": "0917-890-234 ",
-      "coachId": "",
-      "fitnessId": "",
-      "id": 10
+      "email": "fitneeadmin@mail.com",
+      "password": "$2a$10$N3//IX9mHg.hceQarCI4XOIEImIrONPoWLItmshJbfI3CPe2phdSC",
+      "role": "admin",
+      "id": 11
     }
   ],
   "coaches": [
     {
       "id": 1,
-      "userId":1,
-      "conacCert":"",
-      "coachExp":"",
-      "coachTalent":"",
-      "coachName":"吳俊宏",
-      "coachContact":"",
-      "coachPricingNTD":2000,
-      "coachServeArea":"北部",
-      "coachProfile":"",
-      "coachPhoto":""
+      "userId": "1",
+      "conacCert": "",
+      "coachExp": "2",
+      "coachTalent": "體態調整",
+      "coachName": "Kevin",
+      "coachContact": "0916245485",
+      "coachPricingNTD": 2000,
+      "coachServeArea": "北部",
+      "coachProfile": "教練簡介",
+      "coachPhoto": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach1.png",
+      "coachTitle": "連鎖健身房教練",
+      "coachRegion": "北部",
+      "coachPricing": "1600",
+      "coachCert": "證書影本上傳連結",
+      "coachAutherize": true
+    },
+    {
+      "userId": "2",
+      "coachName": "Anny",
+      "coachRegion": "中部",
+      "coachContact": "0916245485",
+      "coachExp": "1",
+      "coachTalent": "體態調整",
+      "coachProfile": "教練簡介",
+      "coachPhoto": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach2.png",
+      "coachPricing": "1600",
+      "coachCert": "證書影本上傳連結",
+      "coachAutherize": true,
+      "id": 2,
+      "coachPricingNTD": 1600,
+      "coachTitle": "連鎖健身房教練"
+    },
+    {
+      "userId": "3",
+      "coachName": "Leo",
+      "coachTitle": "私人教練",
+      "coachRegion": "中部",
+      "coachContact": "0912456485",
+      "coachExp": "4",
+      "coachTalent": "運動訓練",
+      "coachProfile": "教練簡介",
+      "coachPhoto": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach3.png",
+      "coachPricing": "2000",
+      "coachCert": "證書影本上傳連結",
+      "coachAutherize": true,
+      "id": 3
+    },
+    {
+      "userId": "4",
+      "coachExp": "3",
+      "coachTalent": "體態調整",
+      "coachName": "Ting",
+      "coachContact": "0924548165",
+      "coachPricingNTD": 2000,
+      "coachServeArea": "南部",
+      "coachProfile": "教練簡介",
+      "coachPhoto": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach1.png",
+      "coachTitle": "空中瑜伽老師",
+      "coachRegion": "北部",
+      "coachPricing": "1800",
+      "coachCert": "證書影本上傳連結",
+      "coachAutherize": true,
+      "id": 4
     }
   ],
   "healthes": [],
-  "services": [
-    {
-      "id": 1,
-      "userId": "",
-      "serviceName": "無法正確顯示健身教練的詳細資訊 ",
-      "serviceContent": "<p>親愛的客服中心，</p><p>我是這個健身教練媒合平台的會員，但我在瀏覽健身教練的詳細資訊時遇到了問題。某些教練的資訊無法正確顯示，或者無法載入照片或說明文字。</p><p>這讓我難以瞭解教練的專業背景和經驗。請提供指導或協助修復這個問題，以確保我能夠獲得完整的信息，以便選擇適合的教練。</p>",
-      "serviceSentTime": "2023/12/11  00:35:19",
-      "serviceStatus": "已解決"
-    },
-    {
-      "id": 2,
-      "userId": "",
-      "serviceName": "會員無法設定或更新個人健身目標 ",
-      "serviceContent": "<p>親愛的客服中心，</p><p>我是這個健身教練媒合平台的會員，但我遇到了一個問題。在我的個人帳戶中，我無法設定或更新我的健身目標。每當我嘗試更新設定時，系統未反應或顯示錯誤訊息。</p><p>這讓我感到沮喪，因為我希望能夠設定明確的健身目標，以幫助我找到合適的教練。請提供指導或協助我解決這個問題，以便我能夠繼續使用這個平台，尋找合適的教練。</p>",
-      "serviceSentTime": "2023/07/29  00:35:19",
-      "serviceStatus": "已解決"
-    },
-    {
-      "id": 3,
-      "userId": "",
-      "serviceName": "網站無法正確匹配適合的健身教練 ",
-      "serviceContent": "<p>親愛的客服中心，</p><p>我是這個健身教練媒合平台的會員，但我在尋找適合的教練時遇到了問題。網站似乎無法正確匹配我和合適的教練，或者提供適當的建議。</p><p>這對我來說是一個挫折，因為我希望能夠找到一位能夠滿足我的需求的教練。請提供協助，指導我如何改進這個匹配過程，以確保我能夠找到合適的健身教練。</p>",
-      "serviceSentTime": "2021/10/08  00:35:19",
-      "serviceStatus": "已解決"
-    },
-    {
-      "id": 4,
-      "userId": "",
-      "serviceName": "我在瀏覽網站時收到了一個奇怪的錯誤訊息",
-      "serviceContent": "<p>親愛的客服中心，</p><p>我是這個網站的使用者，最近在瀏覽網站時遇到了一個令我困惑的問題。我收到了一個奇怪的錯誤訊息，其內容對我來說毫無意義，我無法理解為何會出現這樣的訊息。</p><p>該錯誤訊息沒有提供具體的細節或指示，並且無法幫助我解決問題。這讓我感到困惑，因為我需要正確地瀏覽網站內容或執行操作。</p><p>我希望您可以提供協助，指導我如何處理這個錯誤訊息，或者協助我找到解決問題的方法。我非常感謝您的協助。</p>",
-      "serviceSentTime": "2023/05/12  00:35:19",
-      "serviceStatus": "已解決"
-    },
-    {
-      "id": 5,
-      "userId": "",
-      "serviceName": "我嘗試登入我的帳戶，但系統一直顯示 '無效的密碼'",
-      "serviceContent": "<p>親愛的客服中心，</p><p>我是這個網站的忠實使用者，但最近遇到了一個令我困擾的問題。當我嘗試登入我的帳戶時，系統一直顯示 '無效的密碼' 的錯誤信息，即使我確信輸入的密碼是正確的。</p><p>我已多次檢查並確保密碼的正確性，甚至嘗試了重設密碼的選項，但問題仍然存在。這對我來說是一個困擾，因為我需要訪問我的帳戶以執行特定操作或瀏覽內容。</p><p>我希望您能提供協助，指導我如何解決這個問題，以確保我能夠成功登入我的帳戶。我非常需要恢復對我的帳戶的訪問權限，並期待著您的支援。</p>",
-      "serviceSentTime": "2022/08/03  00:35:19",
-      "serviceStatus": "已解決"
-    },
-    {
-      "id": 6,
-      "userId": "",
-      "serviceName": "我嘗試上傳我的照片或圖片時，系統無法處理圖像並顯示上傳失敗",
-      "serviceContent": "<p>親愛的客服中心，</p><p>我是這個網站的用戶，我在使用網站時遇到了一個令我感到困惑的問題，並需要您的幫助。當我試圖上傳我的照片或圖片時，系統無法正確處理圖像，並顯示上傳失敗的信息。</p><p>我已嘗試多次上傳不同的圖片，並確保它們符合系統要求的規格，但每次都遇到相同的問題。這對我來說是一個困擾，因為我需要上傳圖像以完成我的任務或操作。</p><p>我希望您可以提供協助，指導我如何解決這個問題，以確保我能夠成功上傳我的圖像。這對我來說非常重要，並希望您能盡快提供支援。</p>",
-      "serviceSentTime": "2023/11/17  00:35:19",
-      "serviceStatus": "已解決"
-    },
-    {
-      "id": 7,
-      "userId": "",
-      "serviceName": "網站在某些瀏覽器中無法正確顯示，我希望獲得幫助",
-      "serviceContent": "<p>親愛的客服中心，</p><p>我是這個網站的使用者，我遇到了一個令我困擾的問題，希望能夠得到協助。我發現在某些瀏覽器中，這個網站無法正確顯示，這讓我無法順利瀏覽網站內容和執行操作。</p><p>我嘗試了不同的瀏覽器，但問題似乎只出現在某些特定的瀏覽器中。這讓我感到沮喪，因為我需要正確顯示的網站來完成我的工作或任務。</p><p>我希望您能提供協助，指導我如何解決這個問題，以確保網站可以在所有瀏覽器中正確顯示。我非常感謝您的協助，並期待著您的回應。</p>",
-      "serviceSentTime": "2020/12/25",
-      "serviceStatus": "已解決"
-    },
-    {
-      "id": 8,
-      "userId": "",
-      "serviceName": "當我點擊 '忘記密碼' 鏈結以重設密碼時，該頁面一直顯示失敗",
-      "serviceContent": "<p>親愛的客服中心，</p><p>我是這個網站的用戶，我遇到了一個令人困擾的問題，希望能夠得到幫助。當我試圖重設我的密碼時，點擊 '忘記密碼' 鏈結後，該頁面一直顯示失敗的信息，而我無法成功完成密碼重設的過程。</p><p>這對我來說是一個問題，因為我需要訪問我的帳戶，並且無法記住原密碼。嘗試了多次後結果都一樣，無法成功重設密碼。這讓我感到沮喪，因為我需要立即恢復對我的帳戶的訪問權限。</p><p>我希望您可以提供指導，或者幫助我解決這個問題，以便我能夠成功重設我的密碼。我非常感謝您的協助，並期待著您的回應。</p><p>謝謝您的理解和支持。</p>",
-      "serviceSentTime": "2023/02/09  00:35:19",
-      "serviceStatus": "已解決"
-    },
-    {
-      "id": 9,
-      "userId": "",
-      "serviceName": "我發現一個潛在的安全漏洞，當我試圖回報時，找不到合適的分類",
-      "serviceContent": "<p>親愛的客服中心，</p><p>我是這個網站的一位使用者，我需要通報一個潛在的安全漏洞，但在回報問題時遇到了一些困難。當我試圖使用網站提供的回報系統時，我發現找不到適合的分類來描述這個安全漏洞。</p><p>這個安全漏洞可能對網站和其使用者構成風險，因此我認為它應該盡快得到關注和解決。但由於找不到適當的分類，我無法提交我的回報，這讓我感到懊惱。</p><p>我希望您可以提供指導，或者讓我知道應該如何正確地回報這個潛在的安全問題。我認為安全問題應該受到重視，並期待著您的協助，以確保這個漏洞能夠被迅速處理。</p>",
-      "serviceSentTime": "2021/06/30  00:35:19",
-      "serviceStatus": "已解決"
-    },
-    {
-      "id": 10,
-      "userId": "",
-      "serviceName": "無法登出帳戶 ",
-      "serviceContent": "<p>親愛的客服中心，</p><p>我是這個健身教練媒合平台的會員，但我無法正確登出我的帳戶。儘管我試圖選擇登出選項，但網站並未執行登出操作，並保持我登入的狀態。</p><p>這讓我擔心我的帳戶可能會被他人訪問，並希望您能提供指導或協助我正確登出我的帳戶。保障帳戶安全對我來說非常重要，並期待著您的支援。</p>",
-      "serviceSentTime": "2022/09/21  00:35:19",
-      "serviceStatus": "已解決"
-    }
-  ],
+  "services": [],
   "articles": [
     {
       "id": 1,
@@ -204,7 +92,8 @@
       "articleAuther": "(William) 賴威廉",
       "articleCreatTime": "2023/07/29",
       "articleCoverImg": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article1.png",
-      "articlePublic": true
+      "articlePublic": true,
+      "articleBrief": "增肌減脂是健身的重要目標之一，這需要一個綜合的方法。以下是五個關鍵步驟，幫助您實珏增肌減脂目標： 控制營養：營養是成功的基石。確保您的飲食提供足夠的蛋白質，碳水化合物和健康脂肪，以支持肌肉生長和脂肪燃燒。盡量避免加工食品和多餘的糖分。 適當的力量訓練：增加肌肉質量是關鍵。進行定期的力量訓練，專注於多關節的複合運動，如深蹲、臥推和硬舉。 有氧運動：有氧運動有助於燃燒多餘的脂肪。包括有氧運動，如跑步、游泳或騎自行車，以增加卡路里消耗。 "
     },
     {
       "id": 2,
@@ -300,14 +189,24 @@
   "restTimes": [],
   "trainings": [
     {
-      "id":"1",
-      "userId":"1",
-      "trainName":"深蹲",
-      "trainWeight":50,
-      "trainTimesPerSet":10,
-      "trainSets":5,
-      "trainTarget":"腿部",
-      "trainCategory":"基礎訓練"
+      "userId": "1",
+      "trainTarget": "腿部訓練",
+      "trainCategory": "俊宏教練12月作業",
+      "trainName": "深蹲",
+      "trainWeight": "55",
+      "trainTimes": "12",
+      "trainSets": "10",
+      "id": "URpPK5a"
+    },
+    {
+      "userId": "1",
+      "trainTarget": "手部訓練",
+      "trainCategory": "俊宏教練12月作業",
+      "trainName": "啞鈴頸後臂屈伸",
+      "trainWeight": "8",
+      "trainTimes": "12",
+      "trainSets": "10",
+      "id": "a1Fr6bP"
     }
   ],
   "muscleImgs": [

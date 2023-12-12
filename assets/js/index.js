@@ -38,9 +38,9 @@ function getArticles(){
 }
 
 function renderArticleHTML(i) {
-  return `<li class="article-card mb-7" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
+  return `<li class="article-card col-3 px-1 mb-7" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
         <a href="article-detail.html?id=${articleData[i].id}">
-            <img class="rounded" src="${articleData[i].articleCoverImg}" alt="${articleData[i].articleName}" />  
+            <img class="rounded w-100" src="${articleData[i].articleCoverImg}" alt="${articleData[i].articleName}" />  
             <div class="article-caption mt-6">
             <h4 class="mb-2 fs-4 link-dark">${articleData[i].articleName}</h4>
             <p class="mb-2 fs-5 text-dark">${articleData[i].articleContent.substring(0, 28)}...</p>
