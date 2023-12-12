@@ -37,7 +37,7 @@ function renderArticleList(i){
             i.articlePublic ? "公開" : "未公開"
         }</td>
         <td class="text-center">
-        <a class="link-primary" data-id="${i.id}" href="${page_rul}/pages/admin/admin-article-detail.html">編輯</a> / 
+        <a class="link-primary" data-id="${i.id}" href="admin-article-detail.html?id=${i.id}">編輯</a> / 
         <a class="link-primary" data-id="${i.id}" href="">刪除</a></td>
     </tr>
     `;

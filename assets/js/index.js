@@ -39,7 +39,7 @@ function getArticles(){
 
 function renderArticleHTML(i) {
   return `<li class="article-card mb-7" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
-        <a href="#">
+        <a href="article-detail.html?id=${articleData[i].id}">
             <img class="rounded" src="${articleData[i].articleCoverImg}" alt="${articleData[i].articleName}" />  
             <div class="article-caption mt-6">
             <h4 class="mb-2 fs-4 link-dark">${articleData[i].articleName}</h4>
@@ -68,10 +68,6 @@ articleFilter.addEventListener('click',(e)=>{
   }
   articleCards.innerHTML = str;
 });
-
-// 註冊功能
-
-// 登入功能
 
 // 文章篩選動畫效果
 const articleFilterItems = document.querySelectorAll('.article-filter li');

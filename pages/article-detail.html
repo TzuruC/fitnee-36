@@ -28,17 +28,22 @@
     </div>
     </div>
 
-    <section class="container py-lg-13 py-6 col-lg-7 col-md-6 col-12">
-      <h3 class="article-title mb-5 mb-lg-10 fw-bold">FitNee 的精神</h3>
-      <div class="article-content row justify-content-between">       
+    <section class="container py-lg-13 py-6 col-lg-7 col-md-9 col-12">
+      <h3 class="article-title mb-2 mb-lg-2 fw-bold">FitNee 的精神</h3>
+      <div class="article-category mb-2 text-primary">OK</div>
+      <div class="article-create mb-2 d-flex justify-content-between">
+        <div class="article-author"></div>
+        <div class="article-time"></div>
+      </div>
+      <div class="article-article row justify-content-between">       
         
-        <div class="article-leading col-12 col-lg-8">
+        <div class="article-breif col-12 col-lg-8">
           <p class="mb-4">歡迎來到我們的教練媒合平台！<br> 我們的使命是為您提供一個優質的平台，幫助您找到最合適的重訓教練，實現健康和體能目標。 <br>無論您是初學者還是經驗豐富的運動員，我們都致力於幫助您找到完美的訓練師，為您提供個性化的健身計畫。</p>          
         </div>
         <div class="article-img col-12 col-lg-4">
           <img class="w-100 img-fluid mb-4" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article3.png" alt="article-img">
         </div>
-        <div class="article-article col-12">
+        <div class="article-content col-12">
           <p class="mb-4">我們是一個充滿熱情的團隊，致力於連接運動愛好者和專業重訓教練。 <br>我們明白，選擇合適的教練是取得成功的關鍵，因此我們建立了這個平台，讓您能夠輕鬆找到您所需要的教練。 <br>每個人都應該擁有機會改善自己的生活品質，通過重訓實現健康、強壯和自信。因此在我們的平台上，您將能夠瀏覽數以百計的專業重訓教練的個人檔案。 </p>
           <p class="mb-4">感謝您的信任： <br>感謝您選擇我們的重訓教練媒合平台。我們迫不及待地期待協助您開始您的健身旅程，實現更健康、更強壯的自己。</p>
           <p class="mb-4">如果您有任何疑問或建議，請隨時與我們聯繫。讓我們一起向更健康的未來邁進！</p>
@@ -63,6 +68,10 @@
     </div>    
     <%- include('./layout/footer'); -%>
 
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <!-- customized js -->
     <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/article-detail.js"></script>
   </body>
 </html>
