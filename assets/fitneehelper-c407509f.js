@@ -1,18 +1,18 @@
-import"./main-b8f35602.js";const l=document.querySelector(".fn-welcome");l.addEventListener("click",e=>{e.preventDefault(),e.target.getAttribute("id")==="startBtn"&&(l.classList.add("d-none"),a())});function a(){c()}const i=document.querySelector(".js-renderTraining"),s=document.querySelector("#addTrainingBtn");let o=[];function c(){let e="";o.length==0&&(e=`
+import"./main-82aaa405.js";const n=document.querySelector(".fn-welcome"),l=document.querySelector(".fn-on-traning");document.querySelector(".fitneehelper-app");fnAppHTML="";n.addEventListener("click",e=>{e.preventDefault(),e.target.getAttribute("id")==="startBtn"&&(n.classList.add("d-none"),l.classList.remove("d-none"),l.classList.add("d-block"),o())});function o(){d()}const i=document.querySelector(".js-renderTraining"),s=document.querySelector("#addTrainingBtn");let r=[];function d(){let e="";r.length==0&&(e=`
         <div class="no-train">
             <span class="mb-5 d-block fs-12">沒有儲存的訓練項目</span>
         </div>
-        `),i.innerHTML=e}const n=document.querySelector(".add-new-train");s.addEventListener("click",e=>{e.preventDefault(),console.log(n);let t="";if(n){console.log("還有未儲存的訓練");return}else t+=`
+        `),i.innerHTML=e}const a=document.querySelector(".add-new-train");s.addEventListener("click",e=>{e.preventDefault(),console.log(a);let t="";if(a){console.log("還有未儲存的訓練");return}else t+=`
         <div class="add-new-train mb-3 p-3 border border-secondary rounded-3">
         <div class="add-or-na mb-3 d-flex justify-content-between align-items-center">
             <span class="d-flex fs-6 text-start">
                 <span class="material-symbols-outlined"> add </span> 
                 <span class="">新的訓練項目</span>
             </span>
-            <span class="material-symbols-outlined"> close </span>
+            <a href="#" class="cancel-add-train material-symbols-outlined link-dark"> close </a>
         </div>
         <!-- 名稱 -->
-        <input class="mb-3 form-control border-primary border-4" type="text" placeholder="訓練項目名稱" />
+        <input class="js-trainName mb-3 form-control border-primary border-4" type="text" placeholder="訓練項目名稱" />
         <!-- 訓練部位 -->
         <div class="row justify-content-center">
             <div class="col-9 mb-3">
@@ -22,13 +22,10 @@ import"./main-b8f35602.js";const l=document.querySelector(".fn-welcome");l.addEv
                     <option value="1">手部</option>
                     <option value="2">腿部</option>
                     <option value="3">核心</option>
-                    <option value="4">- 刪除 -</option>
                 </select>
             </div>
             <div class="col-3 py-1 text-primary">
-                <span class="material-symbols-outlined fs-1">
-                    add_circle
-                    </span>
+                
             </div>
 
             <form class="row gx-3 gy-2 align-items-center">
@@ -69,4 +66,4 @@ import"./main-b8f35602.js";const l=document.querySelector(".fn-welcome");l.addEv
             </form>
         </div>
     </div>
-        `;i.innerHTML=t});
+        `;i.innerHTML=t;const c=document.querySelector(".js-trainName ");document.querySelector(".cancel-add-train"),c.focus()});

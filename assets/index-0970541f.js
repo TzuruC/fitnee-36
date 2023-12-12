@@ -1,6 +1,6 @@
-import"./main-b8f35602.js";const o="http://localhost:3000";function d(){n()}d();document.querySelector(".coach-cards");const i=document.querySelector(".article-cards");let a=[];function n(){axios.get(`${o}/articles`).then(function(t){a=t.data;let e="";for(let r=0;r<4;r++)e+=s(r);i.innerHTML=e}).catch(function(t){console.log(t)})}function s(t){return`<li class="article-card mb-7" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
-        <a href="#">
-            <img class="rounded" src="${a[t].articleCoverImg}" alt="${a[t].articleName}" />  
+import"./main-82aaa405.js";const o="http://localhost:3000";function d(){n()}d();document.querySelector(".coach-cards");const i=document.querySelector(".article-cards");let a=[];function n(){axios.get(`${o}/articles`).then(function(t){a=t.data;let e="";for(let r=0;r<4;r++)e+=s(r);i.innerHTML=e}).catch(function(t){console.log(t)})}function s(t){return`<li class="article-card col-3 px-1 mb-7" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
+        <a href="article-detail.html?id=${a[t].id}">
+            <img class="rounded w-100" src="${a[t].articleCoverImg}" alt="${a[t].articleName}" />  
             <div class="article-caption mt-6">
             <h4 class="mb-2 fs-4 link-dark">${a[t].articleName}</h4>
             <p class="mb-2 fs-5 text-dark">${a[t].articleContent.substring(0,28)}...</p>
