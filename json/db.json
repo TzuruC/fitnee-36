@@ -21,26 +21,159 @@
       "fitnessId": "",
       "trainingsId": "",
       "id": 12
+    },
+    {
+      "email": "john.doe123@gmail.com",
+      "password": "$2a$10$/4uZg750E1iBU5YF0Kc0gel4sCpoOayJs4OUAvlEEuGkJmiqVZ4H6",
+      "role": "user",
+      "name": "李明",
+      "gender": "男",
+      "coachId": "",
+      "fitnessId": "",
+      "trainingsId": "",
+      "id": 13
+    },
+    {
+      "email": "emily.smith456@yahoo.com",
+      "password": "$2a$10$M4DWJ.TapO8VIzUyKQobEOZWfQYVHNd5VtFrUkIWzQhuVktcGrfI6",
+      "role": "user",
+      "name": "林雅文",
+      "gender": "女",
+      "coachId": "",
+      "fitnessId": "",
+      "trainingsId": "",
+      "id": 14
+    },
+    {
+      "email": "david.johnson789@hotmail.com",
+      "password": "$2a$10$liQmoWN61JYHbVF.NfKpJeJ76EyQq7lXb5iS7EjdFoLL.cTgnDsrq",
+      "role": "user",
+      "name": "陳韋婷",
+      "gender": "女",
+      "coachId": "",
+      "fitnessId": "",
+      "trainingsId": "",
+      "id": 15
+    },
+    {
+      "email": "miller321@outlook.com",
+      "password": "$2a$10$4IC919MwBfDgjdOoS.l0Oe5019kJNsGv0dEL3rMBeD3eh5LrSPl.O",
+      "role": "user",
+      "name": "王偉",
+      "gender": "男",
+      "coachId": "",
+      "fitnessId": "",
+      "trainingsId": "",
+      "id": 16
+    },
+    {
+      "email": "on654@gmail.com",
+      "password": "$2a$10$/6L2CBBoCeF3IVMNb2hT0.limK0Uic2zBgqjMR45J.1qZUhlF7UF.",
+      "role": "user",
+      "name": "張美玲",
+      "gender": "女",
+      "coachId": "",
+      "fitnessId": "",
+      "trainingsId": "",
+      "id": 17
+    },
+    {
+      "email": "brown987@yahoo.com",
+      "password": "$2a$10$XACUa5TswjR5aHZdYPcAuOlCV5C7UVRI/7Wyf8DvgL1vHrd2RMF2W",
+      "role": "user",
+      "name": "吳俊傑",
+      "gender": "男",
+      "coachId": "",
+      "fitnessId": "",
+      "trainingsId": "",
+      "id": 18
+    },
+    {
+      "email": "michael@hotmail.com",
+      "password": "$2a$10$xfOeJmrpxuTCKTbUtfyY.u4Mx.Yu1tNHEVt0ct7td5R5kerrF5w6O",
+      "role": "user",
+      "name": "黃蓉",
+      "gender": "女",
+      "coachId": "",
+      "fitnessId": "",
+      "trainingsId": "",
+      "id": 19
+    },
+    {
+      "email": "right654@outlook.com",
+      "password": "$2a$10$tpX8ej7Gtw0urVcxippllORiKErkkFk35f81KV3ZoimeQaLX8BCmi",
+      "role": "user",
+      "name": "馬志強",
+      "gender": "男",
+      "coachId": "",
+      "fitnessId": "",
+      "trainingsId": "",
+      "id": 20
+    },
+    {
+      "email": "erson789@gmail.com",
+      "password": "$2a$10$UM5tAVcCh8HEzLkX8XZHMO.agLd69FPQ2gLFCofPmK2k9TamtDUuy",
+      "role": "user",
+      "name": "蔡蕙芳",
+      "gender": "女",
+      "coachId": "",
+      "fitnessId": "",
+      "trainingsId": "",
+      "id": 21
+    },
+    {
+      "email": "jasoon654@gmail.com",
+      "password": "$2a$10$HIgwiI/RmbAuNypSG4k3Au5ufjtgpTt6oVkc0HD97/L3.WDlpt5F6",
+      "role": "user",
+      "name": "李明亮 ",
+      "gender": "男",
+      "coachId": "",
+      "fitnessId": "",
+      "trainingsId": "",
+      "id": 22
+    },
+    {
+      "email": "kevin9@gmail.com",
+      "password": "$2a$10$tuJAFDbZFC/qDZEqO8GDP.MU.XmCKap7sy4JhqgOxMiE1fA10Ek/6",
+      "role": "user",
+      "name": "陳俊宏",
+      "gender": "男",
+      "coachId": "",
+      "fitnessId": "",
+      "trainingsId": "",
+      "id": 23
+    },
+    {
+      "email": "thomas456@yahoo.com",
+      "password": "$2a$10$kfvLgc7fLM0DY6Jp7vhHkec39Q2UEB8.fcWRDjmYdnG8tu0EDhscq",
+      "role": "user",
+      "name": "林宏毅",
+      "gender": "男",
+      "coachId": "",
+      "fitnessId": "",
+      "trainingsId": "",
+      "id": 24
     }
   ],
   "coaches": [
     {
       "id": 1,
-      "userId": "1",
+      "userId": "23",
       "coachExp": "2",
       "coachTalent": "體態調整",
       "coachName": "Kevin",
-      "coachContact": "0916245485",
-      "coachProfile": "大家好！我是一位擁有豐富健身教練經驗的專業教練。我的專長在於肌力訓練和提升身體素質，致力於協助大家達到更健康的生活。",
+      "coachContact": "0954162485",
+      "coachProfile": "教練簡介",
       "coachPhoto": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach1.png",
       "coachTitle": "連鎖健身房教練",
       "coachRegion": "北部",
-      "coachPricing": 2000,
-      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.jpg",
-      "coachAutherize": true
+      "coachPricing": 1200,
+      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.png",
+      "coachAutherize": true,
+      "coachPricingNTD": 2000
     },
     {
-      "userId": "2",
+      "userId": "14",
       "coachName": "Anny",
       "coachRegion": "中部",
       "coachContact": "0916245485",
@@ -55,7 +188,7 @@
       "coachTitle": "連鎖健身房教練"
     },
     {
-      "userId": "3",
+      "userId": "13",
       "coachName": "Leo",
       "coachTitle": "私人教練",
       "coachRegion": "中部",
@@ -70,7 +203,7 @@
       "id": 3
     },
     {
-      "userId": "4",
+      "userId": "15",
       "coachExp": "3",
       "coachTalent": "體態調整",
       "coachName": "Ting",
@@ -85,7 +218,7 @@
       "id": 4
     },
     {
-      "userId": "5",
+      "userId": "16",
       "coachExp": "2",
       "coachTalent": "體態調整",
       "coachName": "Mei Lee",
@@ -100,7 +233,7 @@
       "id": 5
     },
     {
-      "userId": "6",
+      "userId": "18",
       "coachExp": "8",
       "coachTalent": "運動訓練",
       "coachName": "Kenny吳",
@@ -115,7 +248,7 @@
       "id": 6
     },
     {
-      "userId": "7",
+      "userId": "20",
       "coachExp": "8",
       "coachTalent": "運動訓練",
       "coachName": "馬志強",
@@ -130,7 +263,7 @@
       "id": 7
     },
     {
-      "userId": "8",
+      "userId": "17",
       "coachExp": "8",
       "coachTalent": "增肌減脂",
       "coachName": "陳佩琪",
@@ -145,7 +278,7 @@
       "id": 8
     },
     {
-      "userId": "9",
+      "userId": "22",
       "coachExp": "6",
       "coachTalent": "運動訓練",
       "coachName": "Sam",
@@ -160,13 +293,13 @@
       "id": 9
     },
     {
-      "userId": "10",
+      "userId": "23",
       "coachExp": "6",
-      "coachTalent": "體態調整",
-      "coachName": "俊宏",
-      "coachContact": "0963172234",
-      "coachProfile": "嗨，我是一位專業的康復訓練師。擁有物理治療學位，致力於協助你康復和預防運動傷害，使用科學的方法解決身體不適。",
-      "coachPhoto": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach10.png",
+      "coachTalent": "運動訓練",
+      "coachName": "Sam",
+      "coachContact": "0917322345",
+      "coachProfile": "嘿，我是一位極限運動愛好者的教練。我的專攻是攀岩和爆發力訓練，透過挑戰極限，激發你的運動潛力。",
+      "coachPhoto": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach9.png",
       "coachTitle": "私人教練",
       "coachRegion": "中部",
       "coachPricing": 2000,

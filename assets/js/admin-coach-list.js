@@ -10,7 +10,7 @@ init();
 const coachList = document.querySelector('.js-coachList');
 let coachData = [];
 function getCoaches(){
-  axios.get(`${api_url}/coaches`)
+  axios.get(`${api_url}/coaches?_expand=user`)
   .then(function (res) {
     coachData = res.data;
     console.log(coachData);
@@ -30,11 +30,10 @@ function renderCoachHTML(i){
     <tr>
         <th scope="row">${i.id}</th>
         <td>${i.coachName}</td>
-        <td>李明</td>
-        <td>男</td>
+        <td>${i.user.email}</td>
         <td>${i.coachExp} 年</td>
         <td>${i.coachContact}</td>
-        <td class="text-center">${i.coachAutherize}</td>
+        <td class="text-center">${i.coachAutherize?"通過":"未通過"}</td>
         <td class="text-center"><a href="admin-coach-detail.html?id=${i.id}" class="link-primary">查看</a></td>
     </tr>
     `;
