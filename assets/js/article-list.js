@@ -52,14 +52,15 @@ function getArticles(){
 }
 
 function renderArticleHTML(i) {
-  return `<li class="article-card mb-7 aos-init aos-animate col-4" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
+  return `
+  <li class="article-card mb-7 aos-init aos-animate col-4" data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
   <a href="article-detail.html?id=${i.id}">
-      <img class="rounded w-100" src="${i.articleCoverImg}" alt="${i.articleName}">  
-      <div class="article-caption mt-6">
-      <h4 class="mb-2 fs-4 link-dark">${i.articleName.substring(0, 12)}</h4>
-      <p class="mb-2 fs-5 text-dark">${i.articleContent.substring(0, 28)}...</p>
-      <p class="fs-5 text-dark mb-0">${i.articleCreatTime}</p>            
-  </div>          
+    <img class="rounded w-100" src="${i.articleCoverImg}" alt="${i.articleName}">  
+    <div class="article-caption mt-6 text-dark link-dark">
+        <h4 class="mb-2 fs-4 link-dark">${i.articleName.substring(0, 12)}</h4>
+        <p class="mb-2 fs-5 text-dark">${i.articleBrief.substring(0, 28)}...</p>
+        <p class="fs-5 text-dark mb-0">${i.articleCreatTime}</p>            
+    </div>          
   </a>
 </li>
       `;
