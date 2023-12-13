@@ -33,20 +33,14 @@
       <div id="loginForm" class="container my-lg-5 my-13">
         <div class="text-center">
           <h2 class="fw-bold mb-5">建立會員帳戶</h2>
-          <p class="mb-10">已經是會員？ 前往<a class="link-primary" href="register.html">登入頁面</a></p>
+          <p class="mb-10">已經是會員？ 前往<a class="link-primary" href="member-login.html">登入頁面</a></p>
         </div>
         <div class="ui-form-white my-5">
           <div class="ui-placeholder ui-leftTop">
-            <input id="loginMail" class="form-control ui-underline mb-7" name="email" type="text" placeholder="*姓名"><span>*姓名</span>
+            <input id="loginMail" class="form-control ui-underline mb-7" name="email" type="text" placeholder="*會員名稱"><span>*會員名稱</span>
             <span id="alertEmail" class="alert-span text-danger d-block fs-6"></span>
           </div>
-        </div>
-        <div class="ui-form-white my-5">
-          <div class="ui-placeholder ui-leftTop">            
-            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="text" placeholder="暱稱"><span>暱稱</span>
-            <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
-          </div>
-        </div>   
+        </div>         
         <div class="ui-form-white my-5">
           <div class="ui-placeholder ui-leftTop">            
             <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*電子信箱 ( 將成為您的帳號 )"><span>*電子信箱 ( 將成為您的帳號 )</span>
@@ -83,9 +77,15 @@
 
     <!-- fitnee-ad -->
     <%- include('./layout/fitnee-ad'); -%>
+
     <%- include('./layout/footer'); -%>
+
     <!-- validate -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+     <!-- axios -->
+     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+     <!-- customized js -->
     <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/register.js"></script>
   </body>
 </html>

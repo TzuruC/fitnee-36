@@ -52,7 +52,7 @@
         <div class="text-center">
           <a id="loginBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">登入</a>
           <span class="login-caution">繼續即表示您同意我們的 <a class="link-primary" href="">條款和條件</a> 以及 <a class="link-primary" href="">隱私權政策</a> 。</span>
-          <a type="button" class="d-block my-7 link-primary" href="admin-signin.html">- 管理員登入 -</a>
+          <a type="button" class="d-block my-7 link-primary" href="admin/admin-login.html">- 管理員登入 -</a>
         </div>
       </div>
       
@@ -61,6 +61,10 @@
 
     <%- include('./layout/footer'); -%>
 
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <!-- customized js -->
     <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/member-login.js"></script>
   </body>
 </html>
