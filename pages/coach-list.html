@@ -130,7 +130,7 @@
       </div>        
 
       <!-- coach cards -->
-      <div class="render-cards ms-auto col-lg-8 offset-lg-2">
+      <div class="ms-auto col-lg-9">
 
         <!-- Sort filter -->
         <!-- <div class="coach-sort filter-opt-group4 mb-7 d-lg-block d-none">
@@ -143,8 +143,7 @@
         </div> -->
 
         <!-- Cards -->
-        <ul class="list-unstyled pb-lg-7">
-          <div class="row">
+        <ul class="render-coach-cards list-unstyled pb-lg-7 row">
           <li class="coach-card mb-5">
             <a class="row align-items-center" href="#">
               <div class="coach-photo col-lg-3 col-4">
@@ -237,11 +236,10 @@
               </div>              
             </a>
           </li>      
-          </div>      
         </ul>
         
         <nav aria-label="Page navigation example col-lg-12">
-          <ul class="pagination m-lg-0 py-lg-0 py-7 justify-content-end align-items-center">
+          <ul class="pagination m-lg-0 py-lg-0 py-7 justify-content-center align-items-center">
             <li class="page-item">
               <a class="page-link" href="#" aria-label="Previous">
                 <span class="material-symbols-outlined align-text-bottom">
@@ -272,13 +270,11 @@
 
       <%- include('./layout/footer'); -%>
     </div>
-    <!-- aos-animation -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();            
-    </script>
 
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <!-- customized js -->
     <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/coach-list.js"></script>
   </body>
 </html>

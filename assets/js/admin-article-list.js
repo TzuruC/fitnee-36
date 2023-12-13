@@ -27,7 +27,7 @@ function getArticles(){
 }
 
 function renderArticleList(i){
-    return `<tr>
+  return `<tr>
         <th scope="row">${i.id}</th>
         <td>${i.articleName}</td>
         <td>${i.articleCategory}</td>

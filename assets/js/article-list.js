@@ -13,7 +13,6 @@ function getArticles(){
   axios.get(`${api_url}/articles`)
   .then(function (res) {
     articleData = res.data;
-    console.log(articleData);
     let str = ``;
     articleData.forEach((i) => {
         str += renderArticleHTML(i);

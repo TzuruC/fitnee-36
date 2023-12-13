@@ -11,7 +11,21 @@
     <%- include('././layout/admin-header'); -%>
     
     <div class="container container-min-h pt-11">
-      <h2 class="fw-bold fs-2 mb-10">教練管理</h2>
+      <h2 class="fw-bold fs-2 mb-4">教練管理</h2>
+      <div class="list-action text-end mb-4 d-flex justify-content-between">
+
+        <div class="admin-coach-filter filter-opt-group4 btn-sm">
+          <select class="form-select" aria-label="Default select example">
+            <option>- 所有分類 -</option>
+            <option value="1">增肌減脂</option>
+            <option value="2">運動訓練</option>
+            <option value="3">學員心得</option>
+          </select>
+        </div>
+
+        <!-- <button type="button" class="btn btn-outline-warning btn-sm"> + 新增文章</button> -->
+
+      </div>
       <table class="table">
         <thead class=" table-secondary">
           <tr>
@@ -25,7 +39,7 @@
             <th scope="col" class="text-center">管理操作</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="js-coachList">
           <tr>
             <th scope="row">1</th>
             <td>李明</td>
@@ -86,5 +100,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <!-- customized js -->
     <script type="module" src="/./main.js"></script>
+    <script type="module" src="/./assets/js/admin-coach-list.js"></script>
   </body>
 </html>
