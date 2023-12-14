@@ -2,7 +2,7 @@ const fnWelcome = document.querySelector('.fn-welcome');
 const fnOnTraning = document.querySelector('.fn-on-traning');
 const fitneehelperApp = document.querySelector('.fitneehelper-app');
 
-fnAppHTML = ``; // 負責呈現APP內容
+
 
 // 歡迎頁面
 fnWelcome.addEventListener('click', (e)=>{
@@ -18,109 +18,328 @@ fnWelcome.addEventListener('click', (e)=>{
 
 function init(){
     getTrainings();
+    renderTotoData();  
+    renderTraining.innerHTML = combineFnAppHTML;
+    setTimeout(() => {
+        deleteTrain(renderTraining);
+        breakTriggerer(renderTraining);
+    }, 0);
+    
 }
 
+let combineFnAppHTML = ``; // 負責呈現APP內容
 // 讀取訓練項目
 function startTraining(){
     fitneehelperApp.innerHTML = fnAppHTML;
 }
-
+// 成功新增後渲染在列表
+let trainingData = []; // 已儲存在資料庫的訓練項目
+let onTrainingData = [ // 在畫面上暫存的項目
+    {
+        "content":"訓練名稱",
+        "target":"訓練部位",
+        "weight":"訓練重量",
+        "times":"單組訓練次數"
+    },{
+        "content":"深蹲",
+        "target":"腿",
+        "weight":"40",
+        "times":"10"
+    }
+];
 // 新增訓練項目
 const renderTraining = document.querySelector('.js-renderTraining');
 const addTrainingBtn = document.querySelector('#addTrainingBtn');
-
-let trainingData = [];
 function getTrainings(){
-    let str = ``;
     if(trainingData.length == 0){
-        str =  `
+        combineFnAppHTML =  `
         <div class="no-train">
             <span class="mb-5 d-block fs-12">沒有儲存的訓練項目</span>
         </div>
         `;
     }
-    renderTraining.innerHTML = str;
 }
 
+function renderTotoData(){
+    onTrainingData.forEach((i,index)=>{
+        combineFnAppHTML += renderTotoHTML(i,index);
+    });
+}
 // 點擊新增時增加一組 pattern
 const addNewTrain = document.querySelector('.add-new-train');
 addTrainingBtn.addEventListener('click', (e)=>{
     e.preventDefault();
-    console.log(addNewTrain);
-    let str = ``;
-    if(addNewTrain){
-        console.log("還有未儲存的訓練");
-        return; // 有一組空 pattern 存在時不要繼續渲染多的空 pattern
-    }else{
-        str += `
-        <div class="add-new-train mb-3 p-3 border border-secondary rounded-3">
-        <div class="add-or-na mb-3 d-flex justify-content-between align-items-center">
-            <span class="d-flex fs-6 text-start">
-                <span class="material-symbols-outlined"> add </span> 
-                <span class="">新的訓練項目</span>
-            </span>
-            <a href="#" class="cancel-add-train material-symbols-outlined link-dark"> close </a>
-        </div>
-        <!-- 名稱 -->
-        <input class="js-trainName mb-3 form-control border-primary border-4" type="text" placeholder="訓練項目名稱" />
-        <!-- 訓練部位 -->
-        <div class="row justify-content-center">
-            <div class="col-9 mb-3">
-                <label class="visually-hidden" for="specificSizeSelect">Preference</label>
-                <select class="form-select" id="specificSizeSelect">
-                    <option selected>選擇訓練部位</option>
-                    <option value="1">手部</option>
-                    <option value="2">腿部</option>
-                    <option value="3">核心</option>
-                </select>
-            </div>
-            <div class="col-3 py-1 text-primary">
-                
-            </div>
+    combineFnAppHTML += renderAddingHTML();
+    renderTraining.innerHTML = combineFnAppHTML;
+    const cancelAddingTrain = document.querySelector('.cancel-add-train');
+    // 內容渲染完成後設 focus
+    setTimeout(() => {
+        const trainName = document.querySelector('.js-trainName');
+        if (trainName) {
+            trainName.focus();
+        }
+    }, 0);
+    submitTrain(renderTraining);
+});
+// 新增訓練項目
+function submitTrain(renderTraining){
+    const addTrain = document.querySelector(".js-addTrain");
+    const addTrainName = document.querySelector(".js-trainName");
+    const addTrainTarget = document.querySelector(".js-addTrainTarget");
+    const addTrainWeight = document.querySelector(".js-addTrainWeight");
+    const addTrainTimes = document.querySelector(".js-addTrainTimes");
+    
+    addTrain.addEventListener("click",(e) => {
+        if(addTrainName.value == ""){
+            alert("請輸入訓練名稱");
+            return;
+        }
+        let obj = {};
+        obj.content = addTrainName.value;
+        obj.target = addTrainTarget.value;
+        obj.weight = addTrainWeight.value;
+        obj.times = addTrainTimes.value;
+        onTrainingData.push(obj);        
+        init();
+    });
+}
+// 刪除訓練項目
+function deleteTrain(renderTraining){    
+    const deleteTrain = renderTraining.querySelectorAll(".js-deleteTrain");
+    deleteTrain.forEach((item)=>{
+        item.addEventListener("click",(e) => {
+        e.preventDefault();
+        let trainId = e.target.getAttribute("data-id");
+        onTrainingData.splice(trainId,1);
+        alert("刪除成功！");
+        init();
+        });
+    });
+}
+// 觸發休息計時
+function breakTriggerer(renderTraining){
+    // 核取動畫
+    const finishedTrain = renderTraining.querySelectorAll(".js-finishedTrain");
+    const breakModal = renderTraining.querySelector(".js-breakModal");
+    
+    finishedTrain.forEach((item)=>{
+        item.addEventListener("click",(e) => {
+            e.preventDefault();
+            if(e.target.textContent == 'radio_button_checked'){
+                e.target.textContent = 'radio_button_unchecked';
+            }else{
+                e.target.textContent = 'radio_button_checked';
+                breakModal.classList.remove('d-none');
+            }
+        });
+    });
+    // 跳出計時器
+    countdownBreak(renderTraining);
 
-            <form class="row gx-3 gy-2 align-items-center">
-                <div class="col-2 px-0">
-                    <label class="form-check-label text-end" for="autoSizingCheck2"> 每組 </label>
-                </div>
-                <div class="col-3 px-0">
-                    <input
-                        type="text" maxlength="2"
-                        class="form-control rounded-pill input-bg-25 text-center fw-bold bg-primary bg-opacity-25" 
-                        id="specificSizeInputName"
-                        placeholder=""
-                    />
-                </div>
-                <div class="col-2">
-                    <label class="form-check-label text-start" for="autoSizingCheck2"> KG </label>
-                </div>
-                <div class="col-3 px-0">
-                    <input
-                        type="text" maxlength="2"
-                        class="form-control rounded-pill input-bg-25 text-center fw-bold bg-primary bg-opacity-25"
-                        id="specificSizeInputName"
-                        placeholder=""
-                    />
-                </div>
-                <div class="col-2">
-                    <label class="form-check-label text-start" for="autoSizingCheck2"> 次 </label>
-                </div>
-                <div class="text-center">
-                    <button
-                        type="button"
-                        class="mt-3 fs-6 py-2 btn btn-primary rounded-3 col-12"
-                        href="index.html"
-                    >
-                        確定新增
-                    </button>
-                </div>
-            </form>
+};
+
+function countdownBreak(renderTraining){
+    const bsModalBgShow = renderTraining.querySelector(".modal-backdrop");
+    const bsModalBodyOpen = renderTraining.querySelector(".modal-open");
+    console.log(bsModalBgShow,bsModalBodyOpen);
+    let timer;
+    let defaultCD = 10;
+    // const startTimerBtn = document.querySelector("#startTimerBtn");
+    const defaultTime = document.querySelector("#defaultTime");
+    const endBreak = document.querySelector("#endBreak");
+    const mathTimeBtn = document.querySelector(".mathTimeBtn");
+
+    function setTimer(time) {
+    // 帶入開始的總秒數
+    const sec = parseInt(time);
+    // 開始倒數
+    const now = Date.now();
+    const end = now + sec * 1000;
+    // 倒數計時
+    clearInterval(timer);  
+    timer = setInterval(function() {
+    const secLeft = Math.floor((end - Date.now()) / 1000);
+    
+    if (secLeft >= 0) {      
+        const displayMin = Math.floor(secLeft / 60);
+        let displaySec = secLeft % 60;
+        displaySec = displaySec < 10 ? "0" + displaySec : displaySec;
+        defaultTime.innerText = `${displayMin}:${displaySec}`;
+    } else {
+        defaultTime.innerText = `0:00`;
+        clearInterval(timer);
+    }
+
+    }, 16); //16=偵數  
+    };
+    setTimer(defaultCD);
+
+    // //結束休息
+    // endBreak.addEventListener('click',(e)=>{
+    //     clearInterval(timer);
+    //     setTimer(defaultCD);
+    // });
+
+    // +5, -5 按鈕
+    mathTimeBtn.addEventListener("click", (e)=>{
+        console.log(e.target);
+    const currentValue = parseInt(defaultTime.innerText.split(":")[0]) * 60 +
+                        parseInt(defaultTime.innerText.split(":")[1]);
+    if(e.target.textContent == "+5"){
+    setTimer(currentValue + 5);
+    }else if(e.target.textContent == "-5"){
+    setTimer(Math.max(currentValue - 5, 0)); // 確保計時器不會低於0
+    }else if(e.target.textContent == "結束"){
+    setTimer(0);
+    }
+    });
+}
+
+
+//---以下是渲染架構---
+function renderAddingHTML(){
+    return `
+    <div class="add-new-train mb-3 p-3 border border-secondary rounded-3">
+    <div class="add-or-na mb-3 d-flex justify-content-between align-items-center">
+        <span class="d-flex fs-6 text-start">
+            <span class="material-symbols-outlined"> add </span> 
+            <span class="">新的訓練項目</span>
+        </span>
+        <a href="#" class="cancel-add-train material-symbols-outlined link-dark"> close </a>
+    </div>
+    <!-- 名稱 -->
+    <input class="js-trainName mb-3 form-control border-primary border-4" type="text" placeholder="訓練項目名稱" />
+    <!-- 訓練部位 -->
+    <div class="row justify-content-center">
+        <div class="col-9 mb-3">
+            <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+            <select class="js-addTrainTarget form-select" id="specificSizeSelect">
+                <option selected>選擇訓練部位</option>
+                <option value="手部">手部</option>
+                <option value="腿部">腿部</option>
+                <option value="核心">核心</option>
+            </select>
+        </div>
+        <div class="col-3 py-1 text-primary">
+            
+        </div>
+
+        <form class="row gx-3 gy-2 align-items-center">
+            <div class="col-2 px-0">
+                <label class="form-check-label text-end" for="autoSizingCheck2"> 每組 </label>
+            </div>
+            <div class="col-3 px-0">
+                <input
+                    type="text" maxlength="2"
+                    class="js-addTrainWeight form-control rounded-pill input-bg-25 text-center fw-bold bg-primary bg-opacity-25" 
+                    id="specificSizeInputName"
+                    placeholder=""
+                />
+            </div>
+            <div class="col-2">
+                <label class="form-check-label text-start" for="autoSizingCheck2"> KG </label>
+            </div>
+            <div class="col-3 px-0">
+                <input
+                    type="text" maxlength="2"
+                    class="js-addTrainTimes form-control rounded-pill input-bg-25 text-center fw-bold bg-primary bg-opacity-25"
+                    id="specificSizeInputName"
+                    placeholder=""
+                />
+            </div>
+            <div class="col-2">
+                <label class="form-check-label text-start" for="autoSizingCheck2"> 次 </label>
+            </div>
+            <div class="text-center">
+                <button
+                    type="button"
+                    class="js-addTrain mt-3 fs-6 py-2 btn btn-primary rounded-3 col-12"
+                    href="index.html"
+                >
+                    確定新增
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+    `;
+}
+function renderTotoHTML(i,index){
+    return `    
+        ${renderBreakModalHTML()}
+        <div class="training-unit mb-3 border border-secondary rounded-3">
+            <div class="add-or-na p-3 d-flex justify-content-between align-items-center">
+                <span class="d-flex fs-6 text-start">
+                <span class="trainig-toggler material-symbols-outlined"> stat_minus_1 </span><span class="">${i.content}</span>
+                </span>                           
+                <a class="js-deleteTrain link-dark trainig-toggler material-symbols-outlined pe-auto" data-id="${index}"> DELETE </a> 
+                </a>
+            </div>
+            <div class="row justify-content-center">
+                <form class="row align-items-center">
+                    <div class="squad-unit squad-finished p-3 d-flex justify-content-between align-items-center">
+                        <span class="js-finishedTrain material-symbols-outlined text-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            radio_button_unchecked
+                            </span>
+                        <label class="form-check-label text-end" for="autoSizingCheck2"> 1 </label>
+                        <input
+                            type="text" maxlength="2"
+                            class="form-control rounded-pill input-bg-25 text-center fw-bold bg-primary bg-opacity-25" 
+                            id="specificSizeInputName"
+                            placeholder="${i.weight}"
+                        />
+                        <label class="form-check-label text-start" for="autoSizingCheck2"> KG </label>
+                        <input
+                            type="text" maxlength="2"
+                            class="form-control rounded-pill input-bg-25 text-center fw-bold bg-primary bg-opacity-25"
+                            id="specificSizeInputName"
+                            placeholder="${i.times}"
+                        />
+                        <label class="form-check-label text-start" for="autoSizingCheck2"> 次 </label>
+                    </div>                    
+                    <!-- 訓練組按鈕 -->
+                    <div class="action-btns d-flex text-center p-3 justify-content-between">
+                        <button
+                            type="button"
+                            class="fs-6 btn btn-primary rounded-3"
+                            href="index.html"
+                        >
+                            完成訓練
+                        </button>
+                        <button
+                            type="button"
+                            class="fs-6 btn btn-outline-primary rounded-3"
+                            href="index.html"
+                        >
+                            + 增加組數
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        `;
+}
+function renderBreakModalHTML(){
+    return `
+    <div class="js-breakModal m-0 modal fade modal-dialog modal-dialog-centered d-none" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog fixed-top">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">組間休息倒數</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center justify-content-between">
+            <span id="defaultTime" class="js-countdown fs-1 fw-bold">
+                1:00
+            </span>
+        </div>
+        <div class="mathTimeBtn modal-footer text-center justify-content-between">
+            <button type="button" class="btn btn-outline-primary">-5 秒</button>
+            <button type="button" id="endBreak" class="btn btn-primary" data-bs-dismiss="modal">結束休息</button>
+            <button type="button" class="btn btn-outline-primary">+5 秒</button>
         </div>
     </div>
-        `;
-    }
-    renderTraining.innerHTML = str;
-    const trainName = document.querySelector('.js-trainName ');
-    const cancelAddingTrain = document.querySelector('.cancel-add-train')
-    trainName.focus();
-});
-
+    </div>
+    </div>
+    `;
+}
