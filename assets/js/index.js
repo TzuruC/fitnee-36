@@ -1,4 +1,5 @@
-const api_url="http://localhost:3000";
+// const api_url="http://localhost:3000";
+const api_url="https://fitnee-36-53tb.onrender.com";
 
 // 畫面初始化
 function init(){
@@ -49,6 +50,7 @@ function renderCoachHTML(i){
 const coachFilter = document.querySelector('.coach-filter-system');
 coachFilter.addEventListener('click',(e)=>{
   e.preventDefault();
+  if(e.target.nodeName == "A"){  
   const category = e.target.textContent;
   let str = ``;
   let strCount = 0;
@@ -59,6 +61,7 @@ coachFilter.addEventListener('click',(e)=>{
     };
   });  
   coachCards.innerHTML = str;
+  }
 });
 // 教練篩選動畫效果
 const coachFilterItems = document.querySelectorAll('.coach-filter-system .filter-btn');
@@ -71,7 +74,29 @@ coachFilterItems.forEach((i) => {
     e.target.classList.add('active');
   });
 });
-
+// 教練搜尋欄功能
+const serchCoachForm = document.querySelector('.search-coach');
+const serchCoachInput = document.querySelector('.search-coach input');
+serchCoachForm.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  console.log(serchCoachInput.value);
+  if(e.target.nodeName == "INPUT"){  
+    const searchKey = serchCoachInput.value.trim().toLowerCase();
+    let str = ``;
+    let strCount = 0;
+    
+    coachData.forEach((i) => {
+      dataCoachKeys = i.coachName.toLowerCase().split();
+      console.log(dataCoachKeys);
+      // if(i.coachName.toLowerCase() == CoachName && strCount < 4){
+      //   str += renderCoachHTML(i);
+      //   strCount += 1;
+      // };
+    });  
+    // coachCards.innerHTML = str;
+    }
+  serchCoachForm.reset();
+});
 
 // 取得文章列表
 const articleCards = document.querySelector('.article-cards');
@@ -82,7 +107,6 @@ function getArticles(){
     articleData = res.data;
     let str = ``;
     let strCount = 0;
-    console.log(articleData);
     articleData.forEach((i) => {
       if(strCount < 4){
         str += renderArticleHTML(i);
@@ -115,7 +139,6 @@ const articleFilter = document.querySelector('.article-filter');
 articleFilter.addEventListener('click',(e)=>{
   e.preventDefault();
   const articleCategory = e.target.textContent;
-  console.log(articleCategory);
   if(articleCategory == "所有分類"){    
     getArticles();
     return;
