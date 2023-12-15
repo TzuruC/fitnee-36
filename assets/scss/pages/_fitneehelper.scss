@@ -23,3 +23,23 @@
         width: 60px;
     }
 }
+
+.delete-training-btn{
+    cursor: pointer;
+}
+
+
+// // 隱藏數字箭頭
+// /* Chrome, Safari, Edge, Opera */
+// input.add-new-weight::-webkit-outer-spin-button,
+// input.add-new-weight::-webkit-inner-spin-button,
+// input.add-new-times::-webkit-outer-spin-button,
+// input.add-new-times::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+// /* Firefox */
+// input.add-new-weight[type=number],
+// input.add-new-times[type=number] {
+//   -moz-appearance: textfield;
+// }

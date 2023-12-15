@@ -1,8 +1,7 @@
 const fnWelcome = document.querySelector('.fn-welcome');
 const fnOnTraning = document.querySelector('.fn-on-traning');
 const fitneehelperApp = document.querySelector('.fitneehelper-app');
-
-
+const renderTraining = document.querySelector('.js-renderTraining');
 
 // 歡迎頁面
 fnWelcome.addEventListener('click', (e)=>{
@@ -16,13 +15,13 @@ fnWelcome.addEventListener('click', (e)=>{
     }    
 });
 
-function init(){
-    getTrainings();
-    renderTotoData();  
+function init(){    
+    combineFnAppHTML = ``;
+    renderTotoData();      
     renderTraining.innerHTML = combineFnAppHTML;
     setTimeout(() => {
         deleteTrain(renderTraining);
-        breakTriggerer(renderTraining);
+        // breakTriggerer(renderTraining);
     }, 0);
     
 }
@@ -31,6 +30,9 @@ let combineFnAppHTML = ``; // 負責呈現APP內容
 // 讀取訓練項目
 function startTraining(){
     fitneehelperApp.innerHTML = fnAppHTML;
+}
+function resetRenderTraining(){
+    renderTraining.innerHTML = ``;
 }
 // 成功新增後渲染在列表
 let trainingData = []; // 已儲存在資料庫的訓練項目
@@ -48,16 +50,15 @@ let onTrainingData = [ // 在畫面上暫存的項目
     }
 ];
 // 新增訓練項目
-const renderTraining = document.querySelector('.js-renderTraining');
 const addTrainingBtn = document.querySelector('#addTrainingBtn');
-function getTrainings(){
-    if(trainingData.length == 0){
+
+function emptyTrainHint(renderTraining){
+    if(trainingData.length == 0 && onTrainingData.length == 0 && !addNewTrain){
         combineFnAppHTML =  `
         <div class="no-train">
             <span class="mb-5 d-block fs-12">沒有儲存的訓練項目</span>
         </div>
-        `;
-    }
+        `;}
 }
 
 function renderTotoData(){
@@ -71,13 +72,19 @@ addTrainingBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     combineFnAppHTML += renderAddingHTML();
     renderTraining.innerHTML = combineFnAppHTML;
+    const emptyTrainHinter = document.querySelector('.no-train');
     const cancelAddingTrain = document.querySelector('.cancel-add-train');
     // 內容渲染完成後設 focus
     setTimeout(() => {
+        emptyTrainHinter.classList.add('d-none');
         const trainName = document.querySelector('.js-trainName');
         if (trainName) {
             trainName.focus();
         }
+        // cancelAddingTrain.addEventListener('click',(e)=>{
+        //     e.preventDefault();
+        //     init();
+        // });
     }, 0);
     submitTrain(renderTraining);
 });
@@ -94,13 +101,20 @@ function submitTrain(renderTraining){
             alert("請輸入訓練名稱");
             return;
         }
+        // 加入資料
         let obj = {};
         obj.content = addTrainName.value;
         obj.target = addTrainTarget.value;
         obj.weight = addTrainWeight.value;
         obj.times = addTrainTimes.value;
-        onTrainingData.push(obj);        
-        init();
+        onTrainingData.push(obj);   
+        //去掉 pattern
+        // combineFnAppHTML = combineFnAppHTML.replace(renderAddingHTML(), '');
+        // renderTraining.innerHTML = combineFnAppHTML;
+        // renderTraining.innerHTML = '';
+        combineFnAppHTML = ``;
+        //重新渲染 
+        init(); 
     });
 }
 // 刪除訓練項目
@@ -116,84 +130,7 @@ function deleteTrain(renderTraining){
         });
     });
 }
-// 觸發休息計時
-function breakTriggerer(renderTraining){
-    // 核取動畫
-    const finishedTrain = renderTraining.querySelectorAll(".js-finishedTrain");
-    const breakModal = renderTraining.querySelector(".js-breakModal");
-    
-    finishedTrain.forEach((item)=>{
-        item.addEventListener("click",(e) => {
-            e.preventDefault();
-            if(e.target.textContent == 'radio_button_checked'){
-                e.target.textContent = 'radio_button_unchecked';
-            }else{
-                e.target.textContent = 'radio_button_checked';
-                breakModal.classList.remove('d-none');
-            }
-        });
-    });
-    // 跳出計時器
-    countdownBreak(renderTraining);
 
-};
-
-function countdownBreak(renderTraining){
-    const bsModalBgShow = renderTraining.querySelector(".modal-backdrop");
-    const bsModalBodyOpen = renderTraining.querySelector(".modal-open");
-    console.log(bsModalBgShow,bsModalBodyOpen);
-    let timer;
-    let defaultCD = 10;
-    // const startTimerBtn = document.querySelector("#startTimerBtn");
-    const defaultTime = document.querySelector("#defaultTime");
-    const endBreak = document.querySelector("#endBreak");
-    const mathTimeBtn = document.querySelector(".mathTimeBtn");
-
-    function setTimer(time) {
-    // 帶入開始的總秒數
-    const sec = parseInt(time);
-    // 開始倒數
-    const now = Date.now();
-    const end = now + sec * 1000;
-    // 倒數計時
-    clearInterval(timer);  
-    timer = setInterval(function() {
-    const secLeft = Math.floor((end - Date.now()) / 1000);
-    
-    if (secLeft >= 0) {      
-        const displayMin = Math.floor(secLeft / 60);
-        let displaySec = secLeft % 60;
-        displaySec = displaySec < 10 ? "0" + displaySec : displaySec;
-        defaultTime.innerText = `${displayMin}:${displaySec}`;
-    } else {
-        defaultTime.innerText = `0:00`;
-        clearInterval(timer);
-    }
-
-    }, 16); //16=偵數  
-    };
-    setTimer(defaultCD);
-
-    // //結束休息
-    // endBreak.addEventListener('click',(e)=>{
-    //     clearInterval(timer);
-    //     setTimer(defaultCD);
-    // });
-
-    // +5, -5 按鈕
-    mathTimeBtn.addEventListener("click", (e)=>{
-        console.log(e.target);
-    const currentValue = parseInt(defaultTime.innerText.split(":")[0]) * 60 +
-                        parseInt(defaultTime.innerText.split(":")[1]);
-    if(e.target.textContent == "+5"){
-    setTimer(currentValue + 5);
-    }else if(e.target.textContent == "-5"){
-    setTimer(Math.max(currentValue - 5, 0)); // 確保計時器不會低於0
-    }else if(e.target.textContent == "結束"){
-    setTimer(0);
-    }
-    });
-}
 
 
 //---以下是渲染架構---
@@ -230,8 +167,8 @@ function renderAddingHTML(){
             </div>
             <div class="col-3 px-0">
                 <input
-                    type="text" maxlength="2"
-                    class="js-addTrainWeight form-control rounded-pill input-bg-25 text-center fw-bold bg-primary bg-opacity-25" 
+                    type="text" maxlength="2" onkeyup="value=value.replace(/[^0-9]/g,'')" onpaste="value=value.replace(/[^0-9]/g,'')" oninput="value=value.replace(/[^0-9]/g,'')"
+                    class="js-addTrainWeight add-new-weight form-control rounded-pill input-bg-25 text-center fw-bold bg-primary bg-opacity-25" 
                     id="specificSizeInputName"
                     placeholder=""
                 />
@@ -241,8 +178,8 @@ function renderAddingHTML(){
             </div>
             <div class="col-3 px-0">
                 <input
-                    type="text" maxlength="2"
-                    class="js-addTrainTimes form-control rounded-pill input-bg-25 text-center fw-bold bg-primary bg-opacity-25"
+                    type="text" maxlength="2" onkeyup="value=value.replace(/[^0-9]/g,'')" onpaste="value=value.replace(/[^0-9]/g,'')" oninput="value=value.replace(/[^0-9]/g,'')"
+                    class="js-addTrainTimes add-new-times form-control rounded-pill input-bg-25 text-center fw-bold bg-primary bg-opacity-25"
                     id="specificSizeInputName"
                     placeholder=""
                 />
@@ -272,7 +209,7 @@ function renderTotoHTML(i,index){
                 <span class="d-flex fs-6 text-start">
                 <span class="trainig-toggler material-symbols-outlined"> stat_minus_1 </span><span class="">${i.content}</span>
                 </span>                           
-                <a class="js-deleteTrain link-dark trainig-toggler material-symbols-outlined pe-auto" data-id="${index}"> DELETE </a> 
+                <a class="js-deleteTrain delete-training-btn link-dark trainig-toggler material-symbols-outlined pe-auto" data-id="${index}"> DELETE </a> 
                 </a>
             </div>
             <div class="row justify-content-center">
@@ -343,3 +280,82 @@ function renderBreakModalHTML(){
     </div>
     `;
 }
+
+// 觸發休息計時
+// function breakTriggerer(renderTraining){
+//     // 核取動畫
+//     const finishedTrain = renderTraining.querySelectorAll(".js-finishedTrain");
+//     const breakModal = renderTraining.querySelector(".js-breakModal");
+    
+//     finishedTrain.forEach((item)=>{
+//         item.addEventListener("click",(e) => {
+//             e.preventDefault();
+//             if(e.target.textContent == 'radio_button_checked'){
+//                 e.target.textContent = 'radio_button_unchecked';
+//             }else{
+//                 e.target.textContent = 'radio_button_checked';
+//                 breakModal.classList.remove('d-none');
+//             }
+//         });
+//         // 跳出計時器
+//         countdownBreak(renderTraining);
+//     });
+    
+// };
+// let timer;
+// let defaultCD = 10;
+// function countdownBreak(renderTraining){
+//     const bsModalBgShow = renderTraining.querySelector(".modal-backdrop");
+//     const bsModalBodyOpen = renderTraining.querySelector(".modal-open");
+//     console.log(bsModalBgShow,bsModalBodyOpen);
+    
+//     // const startTimerBtn = document.querySelector("#startTimerBtn");
+//     const defaultTime = document.querySelector("#defaultTime");
+//     const endBreak = document.querySelector("#endBreak");
+//     const mathTimeBtn = document.querySelector(".mathTimeBtn");
+
+//     function setTimer(time) {
+//     // 帶入開始的總秒數
+//     const sec = parseInt(time);
+//     // 開始倒數
+//     const now = Date.now();
+//     const end = now + sec * 1000;
+//     // 倒數計時
+//     clearInterval(timer);  
+//     timer = setInterval(function() {
+//     const secLeft = Math.floor((end - Date.now()) / 1000);
+    
+//     if (secLeft >= 0) {      
+//         const displayMin = Math.floor(secLeft / 60);
+//         let displaySec = secLeft % 60;
+//         displaySec = displaySec < 10 ? "0" + displaySec : displaySec;
+//         defaultTime.innerText = `${displayMin}:${displaySec}`;
+//     } else {
+//         defaultTime.innerText = `0:00`;
+//         clearInterval(timer);
+//     }
+
+//     }, 16); //16=偵數  
+//     };
+//     setTimer(defaultCD);
+
+//     // //結束休息
+//     // endBreak.addEventListener('click',(e)=>{
+//     //     clearInterval(timer);
+//     //     setTimer(defaultCD);
+//     // });
+
+//     // +5, -5 按鈕
+//     // mathTimeBtn.addEventListener("click", (e)=>{
+//     //     console.log(e.target);
+//     // const currentValue = parseInt(defaultTime.innerText.split(":")[0]) * 60 +
+//     //                     parseInt(defaultTime.innerText.split(":")[1]);
+//     // if(e.target.textContent == "+5"){
+//     // setTimer(currentValue + 5);
+//     // }else if(e.target.textContent == "-5"){
+//     // setTimer(Math.max(currentValue - 5, 0)); // 確保計時器不會低於0
+//     // }else if(e.target.textContent == "結束"){
+//     // setTimer(0);
+//     // }
+//     // });
+// }

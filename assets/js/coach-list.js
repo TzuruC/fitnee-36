@@ -52,3 +52,29 @@ function renderCoachHTML(i){
     </li>
     `;
 };
+// 教練搜尋欄功能
+const serchCoachForm = document.querySelector('.aside-search-box');
+const serchCoachInput = document.querySelector('.aside-search-box input');
+serchCoachForm.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  const searchKey = serchCoachInput.value.trim().toLowerCase();
+  console.log(searchKey);
+  let matchingCoaches = []; // 存储匹配的结果
+  let str=``;    
+  coachData.forEach((i) => {
+    // 將每組單字拆成ary
+    let dataCoachNameKey = i.coachName.toLowerCase().split('');
+    let matchFound = false;
+    // 一個字一個字比對
+    dataCoachNameKey.forEach((key)=>{
+      if(key.includes(searchKey)){
+        matchFound = true;
+      }
+    });    
+    if (matchFound) {
+      str += renderCoachHTML(i);
+    };
+    coachCards.innerHTML = str;
+  });  
+  serchCoachForm.reset();
+});

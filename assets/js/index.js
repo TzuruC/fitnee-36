@@ -1,5 +1,5 @@
-// const api_url="http://localhost:3000";
-const api_url="https://fitnee-36-53tb.onrender.com";
+const api_url="http://localhost:3000";
+// const api_url="https://fitnee-36-53tb.onrender.com";
 
 // 畫面初始化
 function init(){
@@ -33,7 +33,7 @@ function getCoaches(){
 // 渲染教練卡片
 function renderCoachHTML(i){
   return `
-  <li class="coach-card mb-lg-0 mb-7" data-aos="flip-left" data-aos-delay="50" data-aos-once="true">
+  <li class="coach-card mb-lg-0 mb-7 px-2" data-aos="flip-left" data-aos-delay="50" data-aos-once="true">
       <a href="coach-detail.html?id=${i.id}">
       <div class="img-gradient">
           <img src="${i.coachPhoto}" alt="${i.coachTitle}" />
@@ -79,22 +79,27 @@ const serchCoachForm = document.querySelector('.search-coach');
 const serchCoachInput = document.querySelector('.search-coach input');
 serchCoachForm.addEventListener('submit',(e)=>{
   e.preventDefault();
-  console.log(serchCoachInput.value);
-  if(e.target.nodeName == "INPUT"){  
-    const searchKey = serchCoachInput.value.trim().toLowerCase();
-    let str = ``;
-    let strCount = 0;
-    
-    coachData.forEach((i) => {
-      dataCoachKeys = i.coachName.toLowerCase().split();
-      console.log(dataCoachKeys);
-      // if(i.coachName.toLowerCase() == CoachName && strCount < 4){
-      //   str += renderCoachHTML(i);
-      //   strCount += 1;
-      // };
-    });  
-    // coachCards.innerHTML = str;
-    }
+  const searchKey = serchCoachInput.value.trim().toLowerCase();
+  console.log(searchKey);
+  let matchingCoaches = []; // 存储匹配的结果
+  let str=``;    
+  let strCount = 0;
+  coachData.forEach((i) => {
+    // 將每組單字拆成ary
+    let dataCoachNameKey = i.coachName.toLowerCase().split('');
+    let matchFound = false;
+    // 一個字一個字比對
+    dataCoachNameKey.forEach((key)=>{
+      if(key.includes(searchKey)){
+        matchFound = true;
+      }
+    });    
+    if (matchFound && strCount < 4) {
+      str += renderCoachHTML(i);
+      strCount += 1;
+    };
+    coachCards.innerHTML = str;
+  });  
   serchCoachForm.reset();
 });
 
