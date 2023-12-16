@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>#36 FitNee - 訓練幫手</title>
-      <script type="module" crossorigin src="/fitnee-36/assets/fitneehelper-c407509f.js"></script>
-      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-82aaa405.js">
-      <link rel="stylesheet" href="/fitnee-36/assets/main-f6e19037.css">
+      <script type="module" crossorigin src="/fitnee-36/assets/fitneehelper-64e44b42.js"></script>
+      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-9ae5eee9.js">
+      <link rel="stylesheet" href="/fitnee-36/assets/main-3a1a2dc4.css">
     </head>
     <body>
         <header id="transNav"  class="fixed-top trans-nav">
@@ -84,6 +84,8 @@
             </div>
         </div>
 
+        <!-- module -->
+        
         <!-- Fitnee App -->
         <div class="container">
             <div id="fitneehelper" class="fitneehelper-app text-center">
@@ -109,6 +111,26 @@
                 </div>
                 </div>
 
+                <div class="js-breakModal m-0 modal fade modal-dialog modal-dialog-centered" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog fixed-top">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">組間休息倒數</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center justify-content-between">
+                            <span id="defaultTime" class="js-countdown fs-1 fw-bold">
+                                1:00
+                            </span>
+                        </div>
+                        <div class="mathTimeBtn modal-footer text-center justify-content-between">
+                            <button type="button" class="btn btn-outline-primary">-5 秒</button>
+                            <button type="button" id="endBreak" class="btn btn-primary" data-bs-dismiss="modal">結束休息</button>
+                            <button type="button" class="btn btn-outline-primary">+5 秒</button>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
                 
             </div>
         </div>

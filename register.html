@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>#36 FitNee - 註冊</title>
-    <script type="module" crossorigin src="/fitnee-36/assets/main-82aaa405.js"></script>
-    <link rel="stylesheet" href="/fitnee-36/assets/main-f6e19037.css">
+    <script type="module" crossorigin src="/fitnee-36/assets/register-6b01bfa4.js"></script>
+    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-9ae5eee9.js">
+    <link rel="stylesheet" href="/fitnee-36/assets/main-3a1a2dc4.css">
   </head>
   <body>
     <header id="transNav"  class="fixed-top trans-nav">
@@ -85,52 +86,66 @@
       <div id="loginForm" class="container my-lg-5 my-13">
         <div class="text-center">
           <h2 class="fw-bold mb-5">建立會員帳戶</h2>
-          <p class="mb-10">已經是會員？ 前往<a class="link-primary" href="register.html">登入頁面</a></p>
-        </div>
-        <div class="ui-form-white my-5">
-          <div class="ui-placeholder ui-leftTop">
-            <input id="loginMail" class="form-control ui-underline mb-7" name="email" type="text" placeholder="*姓名"><span>*姓名</span>
-            <span id="alertEmail" class="alert-span text-danger d-block fs-6"></span>
-          </div>
-        </div>
-        <div class="ui-form-white my-5">
-          <div class="ui-placeholder ui-leftTop">            
-            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="text" placeholder="暱稱"><span>暱稱</span>
-            <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
-          </div>
-        </div>   
-        <div class="ui-form-white my-5">
-          <div class="ui-placeholder ui-leftTop">            
-            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*電子信箱 ( 將成為您的帳號 )"><span>*電子信箱 ( 將成為您的帳號 )</span>
-            <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
-          </div>
-        </div>  
-        <div class="ui-form-white my-5">
-          <div class="ui-placeholder ui-leftTop">            
-            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="tel" placeholder="*聯絡電話"><span>*聯絡電話</span>
-            <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
-          </div>
-        </div>  
-        <div class="ui-form-white my-5">
-          <div class="ui-placeholder ui-leftTop">            
-            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*密碼"><span>*密碼</span>
-            <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
-          </div>
-        </div>  
-        <div class="ui-form-white my-5">
-          <div class="ui-placeholder ui-leftTop">            
-            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*確認密碼"><span>*確認密碼</span>
-            <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
-          </div>
+          <p class="mb-10">已經是會員？ 前往<a class="link-primary" href="member-login.html">登入頁面</a></p>
         </div>      
+        <form class="register-form">
+          <div class="ui-form-white my-5">
+            <div class="ui-placeholder ui-leftTop">            
+              <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*電子信箱 ( 將成為您的帳號 )"><span>*電子信箱 ( 將成為您的帳號 )</span>
+              <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
+            </div>
+          </div>
+          
+          <div class="ui-form-white my-5">
+            <div class="ui-placeholder ui-leftTop">
+              <input id="loginMail" class="form-control ui-underline mb-7" name="email" type="text" placeholder="*會員名稱"><span>*會員暱稱</span>
+              <span id="alertEmail" class="alert-span text-danger d-block fs-6"></span>
+            </div>
+          </div>     
+          <div class="ui-form-white my-5">
+            <div class="ui-placeholder ui-leftTop">            
+              <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="tel" placeholder="*聯絡電話"><span>*聯絡電話</span>
+              <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
+            </div>
+          </div>  
+          <div class="ui-form-white my-5">
+            <div class="ui-placeholder ui-leftTop">            
+              <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*密碼"><span>*密碼</span>
+              <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
+            </div>
+          </div>  
+          <div class="ui-form-white my-5">
+            <div class="ui-placeholder ui-leftTop">            
+              <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*確認密碼"><span>*確認密碼</span>
+              <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
+            </div>
+          </div>      
 
-        <div class="text-center">
-          <a id="loginBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">立即加入</a>
-          <span class="login-caution">繼續即表示您同意我們的 <a class="link-primary" href="">條款和條件</a> 以及 <a class="link-primary" href="">隱私權政策</a> 。</span>
-        </div>
+          <div class="text-center">
+            <a id="loginBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">立即加入</a>
+            <span class="login-caution">繼續即表示您同意我們的 <a class="link-primary" href="">條款和條件</a> 以及 <a class="link-primary" href="">隱私權政策</a> 。</span>
+          </div>
+        </form>
       </div>
       
     </section>
+
+
+    <!-- fitnee-ad -->
+    <div class="fitnee-ad py-10">
+    <div class="container text-white">
+    <div class="page-slogan mb-lg-7 mb-5 text-center">
+    <span class="d-block mb-lg-3 mb-0 fs-2">訓練幫手 免費體驗</span>
+    <span class="d-block fs-6">幫助您輕鬆組織有效訓練</span>
+    </div>
+    <div class="page-action">
+    <div class="text-center">
+        <a href="fitneehelper.html" class="btn ms-2 mb-lg-7 mb-5 btn-outline-primary rounded-1 fs-4 px-9 py-3">立即免費體驗</a>
+    </div>
+    <span class="d-block text-center">掌握訓練品質精確，讓我們為您準備</span>
+    </div>
+</div>
+</div>    
     <footer>
     <div class="sitemap bg-dark">
     <div class="container">
@@ -174,8 +189,13 @@
 </div>
 
     
-</footer>    <!-- validate -->
+</footer>
+    <!-- validate -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+     <!-- axios -->
+     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+     <!-- customized js -->
+    
     
   </body>
 </html>

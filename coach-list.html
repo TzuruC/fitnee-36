@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>#36 FitNee - 專業教練</title>
-    <script type="module" crossorigin src="/fitnee-36/assets/main-82aaa405.js"></script>
-    <link rel="stylesheet" href="/fitnee-36/assets/main-f6e19037.css">
+    <script type="module" crossorigin src="/fitnee-36/assets/coach-list-3fb9b7b0.js"></script>
+    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-9ae5eee9.js">
+    <link rel="stylesheet" href="/fitnee-36/assets/main-3a1a2dc4.css">
   </head>
   <body>
     <div class="page-wrapper">
@@ -92,80 +93,83 @@
       
         <div class="filter-opt-group0 mb-7">
           <div class="mb-5 d-block fw-bold" for="">教練關鍵字搜尋</div>
-          <div class="aside-search-box mb-3 d-flex justify-content-between align-items-center">
-            <span class="material-symbols-outlined">
-              search
-            </span>
-            <input type="search" class="form-control" placeholder="搜尋專業教練" aria-label="Search"
-              aria-describedby="search-addon" />
-          </div>
+          <form action="" class="aside-search-box">
+            <div class=" mb-3 d-flex justify-content-between align-items-center">
+              <span class="material-symbols-outlined">
+                search
+              </span>
+              <input type="search" class="form-control" placeholder="搜尋專業教練" aria-label="Search"
+                aria-describedby="search-addon" />
+            </div>
+          </form>
         </div>
 
         <div class="filter-opt-group1 mb-7">
           <div class="mb-5 d-block fw-bold" for="">教練專長項目</div>
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" value="" id="c1">
-            <label class="form-check-label" for="c1">
-              體態調整
-            </label>
+          <form action="" class="aside-filter-form">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="" id="c1">
+              <label class="form-check-label" for="c1">
+                體態調整
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="" id="c2">
+              <label class="form-check-label" for="c2">
+                增肌減脂
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="c3">
+              <label class="form-check-label" for="c3">
+                運動訓練
+              </label>
+            </div>
           </div>
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" value="" id="c2">
-            <label class="form-check-label" for="c2">
-              增肌減脂
-            </label>
+        
+          <div class="filter-opt-group2 mb-7">
+            <div class="mb-5 d-block fw-bold" for="">教練服務地區</div>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>未選擇</option>
+              <option value="1">北部</option>
+              <option value="2">中部</option>
+              <option value="3">南部</option>
+            </select>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="c3">
-            <label class="form-check-label" for="c3">
-              運動訓練
-            </label>
+        
+          <div class="filter-opt-group3 mb-7">
+            <div class="mb-5 d-block fw-bold" for="">教練服務時間</div>
+            <select class="form-select mb-3" aria-label="Default select example">
+              <option selected>每天</option>
+              <option value="1">星期一</option>
+              <option value="2">星期二</option>
+              <option value="3">星期三</option>
+              <option value="3">星期四</option>
+              <option value="3">星期五</option>
+              <option value="3">星期六</option>
+              <option value="3">星期日</option>
+            </select>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="" id="c4">
+              <label class="form-check-label" for="c4">
+                早上 6:00 ~ 12:00
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="" id="c5">
+              <label class="form-check-label" for="c5">
+                下午 12:00 ~ 18:00
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="c6">
+              <label class="form-check-label" for="c6">
+                晚上 18:00 ~ 0:00
+              </label>
+            </div>
+        
           </div>
-        </div>
-      
-        <div class="filter-opt-group2 mb-7">
-          <div class="mb-5 d-block fw-bold" for="">教練服務地區</div>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>未選擇</option>
-            <option value="1">北部</option>
-            <option value="2">中部</option>
-            <option value="3">南部</option>
-          </select>
-        </div>
-      
-        <div class="filter-opt-group3 mb-7">
-          <div class="mb-5 d-block fw-bold" for="">教練服務時間</div>
-          <select class="form-select mb-3" aria-label="Default select example">
-            <option selected>每天</option>
-            <option value="1">星期一</option>
-            <option value="2">星期二</option>
-            <option value="3">星期三</option>
-            <option value="3">星期四</option>
-            <option value="3">星期五</option>
-            <option value="3">星期六</option>
-            <option value="3">星期日</option>
-          </select>
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" value="" id="c4">
-            <label class="form-check-label" for="c4">
-              早上 6:00 ~ 12:00
-            </label>
-          </div>
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" value="" id="c5">
-            <label class="form-check-label" for="c5">
-              下午 12:00 ~ 18:00
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="c6">
-            <label class="form-check-label" for="c6">
-              晚上 18:00 ~ 0:00
-            </label>
-          </div>
-      
-        </div>
-      
+        </form>
         <div class="text-center">
           <div class="btn btn-primary text-white rounded-1 px-9 w-100">搜尋</div>
         </div>
@@ -182,7 +186,7 @@
       </div>        
 
       <!-- coach cards -->
-      <div class="render-cards ms-auto col-lg-8 offset-lg-2">
+      <div class="ms-auto col-lg-9">
 
         <!-- Sort filter -->
         <!-- <div class="coach-sort filter-opt-group4 mb-7 d-lg-block d-none">
@@ -195,105 +199,27 @@
         </div> -->
 
         <!-- Cards -->
-        <ul class="list-unstyled pb-lg-7">
-          <div class="row">
-          <li class="coach-card mb-5">
-            <a class="row align-items-center" href="#">
-              <div class="coach-photo col-lg-3 col-4">
-                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach1.png" alt="coach1" />              
-              </div>
-              <div class="coach-content col-lg-9 col-8">
-                <div class="coach-info d-flex justify-content-between">  
-                  <div>
-                    <h4 class="coach-name fs-4 text-right link-dark">Kevin</h4>
-                    <p class="coach-title fs-6">連鎖健身房教練</p>
-                  </div>
-                  <div class="coach-price">
-                    <span class="d-block fs-5 text-end link-dark">NT 800</span> 
-                    <span class="d-block fs-6 text-end link-dark">/ 體驗課</span>
-                  </div>  
-                </div>
-                <div class="coach-intro link-dark fs-6">
-                  專注於為學生提供最佳的健身教練服務。我能夠設計個性化的訓練計劃 ...
-                </div>    
-                
-              </div>              
-            </a>
-          </li>
-          <li class="coach-card mb-5">
-            <a class="row align-items-center" href="#">
-              <div class="coach-photo col-lg-3 col-4">
-                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach2.png" alt="coach1" />              
-              </div>
-              <div class="coach-content col-lg-9 col-8">
-                <div class="coach-info d-flex justify-content-between">  
-                  <div>
-                    <h4 class="coach-name fs-4 text-right link-dark">Kevin</h4>
-                    <p class="coach-title fs-6">連鎖健身房教練</p>
-                  </div>
-                  <div class="coach-price">
-                    <span class="d-block fs-5 text-end link-dark">NT 800</span> 
-                    <span class="d-block fs-6 text-end link-dark">/ 體驗課</span>
-                  </div>  
-                </div>
-                <div class="coach-intro link-dark fs-6">
-                  專注於為學生提供最佳的健身教練服務。我能夠設計個性化的訓練計劃 ...
-                </div>    
-                
-              </div>              
-            </a>
-          </li>
-          <li class="coach-card mb-5">
-            <a class="row align-items-center" href="#">
-              <div class="coach-photo col-lg-3 col-4">
-                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach3.png" alt="coach1" />              
-              </div>
-              <div class="coach-content col-lg-9 col-8">
-                <div class="coach-info d-flex justify-content-between">  
-                  <div>
-                    <h4 class="coach-name fs-4 text-right link-dark">Kevin</h4>
-                    <p class="coach-title fs-6">連鎖健身房教練</p>
-                  </div>
-                  <div class="coach-price">
-                    <span class="d-block fs-5 text-end link-dark">NT 800</span> 
-                    <span class="d-block fs-6 text-end link-dark">/ 體驗課</span>
-                  </div>  
-                </div>
-                <div class="coach-intro link-dark fs-6">
-                  專注於為學生提供最佳的健身教練服務。我能夠設計個性化的訓練計劃 ...
-                </div>    
-                
-              </div>              
-            </a>
-          </li>
-          <li class="coach-card mb-5">
-            <a class="row align-items-center" href="#">
-              <div class="coach-photo col-lg-3 col-4">
-                <img src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach4.png" alt="coach1" />              
-              </div>
-              <div class="coach-content col-lg-9 col-8">
-                <div class="coach-info d-flex justify-content-between">  
-                  <div>
-                    <h4 class="coach-name fs-4 text-right link-dark">Kevin</h4>
-                    <p class="coach-title fs-6">連鎖健身房教練</p>
-                  </div>
-                  <div class="coach-price">
-                    <span class="d-block fs-5 text-end link-dark">NT 800</span> 
-                    <span class="d-block fs-6 text-end link-dark">/ 體驗課</span>
-                  </div>  
-                </div>
-                <div class="coach-intro link-dark fs-6">
-                  專注於為學生提供最佳的健身教練服務。我能夠設計個性化的訓練計劃 ...
-                </div>    
-                
-              </div>              
-            </a>
-          </li>      
-          </div>      
+        <ul class="render-coach-cards list-unstyled pb-lg-7 row">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#fff;display:block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+            <rect x="17.5" y="30" width="15" height="40" fill="#996f05">
+            <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="18;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
+            <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="64;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
+          </rect>
+          <rect x="42.5" y="30" width="15" height="40" fill="#d79c05">
+            <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
+            <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
+          </rect>
+          <rect x="67.5" y="30" width="15" height="40" fill="#f6bd2c">
+            <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+            <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
+          </rect>
+          </svg>
+
+          
         </ul>
         
-        <nav aria-label="Page navigation example col-lg-12">
-          <ul class="pagination m-lg-0 py-lg-0 py-7 justify-content-end align-items-center">
+        <!-- <nav aria-label="Page navigation example col-lg-12">
+          <ul class="pagination m-lg-0 py-lg-0 py-7 justify-content-center align-items-center">
             <li class="page-item">
               <a class="page-link" href="#" aria-label="Previous">
                 <span class="material-symbols-outlined align-text-bottom">
@@ -313,27 +239,27 @@
               </a>
             </li>
           </ul>
-        </nav>
+        </nav> -->
       </div>
 
       
     </section>
 
-    <!-- fitnee-ad -->
-    <div class="fitnee-ad py-10">
-      <div class="container text-white">
-        <div class="page-slogan mb-lg-7 mb-5 text-center">
-          <span class="d-block mb-lg-3 mb-0 fs-2">訓練幫手 免費體驗</span>
-          <span class="d-block fs-6">幫助您輕鬆組織有效訓練</span>
-        </div>
-        <div class="page-action">
-          <div class="text-center">
-            <div class="btn ms-2 mb-lg-7 mb-5 btn-outline-primary rounded-1 fs-4 px-9 py-3">立即免費體驗</div>
-          </div>
-          <span class="d-block text-center">掌握訓練品質精確，讓我們為您準備</span>
-        </div>
-      </div>
-    </div>      
+      <!-- fitnee-ad -->
+      <div class="fitnee-ad py-10">
+    <div class="container text-white">
+    <div class="page-slogan mb-lg-7 mb-5 text-center">
+    <span class="d-block mb-lg-3 mb-0 fs-2">訓練幫手 免費體驗</span>
+    <span class="d-block fs-6">幫助您輕鬆組織有效訓練</span>
+    </div>
+    <div class="page-action">
+    <div class="text-center">
+        <a href="fitneehelper.html" class="btn ms-2 mb-lg-7 mb-5 btn-outline-primary rounded-1 fs-4 px-9 py-3">立即免費體驗</a>
+    </div>
+    <span class="d-block text-center">掌握訓練品質精確，讓我們為您準備</span>
+    </div>
+</div>
+</div>       
 
       <footer>
     <div class="sitemap bg-dark">
@@ -379,13 +305,11 @@
 
     
 </footer>    </div>
-    <!-- aos-animation -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();            
-    </script>
 
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <!-- customized js -->
+    
     
   </body>
 </html>
