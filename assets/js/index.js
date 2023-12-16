@@ -2,7 +2,7 @@ const api_url="http://localhost:3000";
 // const api_url="https://fitnee-36-53tb.onrender.com";
 
 // 畫面初始化
-function init(){
+function init(){  
   getCoaches();
   getArticles();
 };

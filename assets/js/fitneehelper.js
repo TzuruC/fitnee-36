@@ -2,6 +2,13 @@ const fnWelcome = document.querySelector('.fn-welcome');
 const fnOnTraning = document.querySelector('.fn-on-traning');
 const fitneehelperApp = document.querySelector('.fitneehelper-app');
 const renderTraining = document.querySelector('.js-renderTraining');
+const dateToday = document.querySelector('.date-today');
+
+
+// 更新歡迎頁日期
+const today = new Date();
+const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+dateToday.textContent = "今天日期︰" + today.toLocaleDateString('zh-TW', options);
 
 // 歡迎頁面
 fnWelcome.addEventListener('click', (e)=>{
