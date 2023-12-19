@@ -1,4 +1,4 @@
-import"./main-9ae5eee9.js";const d="http://localhost:3000";function u(){f()}u();const l=document.querySelector(".render-coach-cards");let o=[];function f(){axios.get(`${d}/coaches`).then(function(c){o=c.data,console.log(o);let a="";o.forEach(e=>{a+=r(e)}),l.innerHTML=a}).catch(function(c){console.log(c)})}function r(c){return`
+import"./main-e394583a.js";import"./animation-2ea199e6.js";import{a as d}from"./config-f552c1ba.js";function f(){u()}f();const r=document.querySelector(".render-coach-cards");let o=[];function u(){axios.get(`${d}/coaches`).then(function(c){o=c.data,console.log(o);let a="";o.forEach(e=>{a+=l(e)}),r.innerHTML=a}).catch(function(c){console.log(c)})}function l(c){return`
     <li class="coach-card mb-5">
         <a class="row align-items-center" href="coach-detail.html?id=${c.id}">
             <div class="coach-photo col-lg-3 col-4">
@@ -21,4 +21,4 @@ import"./main-9ae5eee9.js";const d="http://localhost:3000";function u(){f()}u();
             </div>              
         </a>
     </li>
-    `}const n=document.querySelector(".aside-search-box"),m=document.querySelector(".aside-search-box input");n.addEventListener("submit",c=>{c.preventDefault();const a=m.value.trim().toLowerCase();console.log(a);let e="";o.forEach(t=>{let i=t.coachName.toLowerCase().split(""),s=!1;i.forEach(h=>{h.includes(a)&&(s=!0)}),s&&(e+=r(t)),l.innerHTML=e}),n.reset()});
+    `}const n=document.querySelector(".aside-search-box"),m=document.querySelector(".aside-search-box input");n.addEventListener("submit",c=>{c.preventDefault();const a=m.value.trim().toLowerCase();console.log(a);let e="";o.forEach(t=>{let i=t.coachName.toLowerCase().split(""),s=!1;i.forEach(h=>{h.includes(a)&&(s=!0)}),s&&(e+=l(t)),r.innerHTML=e}),n.reset()});

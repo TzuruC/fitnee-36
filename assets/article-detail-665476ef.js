@@ -1,4 +1,4 @@
-import"./main-9ae5eee9.js";const i="http://localhost:3000",a=new URLSearchParams(window.location.search),c=a.get("id"),l=document.querySelector(".article-detail");axios.get(`${i}/articles/${c}`).then(function(e){const t=e.data;l.innerHTML=`
+import"./main-e394583a.js";import"./animation-2ea199e6.js";import{a as i}from"./config-f552c1ba.js";const a=new URLSearchParams(window.location.search),c=a.get("id"),l=document.querySelector(".article-detail");axios.get(`${i}/articles/${c}`).then(function(e){const t=e.data;l.innerHTML=`
     <h3 class="article-title mb-2 mb-lg-2 fw-bold">${t.articleName}</h3>
       <div class="article-category mb-2 text-primary">${t.articleCategory}</div>
       <div class="article-create mb-2 d-flex justify-content-between">

@@ -1,4 +1,4 @@
-import"./main-9ae5eee9.js";const i="http://localhost:3000";function s(){c()}s();const r=document.querySelector(".render-cards");let e=[];function c(){axios.get(`${i}/articles`).then(function(a){e=a.data;let l="";e.forEach(t=>{l+=n(t)}),r.innerHTML=`
+import"./main-e394583a.js";import"./animation-2ea199e6.js";import{a as i}from"./config-f552c1ba.js";function s(){c()}s();const r=document.querySelector(".render-cards");let e=[];function c(){axios.get(`${i}/articles`).then(function(a){e=a.data;let l="";e.forEach(t=>{l+=n(t)}),r.innerHTML=`
     <ul class="article-cards list-unstyled pb-lg-7 row">
     ${l}
     </ul>
