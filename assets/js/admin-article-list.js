@@ -1,5 +1,4 @@
-const api_url="http://localhost:3000";
-const page_rul="http://localhost:5173/fitnee-36"
+import { api_url } from "./config.js";
 
 // 畫面初始化
 function init(){
@@ -37,7 +36,7 @@ function renderArticleList(i){
             i.articlePublic ? "公開" : "未公開"
         }</td>
         <td class="text-center">
-        <a class="link-primary" data-id="${i.id}" href="admin-article-detail.html?id=${i.id}">編輯</a> / 
+        <a class="link-primary" data-id="${i.id}" href="admin-article-detail.html?id=${i.id}">查看</a> / 
         <a class="link-primary" data-id="${i.id}" href="">刪除</a></td>
     </tr>
     `;

@@ -1,4 +1,4 @@
-const api_url="http://localhost:3000";
+import { api_url } from "./config.js";
 
 
 // 渲染文章內容

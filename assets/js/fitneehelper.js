@@ -1,3 +1,5 @@
+import { api_url } from "./config.js";
+
 const fnWelcome = document.querySelector('.fn-welcome');
 const fnOnTraning = document.querySelector('.fn-on-traning');
 const fitneehelperApp = document.querySelector('.fitneehelper-app');
@@ -302,7 +304,7 @@ function breakTriggerer(renderTraining){
     
 };
 let timer;
-let defaultCD = 10;
+let defaultCD = 30;
 function countdownBreak(renderTraining){
     const startTimerBtn = document.querySelectorAll(".js-startTimerBtn");
     const defaultTime = document.querySelector("#defaultTime");

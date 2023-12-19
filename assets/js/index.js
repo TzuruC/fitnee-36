@@ -1,5 +1,4 @@
-const api_url="http://localhost:3000";
-// const api_url="https://fitnee-36-53tb.onrender.com";
+import { api_url } from "./config.js";
 
 // 畫面初始化
 function init(){  
