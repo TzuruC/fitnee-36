@@ -1,4 +1,5 @@
 import { api_url } from "./config.js";
+import  Swal  from '../../node_modules/sweetalert2/src/sweetalert2.js';
 
 const registMail = document.querySelector('#registMail');
 const registName = document.querySelector('#registName');
@@ -40,11 +41,31 @@ const constraints = {
     },
     "確認密碼": {
         presence: {
-            message: "為必填欄位",
-            equality: "密碼"
+            message: "為必填欄位"
+        },
+        equality: {
+            attribute: "密碼",
+            message: "與密碼不符",
         }
     },
+    
 };
+
+function init(){
+    registPsw.value = '';
+    registConfirmPsw.value = '';
+}
+init();
+function formValidate(item){
+    item.nextElementSibling.textContent = '';
+    let errors = validate(form, constraints) || '';
+    if (errors) {
+        Object.keys(errors).forEach(function (keys) {
+            document.querySelector(`[data-message="${keys}"]`).textContent = errors[keys];
+        })
+        init();
+    }
+}
 inputs.forEach((item) => {
     // change, blur(移開焦點), input(填寫值改變時觸發)
     item.addEventListener("change", function () {
@@ -52,7 +73,6 @@ inputs.forEach((item) => {
         let errors = validate(form, constraints) || '';
         if (errors) {
             Object.keys(errors).forEach(function (keys) {
-                console.log(document.querySelector(`[data-message=${keys}]`))
                 document.querySelector(`[data-message="${keys}"]`).textContent = errors[keys];
             })
         }
@@ -69,25 +89,44 @@ registBtn.addEventListener('click',function(e){
         "contact": registPhone.value,
         "role": "user"
     }
+    
+
     //傳送post
     axios.post(`${api_url}/users`, newUser)
     .then(function (res) {
-        alert("註冊成功，請重新登入");
-        // 我想在這裡加入自動登入功能
-        window.location.href = 'login.html';
-        console.log(res.data);
-    })
-    .catch(function (error) {
-        if (err.response.data == 'Email and password are required'){
-            registMail.textContent = '*請輸入註冊用信箱!';
-            alertPsw.textContent = '*請輸入密碼！';
-            registPsw.value = '';
-        }else if(err.response.data == 'Email format is invalid'){
-            registMail.textContent = '*信箱格式錯誤！';
-            registPsw.value = '';
-        }else if(err.response.data == 'Password is too short'){
-            alertPsw.textContent = '*密碼過短！請輸入 4 個以上數字或字母組合';
-            registPsw.value = '';
-        }
+        Swal.fire({
+            title: '註冊成功',
+            text: '請重新登入',
+            icon: 'success',
+            confirmButtonText: '確認'
+            });
+        window.location.href = 'member-login.html';
+        })
+    .catch(function (err) {
+        console.log(err.response.data);
+        if(err.response.data == 'Email already exists'){
+            Swal.fire({
+                title: '註冊失敗',
+                text: '此 Email 已經註冊',
+                icon: 'error',
+                confirmButtonText: '確認'
+            });
+            init();
+        }else if (
+            err.response.data == 'Email and password are required'
+            || err.response.data == 'Email format is invalid'
+            || err.response.data == 'Password is too short'
+            ){
+                inputs.forEach((item) => {
+                    formValidate(item);
+                });
+                Swal.fire({
+                    title: '資料送出失敗',
+                    text: '請檢查填寫資料',
+                    icon: 'warning',
+                    confirmButtonText: '確認'
+                });
+                init();
+            }
     })
 })

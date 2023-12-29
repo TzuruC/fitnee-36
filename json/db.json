@@ -153,6 +153,22 @@
       "fitnessId": "",
       "trainingsId": "",
       "id": 24
+    },
+    {
+      "email": "aaa@mail.com",
+      "password": "$2a$10$2pbi0Yx8ARAjy4Grwgvkq.0MuGny9hVwLm4Y7YM4kULNRzuAzQ3N2",
+      "name": "1",
+      "contact": "",
+      "role": "user",
+      "id": 25
+    },
+    {
+      "email": "aaa@mail.com",
+      "password": "$2a$10$dD8FFKJi5bUbVDDj3C6LdOOgub4IMlGmhmYKj6v3Xx/si96hIFTHq",
+      "name": "1",
+      "contact": "",
+      "role": "user",
+      "id": 26
     }
   ],
   "coaches": [
