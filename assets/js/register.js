@@ -7,8 +7,6 @@ const registPsw = document.querySelector('#registPsw');
 const registConfirmPsw = document.querySelector('#registConfirmPsw');
 const registBtn = document.querySelector('#registBtn');
 
-
-
 // 表單驗證
 const form = document.querySelector(".register-form");
 const inputs = document.querySelectorAll("input[name]");
@@ -52,7 +50,6 @@ inputs.forEach((item) => {
     item.addEventListener("change", function () {
         item.nextElementSibling.textContent = '';
         let errors = validate(form, constraints) || '';
-
         if (errors) {
             Object.keys(errors).forEach(function (keys) {
                 console.log(document.querySelector(`[data-message=${keys}]`))
@@ -82,15 +79,15 @@ registBtn.addEventListener('click',function(e){
     })
     .catch(function (error) {
         if (err.response.data == 'Email and password are required'){
-            alertEmail.textContent = '*請輸入註冊用信箱!';
+            registMail.textContent = '*請輸入註冊用信箱!';
             alertPsw.textContent = '*請輸入密碼！';
-            registerPsw.value = '';
+            registPsw.value = '';
         }else if(err.response.data == 'Email format is invalid'){
-            alertEmail.textContent = '*信箱格式錯誤！';
-            registerPsw.value = '';
+            registMail.textContent = '*信箱格式錯誤！';
+            registPsw.value = '';
         }else if(err.response.data == 'Password is too short'){
             alertPsw.textContent = '*密碼過短！請輸入 4 個以上數字或字母組合';
-            registerPsw.value = '';
+            registPsw.value = '';
         }
     })
 })
