@@ -97,10 +97,11 @@ registBtn.addEventListener('click',function(e){
         Swal.fire({
             title: '註冊成功',
             text: '請重新登入',
-            icon: 'success',
-            confirmButtonText: '確認'
-            });
-        window.location.href = 'member-login.html';
+            icon: 'success'
+        });
+        setTimeout(() => {
+            window.location.href = 'member-login.html';
+        }, 0);
         })
     .catch(function (err) {
         console.log(err.response.data);

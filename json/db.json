@@ -169,6 +169,38 @@
       "contact": "",
       "role": "user",
       "id": 26
+    },
+    {
+      "email": "888@mail.com",
+      "password": "$2a$10$u3tTgmHqmVnITnB9Nbirx.ucNXgFCHiLivqoOkd51Z0IbNqJR89.S",
+      "name": "8",
+      "contact": "8888888888",
+      "role": "user",
+      "id": 27
+    },
+    {
+      "email": "111@mail.com",
+      "password": "$2a$10$pOEr8VSJX6RL.SZl7AAMz.qMWWmN4GjTmgwYsZVhDOh9wi17JAgg6",
+      "name": "8",
+      "contact": "8888888888",
+      "role": "user",
+      "id": 28
+    },
+    {
+      "email": "222@mail.com",
+      "password": "$2a$10$kGRMJI4qAzIe4lokVRlPlOWU3JcbX4bI6C10BCa5Nr32PCzyqngpi",
+      "name": "222",
+      "contact": "222",
+      "role": "user",
+      "id": 29
+    },
+    {
+      "email": "333@mail.com",
+      "password": "$2a$10$P0OTGb12RKGeM7s6bFaNreEvLklAiDm/ekR8TfQsiFnbMWjn/fxm6",
+      "name": "222",
+      "contact": "222",
+      "role": "user",
+      "id": 30
     }
   ],
   "coaches": [
