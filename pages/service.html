@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>service</title>
+    <title>#36 FitNee - 錯誤回報</title>
   </head>
   <body>
     <%- include('./layout/header'); -%>
@@ -12,7 +12,7 @@
     <div class="page-banner pt-12 pb-5 justify-content-between">
       <div class="container py-lg-11">
         <div class="d-lg-flex d-block justify-content-between">
-      <h2 class="fs-3 text-primary">專業教練 <span class="fs-5">/</span></h2>
+      <h2 class="fs-3 text-primary">錯誤回報 <span class="fs-5">/</span></h2>
       <p class="fs-6 text-white text-end">
         堅持不懈自己的選擇
         <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
@@ -27,7 +27,73 @@
       </div>
     </div>
     </div>
-    <h1>service</h1>
+    <section class="container my-lg-13 d-lg-block col-lg-4 col-md-6 col-10">
+      <div class="to-coach my-13">
+        <p>親愛的客戶，</p>
+        <p>感謝您選擇使用我們的網站服務。為了更有效地協助您，我們特別設置了錯誤回報專頁，希望您能在描述問題時提供盡可能多的細節，例如錯誤訊息、發生問題的頁面，以及您使用的設備和瀏覽器信息等。這將有助於我們更全面地了解並快速解決您的需求。</p>
+        <p>我們理解您的時間寶貴，將盡快處理您的問題，確保您順利使用我們的網站。
+若有任何建議或意見，隨時與我們分享。再次感謝您的支持。</p>
+      </div>
+
+      <!-- 如果需要登入會員 -->
+      <!-- <div id="loginForm" class="my-13">
+        <div class="text-center">
+          <h2 class="fw-bold mb-5">請先登入會員</h2>
+          <p class="mb-10">還不是會員？ <a class="link-primary" href="register.html">免費註冊</a></p>
+        </div>
+        <div class="ui-form-white my-5">
+          <div class="ui-placeholder ui-leftTop">
+            <input id="loginMail" class="form-control ui-underline mb-7" name="email" type="text" placeholder="帳號 ( Email 信箱 )"><span>帳號</span>
+            <span id="alertEmail" class="alert-span text-danger d-block fs-6"></span>
+          </div>
+        </div>
+        <div class="ui-form-white my-5">
+          <div class="ui-placeholder ui-leftTop">            
+            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="密碼"><span>密碼</span>
+            <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
+          </div>
+        </div>       
+
+        <div class="text-center">
+          <a id="loginBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">登入</a>
+          <span class="login-caution">繼續即表示您同意我們的 <a class="link-primary" href="">條款和條件</a> 以及 <a class="link-primary" href="">隱私權政策</a> 。</span>
+        </div>
+      </div>      -->
+
+      <div id="coachAuditForm" class="my-13">
+        <div class="text-center">
+          <h2 class="fw-bold mb-5">請協助填入以下資料</h2>
+        </div>
+        <div class="ui-form-white my-5">
+          <div class="ui-placeholder ui-leftTop">
+            <input id="serviceTitle" class="form-control ui-underline mb-7" name="回報主旨" type="text" placeholder="*回報主旨"><span>*回報主旨</span>
+            <span id="alertTitle" class="alert-span text-danger d-block fs-6"></span>
+          </div>
+        </div>    
+
+        <h6 class="mt-5 mb-3">上傳截圖︰(選擇性)</h6>
+        <div class="mb-3">
+          <input class="form-control" type="file" id="formFile">
+        </div>
+        
+
+        <h6 class="mt-5 mb-3">回報發生經過︰<span class="d-block fs-6 fw-normal"></h6>
+        
+        <div class="mb-3">
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2"></label>
+          </div>
+        </div>
+
+
+        <div class="text-start service-caution fs-7">
+          <p>我們將盡速處理您的回報，<br>如有需要，將在 3 日內與您聯絡，謝謝。</p>
+        </div>
+        
+      </div>    
+
+    </section>
 
 
         <!-- fitnee-ad -->
