@@ -74,7 +74,7 @@ registBtn.addEventListener('click',function(e){
     .then(function (res) {
         alert("註冊成功，請重新登入");
         // 我想在這裡加入自動登入功能
-        window.location.href = 'login.html';
+        window.location.href = 'member-login.html';
         console.log(res.data);
     })
     .catch(function (error) {

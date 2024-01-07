@@ -153,6 +153,14 @@
       "fitnessId": "",
       "trainingsId": "",
       "id": 24
+    },
+    {
+      "email": "bbb@mail.com",
+      "password": "$2a$10$hSJJylz93Py5kp9gKfE.LeRj1H5B4QKMdr9QoGvv76p5eJp81mPkG",
+      "name": "BBB",
+      "contact": "09854021356",
+      "role": "user",
+      "id": 25
     }
   ],
   "coaches": [
