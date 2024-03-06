@@ -1,7 +1,9 @@
 import { api_url } from "./config.js";
+import { header } from "./component/header.js";
 
 // 畫面初始化
-function init(){  
+function init() {
+  header();
   getCoaches();
   getArticles();
 };
@@ -11,26 +13,26 @@ init();
 // 取得教練列表
 const coachCards = document.querySelector('.coach-cards');
 let coachData = [];
-function getCoaches(){
+function getCoaches() {
   axios.get(`${api_url}/coaches`)
-  .then(function (res) {
-    coachData = res.data;
-    let str=``;    
-    let strCount = 0;
-    coachData.forEach((i) => {
-      if( strCount < 4){
-        str += renderCoachHTML(i);
-        strCount += 1;
-      };
-    });  
-    coachCards.innerHTML = str;
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
+    .then(function (res) {
+      coachData = res.data;
+      let str = ``;
+      let strCount = 0;
+      coachData.forEach((i) => {
+        if (strCount < 4) {
+          str += renderCoachHTML(i);
+          strCount += 1;
+        };
+      });
+      coachCards.innerHTML = str;
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
 };
 // 渲染教練卡片
-function renderCoachHTML(i){
+function renderCoachHTML(i) {
   return `
   <li class="coach-card mb-lg-0 mb-7 px-2" data-aos="flip-left" data-aos-delay="50" data-aos-once="true">
       <a href="coach-detail.html?id=${i.id}">
@@ -47,27 +49,27 @@ function renderCoachHTML(i){
 };
 // 篩選教練
 const coachFilter = document.querySelector('.coach-filter-system');
-coachFilter.addEventListener('click',(e)=>{
+coachFilter.addEventListener('click', (e) => {
   e.preventDefault();
-  if(e.target.nodeName == "A"){  
-  const category = e.target.textContent;
-  let str = ``;
-  let strCount = 0;
-  coachData.forEach((i) => {
-    if(i.coachTalent == category && strCount < 4){
-      str += renderCoachHTML(i);
-      strCount += 1;
-    };
-  });  
-  coachCards.innerHTML = str;
+  if (e.target.nodeName == "A") {
+    const category = e.target.textContent;
+    let str = ``;
+    let strCount = 0;
+    coachData.forEach((i) => {
+      if (i.coachTalent == category && strCount < 4) {
+        str += renderCoachHTML(i);
+        strCount += 1;
+      };
+    });
+    coachCards.innerHTML = str;
   }
 });
 // 教練篩選動畫效果
 const coachFilterItems = document.querySelectorAll('.coach-filter-system .filter-btn');
 coachFilterItems.forEach((i) => {
-  i.addEventListener('click', (e)=> {
+  i.addEventListener('click', (e) => {
     e.preventDefault();
-    coachFilterItems.forEach((i) =>  {
+    coachFilterItems.forEach((i) => {
       i.classList.remove('active');
     });
     e.target.classList.add('active');
@@ -76,52 +78,52 @@ coachFilterItems.forEach((i) => {
 // 教練搜尋欄功能
 const serchCoachForm = document.querySelector('.search-coach');
 const serchCoachInput = document.querySelector('.search-coach input');
-serchCoachForm.addEventListener('submit',(e)=>{
+serchCoachForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const searchKey = serchCoachInput.value.trim().toLowerCase();
-  console.log(searchKey);
+  // console.log(searchKey);
   let matchingCoaches = []; // 存储匹配的结果
-  let str=``;    
+  let str = ``;
   let strCount = 0;
   coachData.forEach((i) => {
     // 將每組單字拆成ary
     let dataCoachNameKey = i.coachName.toLowerCase().split('');
     let matchFound = false;
     // 一個字一個字比對
-    dataCoachNameKey.forEach((key)=>{
-      if(key.includes(searchKey)){
+    dataCoachNameKey.forEach((key) => {
+      if (key.includes(searchKey)) {
         matchFound = true;
       }
-    });    
+    });
     if (matchFound && strCount < 4) {
       str += renderCoachHTML(i);
       strCount += 1;
     };
     coachCards.innerHTML = str;
-  });  
+  });
   serchCoachForm.reset();
 });
 
 // 取得文章列表
 const articleCards = document.querySelector('.article-cards');
 let articleData = [];
-function getArticles(){
+function getArticles() {
   axios.get(`${api_url}/articles`)
-  .then(function (res) {
-    articleData = res.data;
-    let str = ``;
-    let strCount = 0;
-    articleData.forEach((i) => {
-      if(strCount < 4){
-        str += renderArticleHTML(i);
-        strCount += 1;
-      };
-    });      
-    articleCards.innerHTML = str;
-  })
-  .catch(function (error) {
-    console.log(error);
-  })
+    .then(function (res) {
+      articleData = res.data;
+      let str = ``;
+      let strCount = 0;
+      articleData.forEach((i) => {
+        if (strCount < 4) {
+          str += renderArticleHTML(i);
+          strCount += 1;
+        };
+      });
+      articleCards.innerHTML = str;
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
 }
 // 渲染文章卡片
 function renderArticleHTML(i) {
@@ -140,29 +142,29 @@ function renderArticleHTML(i) {
 }
 // 篩選文章
 const articleFilter = document.querySelector('.article-filter');
-articleFilter.addEventListener('click',(e)=>{
+articleFilter.addEventListener('click', (e) => {
   e.preventDefault();
   const articleCategory = e.target.textContent;
-  if(articleCategory == "所有分類"){    
+  if (articleCategory == "所有分類") {
     getArticles();
     return;
   }
   let str = ``;
   let strCount = 0;
   articleData.forEach((i) => {
-    if(i.articleCategory == articleCategory && strCount < 4){
+    if (i.articleCategory == articleCategory && strCount < 4) {
       str += renderArticleHTML(i);
       strCount += 1;
     };
-  });  
+  });
   articleCards.innerHTML = str;
 });
 // 文章篩選動畫效果
 const articleFilterItems = document.querySelectorAll('.article-filter li');
 articleFilterItems.forEach((i) => {
-  i.addEventListener('click', (e)=> {
+  i.addEventListener('click', (e) => {
     e.preventDefault();
-    articleFilterItems.forEach((i) =>  {
+    articleFilterItems.forEach((i) => {
       i.querySelector('a').classList.remove('link-primary', 'active');
     });
     e.target.classList.add('link-primary', 'active');

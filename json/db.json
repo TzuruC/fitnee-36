@@ -155,14 +155,6 @@
       "id": 24
     },
     {
-<<<<<<< HEAD
-      "email": "bbb@mail.com",
-      "password": "$2a$10$hSJJylz93Py5kp9gKfE.LeRj1H5B4QKMdr9QoGvv76p5eJp81mPkG",
-      "name": "BBB",
-      "contact": "09854021356",
-      "role": "user",
-      "id": 25
-=======
       "email": "aaa@mail.com",
       "password": "$2a$10$2pbi0Yx8ARAjy4Grwgvkq.0MuGny9hVwLm4Y7YM4kULNRzuAzQ3N2",
       "name": "1",
@@ -209,7 +201,6 @@
       "contact": "222",
       "role": "user",
       "id": 30
->>>>>>> d2235f73ca9b28adc01a45251666af937c250ac4
     }
   ],
   "coaches": [
