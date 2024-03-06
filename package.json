@@ -31,7 +31,7 @@
     "sass": "^1.61.0",
     "sass-loader": "^13.2.2",
     "style-loader": "^2.0.0",
-    "sweetalert2": "^11.10.2",
+    "sweetalert2": "^11.10.6",
     "swiper": "^11.0.4",
     "vite-plugin-live-reload": "^3.0.2",
     "webpack": "^5.89.0",

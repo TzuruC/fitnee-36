@@ -1,20 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>#36 後台 - 文章管理-新增文章</title>
-  </head>
-  <body>
-    <%- include('././layout/admin-header'); -%>
-    <div class="container container-min-h pt-11 mb-12">
-      <h2 class="fw-bold fs-2 mb-4">文章管理-新增文章</h2> 
-    </div>
-    <%- include('././layout/admin-footer'); -%>
-    <!-- axios -->
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <!-- customized js -->
-    <script type="module" src="/./main.js"></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>#36 後台 - 文章管理-新增文章</title>
+    </head>
+
+    <body>
+        <%- include('././layout/admin-header'); -%>
+        <div class="container container-min-h pt-11 mb-12">
+            <div class="content-viewbox col-10 offset-1 row">
+                <h2 class="fw-bold fs-6 mb-5">文章管理-新增文章</h2>
+                <div class="col-8">
+                    <div class="admin-article-title mb-2 mb-lg-2">
+                        <span class="fw-bold">文章標題：</span>
+                        <input
+                            id="articleTitle"
+                            type="text"
+                            class="form-control d-inline"
+                            id="floatingInput"
+                            name="文章標題"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="文章標題"></span>
+                    </div>
+
+                    <div class="admin-article-category mb-2">
+                        <span class="fw-bold">文章分類：</span>
+                        <input
+                            id="articleType"
+                            type="text"
+                            class="form-control d-inline"
+                            id="floatingInput"
+                            name="文章分類"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="文章分類"></span>
+                    </div>
+
+                    <div class="admin-article-author mb-2">
+                        <span class="fw-bold">文章作者：</span>
+                        <input
+                            id="articleAuthor"
+                            type="text"
+                            class="form-control d-inline"
+                            id="floatingInput"
+                            name="文章作者"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="文章作者"></span>
+                    </div>
+                    <div class="admin-article-time mb-2">
+                        <span class="fw-bold">文章發布日期：</span>
+                        <input
+                            id="articleTime"
+                            type="text"
+                            class="form-control d-inline"
+                            id="floatingInput"
+                            name="文章發布日期"
+                        />
+                    </div>
+                    <div class="admin-article-article row justify-content-between">
+                        <div class="admin-article-breif mb-2">
+                            <span class="fw-bold d-block">文章簡介：</span>
+                            <textarea class="border w-100" name="" id="articleBrief" rows="3"></textarea>
+                        </div>
+
+                        <div class="admin-article-content mb-2">
+                            <span class="fw-bold d-block">文章內容：</span>
+                            <textarea class="border w-100" name="" id="articleContent" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="admin-article-public text-end mb-2">
+                        <span class="fw-bold">文章狀態：</span><a href="#" class="btn btn-success btn-sm">公開</a>
+                        <a href="#" class="btn btn-secondary btn-sm">未公開</a>
+                    </div>
+                    <span class="fw-bold">封面圖片：</span>
+                    <div class="admin-article-img">
+                        <img
+                            class="w-100 img-fluid mb-4"
+                            src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article3.png"
+                            alt="article-img"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="admin-article-list.html" class="btn btn-outline-primary my-5">返回文章列表</a>
+                <a href="#" id="newArticle" class="btn btn-outline-primary my-5">新增文章</a>
+            </div>
+        </div>
+        <%- include('././layout/admin-footer'); -%>
+        <!-- axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <!-- customized js -->
+        <script type="module" src="/./main.js"></script>
+        <script type="module" src="/./assets/js/admin-article-new.js"></script>
+    </body>
 </html>

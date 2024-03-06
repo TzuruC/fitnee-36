@@ -5,8 +5,6 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 @import url('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
 
-
-
 @import './utils/variables';
 @import './utils/helper';
 
@@ -23,9 +21,10 @@
 
 @import '../../node_modules/bootstrap';
 
-.container{
+.container {
     max-width: 1296px !important;
 }
-.sm-h-container{
+
+.sm-h-container {
     min-height: 84vh;
 }
