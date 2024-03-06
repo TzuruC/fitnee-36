@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>#36 後台 - 文章管理</title>
-    
-    <script type="module" crossorigin src="/fitnee-36/assets/admin\\admin-article-list-68404d39.js"></script>
-    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-823c48ba.js">
-    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/config-afd6d7d3.js">
-    <link rel="stylesheet" href="/fitnee-36/assets/main-3a1a2dc4.css">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>#36 後台 - 文章管理</title>
+      <script type="module" crossorigin src="/fitnee-36/assets/admin\\admin-article-list-ce39b868.js"></script>
+      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-aa134d7c.js">
+      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/config-afd6d7d3.js">
+      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/sweetalert2.all-e5a31434.js">
+      <link rel="stylesheet" href="/fitnee-36/assets/main-d762a2ae.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold py-4" href="admin-article-list.html"><img class="mb-1" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/logo-dark.png" alt="logo"><span class="fs-6 fw-normal">後台管理</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,54 +35,112 @@
         </div>
         </div>
     </div>
-    </nav>    
-    <div class="container container-min-h pt-11 mb-12">
-      <h2 class="fw-bold fs-2 mb-4">文章管理</h2>
-      <div class="list-action text-end mb-4 d-flex justify-content-between">
+    </nav>
+        <div class="container container-min-h pt-11 mb-12">
+            <h2 class="fw-bold fs-2 mb-4">文章管理</h2>
+            <div class="list-action text-end mb-4 d-flex justify-content-between">
+                <div class="admin-article-filter filter-opt-group4 btn-sm">
+                    <select class="form-select" aria-label="Default select example">
+                        <option>- 所有分類 -</option>
+                    </select>
+                </div>
 
-        <div class="admin-article-filter filter-opt-group4 btn-sm">
-          <select class="form-select" aria-label="Default select example">
-            <option>- 所有分類 -</option>
-          </select>
-        </div>
+                <a href="admin-article-new.html" class="btn btn-outline-warning lh-lg btn-sm"> + 新增文章</a>
+            </div>
+            <table class="table">
+                <thead class="table-secondary">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">文章標題</th>
+                        <th scope="col">文章分類</th>
+                        <th scope="col">作者</th>
+                        <th scope="col" class="text-center">發布時間</th>
+                        <th scope="col" class="text-center">文章狀態</th>
+                        <th scope="col" class="text-center">管理操作</th>
+                    </tr>
+                </thead>
+                <tbody class="js-articleList">
+                    <th colspan="7">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            style="margin: auto; background: #fff; display: block"
+                            width="50px"
+                            height="50px"
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="xMidYMid"
+                        >
+                            <rect x="17.5" y="30" width="15" height="40" fill="#666666">
+                                <animate
+                                    attributeName="y"
+                                    repeatCount="indefinite"
+                                    dur="1s"
+                                    calcMode="spline"
+                                    keyTimes="0;0.5;1"
+                                    values="18;30;30"
+                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                    begin="-0.2s"
+                                ></animate>
+                                <animate
+                                    attributeName="height"
+                                    repeatCount="indefinite"
+                                    dur="1s"
+                                    calcMode="spline"
+                                    keyTimes="0;0.5;1"
+                                    values="64;40;40"
+                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                    begin="-0.2s"
+                                ></animate>
+                            </rect>
+                            <rect x="42.5" y="30" width="15" height="40" fill="#999999">
+                                <animate
+                                    attributeName="y"
+                                    repeatCount="indefinite"
+                                    dur="1s"
+                                    calcMode="spline"
+                                    keyTimes="0;0.5;1"
+                                    values="20.999999999999996;30;30"
+                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                    begin="-0.1s"
+                                ></animate>
+                                <animate
+                                    attributeName="height"
+                                    repeatCount="indefinite"
+                                    dur="1s"
+                                    calcMode="spline"
+                                    keyTimes="0;0.5;1"
+                                    values="58.00000000000001;40;40"
+                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                    begin="-0.1s"
+                                ></animate>
+                            </rect>
+                            <rect x="67.5" y="30" width="15" height="40" fill="#cccccc">
+                                <animate
+                                    attributeName="y"
+                                    repeatCount="indefinite"
+                                    dur="1s"
+                                    calcMode="spline"
+                                    keyTimes="0;0.5;1"
+                                    values="20.999999999999996;30;30"
+                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                ></animate>
+                                <animate
+                                    attributeName="height"
+                                    repeatCount="indefinite"
+                                    dur="1s"
+                                    calcMode="spline"
+                                    keyTimes="0;0.5;1"
+                                    values="58.00000000000001;40;40"
+                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                ></animate>
+                            </rect>
+                        </svg>
+                    </th>
+                </tbody>
+            </table>
 
-        <a href="admin-article-new.html" class="btn btn-outline-warning lh-lg btn-sm"> + 新增文章</a>
-
-      </div>
-      <table class="table">
-        <thead class=" table-secondary">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">文章標題</th>
-            <th scope="col">文章分類</th>
-            <th scope="col">作者</th>
-            <th scope="col" class="text-center">發布時間</th>
-            <th scope="col" class="text-center">文章狀態</th>
-            <th scope="col" class="text-center">管理操作</th>
-          </tr>
-        </thead>
-        <tbody class="js-articleList">
-          <th colspan="7">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#fff;display:block;" width="50px" height="50px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-              <rect x="17.5" y="30" width="15" height="40" fill="#666666">
-              <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="18;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
-              <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="64;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
-          </rect>
-          <rect x="42.5" y="30" width="15" height="40" fill="#999999">
-              <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
-              <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
-          </rect>
-          <rect x="67.5" y="30" width="15" height="40" fill="#cccccc">
-              <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
-              <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
-          </rect>
-          </svg>
-          </th>
-        </tbody>
-      </table>
-
-      <!-- 文章載入分頁 -->
-      <!-- <nav aria-label="Page navigation example">
+            <!-- 文章載入分頁 -->
+            <!-- <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
           <li class="page-item">
             <a class="page-link" href="#" aria-label="Previous">
@@ -103,12 +161,12 @@
           </li>
         </ul>
       </nav> -->
-    </div>
+        </div>
 
-    <footer class="py-2 fs-6 text-center bg-secondary">copyright © 2023</footer>  <!-- axios -->
-  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-  <!-- customized js -->
-  
-  
-  </body>
+        <footer class="py-2 fs-6 text-center bg-secondary">copyright © 2023</footer>        <!-- axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <!-- customized js -->
+        
+        
+    </body>
 </html>

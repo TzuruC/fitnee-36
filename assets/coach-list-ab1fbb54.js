@@ -1,4 +1,4 @@
-import"./main-823c48ba.js";import"./animation-2ea199e6.js";import{a as d}from"./config-afd6d7d3.js";function f(){u()}f();const r=document.querySelector(".render-coach-cards");let o=[];function u(){axios.get(`${d}/coaches`).then(function(c){o=c.data,console.log(o);let a="";o.forEach(e=>{a+=l(e)}),r.innerHTML=a}).catch(function(c){console.log(c)})}function l(c){return`
+import"./main-aa134d7c.js";import"./animation-2ea199e6.js";import{a as d}from"./config-afd6d7d3.js";function f(){u()}f();const r=document.querySelector(".render-coach-cards");let o=[];function u(){axios.get(`${d}/coaches`).then(function(c){o=c.data,console.log(o);let a="";o.forEach(e=>{a+=l(e)}),r.innerHTML=a}).catch(function(c){console.log(c)})}function l(c){return`
     <li class="coach-card mb-5">
         <a class="row align-items-center" href="coach-detail.html?id=${c.id}">
             <div class="coach-photo col-lg-3 col-4">
