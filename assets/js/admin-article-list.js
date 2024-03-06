@@ -1,5 +1,6 @@
 import { api_url } from "./config.js";
 import Swal from 'sweetalert2';
+
 let deleteBtns;
 
 // 畫面初始化
@@ -99,9 +100,13 @@ function deleteArticle(dataId) {
     .then(function (res) {
       Swal.fire({
         title: '刪除成功',
-        text: '即將返回文章列表',
+        text: '確認後返回列表',
         icon: 'success',
-        confirmButtonText: '確認'
+        confirmButtonText: '確認',
+        buttonsStyling: false,
+        customClass: {
+          confirmButton: 'btn btn-success py-3 px-10', // 設置確認按鈕的樣式
+        }
       }).then((result) => {
         if (result.isConfirmed) {
           location.reload();

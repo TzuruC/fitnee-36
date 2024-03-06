@@ -2,7 +2,6 @@ import { api_url } from "./config.js";
 import Swal from 'sweetalert2';
 
 
-
 const title = document.querySelector("#articleTitle");
 const category = document.querySelector("#articleType");
 const author = document.querySelector("#articleAuthor");
@@ -31,9 +30,13 @@ newBtn.addEventListener("click", (e) => {
         .then(function (res) {
             Swal.fire({
                 title: '新增成功',
-                text: '即將返回文章列表',
+                text: '確認後返回列表',
                 icon: 'success',
-                confirmButtonText: '確認'
+                confirmButtonText: '確認',
+                buttonsStyling: false,
+                customClass: {
+                    confirmButton: 'btn btn-success py-3 px-10', // 設置確認按鈕的樣式
+                }
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location.href = 'admin-article-list.html';

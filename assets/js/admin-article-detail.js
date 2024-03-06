@@ -14,6 +14,7 @@ const articleBreif = document.querySelector('.admin-article-breif');
 const articleImg = document.querySelector('.admin-article-img');
 const articleContent = document.querySelector('.admin-article-content');
 const articlePublic = document.querySelector('.admin-article-public');
+const editArticleBtn = document.querySelector('#editArticleBtn');
 
 axios.get(`${api_url}/articles/${articleId}`)
   .then(function (res) {
@@ -27,13 +28,18 @@ axios.get(`${api_url}/articles/${articleId}`)
     articleImg.innerHTML = `<img class="w-100 img-fluid mb-4 rounded" src="${articleData.articleCoverImg}" alt="article-img" />`;
     articleContent.innerHTML = `<span class="fw-bold">文章內容：</span><p>${articleData.articleContent}</p>`;
 
-    if(articleData.articlePublic){
-        articlePublic.innerHTML = `<span class="fw-bold">文章狀態：</span><a href="#" class="btn btn-success btn-sm">公開</a>`;
-    }else{
-        articlePublic.innerHTML = `<span class="fw-bold">文章狀態：</span><a href="#" class="btn btn-secondary btn-sm">未公開</a>`;
+    if (articleData.articlePublic) {
+      articlePublic.innerHTML = `<span class="fw-bold">文章狀態：</span><a href="#" class="btn btn-success btn-sm">公開</a>`;
+    } else {
+      articlePublic.innerHTML = `<span class="fw-bold">文章狀態：</span><a href="#" class="btn btn-secondary btn-sm">未公開</a>`;
     }
 
-    console.log(articleData);
+
+    editArticleBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log(editArticleBtn);
+      window.location.href = `admin-article-edit.html?id=${articleId}`;
+    });
   })
   .catch(function (error) {
     console.log(error);
