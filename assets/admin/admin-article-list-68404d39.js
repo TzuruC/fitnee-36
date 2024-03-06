@@ -1,4 +1,4 @@
-import"../main-e394583a.js";import{a as s}from"../config-f552c1ba.js";function u(){n()}u();const l=document.querySelector(".js-articleList");let i=[];function n(){axios.get(`${s}/articles`).then(function(t){i=t.data;let e="";i.forEach(a=>{e+=o(a)}),l.innerHTML=e,f(t)}).catch(function(t){console.log(t)})}function o(t){return`<tr>
+import"../main-823c48ba.js";import{a as s}from"../config-afd6d7d3.js";function u(){n()}u();const l=document.querySelector(".js-articleList");let i=[];function n(){axios.get(`${s}/articles`).then(function(t){i=t.data;let e="";i.forEach(a=>{e+=o(a)}),l.innerHTML=e,f(t)}).catch(function(t){console.log(t)})}function o(t){return`<tr>
         <th scope="row">${t.id}</th>
         <td>${t.articleName}</td>
         <td>${t.articleCategory}</td>

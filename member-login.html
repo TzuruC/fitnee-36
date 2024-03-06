@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>#36 FitNee - 登入會員</title>
-    <script type="module" crossorigin src="/fitnee-36/assets/member-login-a4be60df.js"></script>
-    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-e394583a.js">
+    <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css " rel="stylesheet"> 
+    <script type="module" crossorigin src="/fitnee-36/assets/member-login-bd2acef8.js"></script>
+    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-823c48ba.js">
     <link rel="modulepreload" crossorigin href="/fitnee-36/assets/animation-2ea199e6.js">
+    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/config-afd6d7d3.js">
     <link rel="stylesheet" href="/fitnee-36/assets/main-3a1a2dc4.css">
   </head>
   <body>
@@ -90,19 +92,20 @@
           <h2 class="fw-bold mb-5">登入會員</h2>
           <p class="mb-10">還不是會員？ <a class="link-primary" href="register.html">免費註冊</a></p>
         </div>
-        <div class="ui-form-white my-5">
-          <div class="ui-placeholder ui-leftTop">
-            <input id="loginMail" class="form-control ui-underline mb-7" name="email" type="text" placeholder="帳號 ( Email 信箱 )"><span>帳號</span>
-            <span id="alertEmail" class="alert-span text-danger d-block fs-6"></span>
+        <form action="" class="login-form">
+          <div class="ui-form-white my-5">
+            <div class="ui-placeholder ui-leftTop">
+              <input id="loginMail" class="form-control ui-underline mb-7" name="email" type="text" placeholder="帳號 ( Email 信箱 )"><span>帳號</span>
+              <span id="alertEmail" class="alert-span text-danger d-block fs-6"></span>
+            </div>
           </div>
-        </div>
-        <div class="ui-form-white my-5">
-          <div class="ui-placeholder ui-leftTop">            
-            <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="密碼"><span>密碼</span>
-            <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
-          </div>
-        </div>       
-
+          <div class="ui-form-white my-5">
+            <div class="ui-placeholder ui-leftTop">            
+              <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="密碼"><span>密碼</span>
+              <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
+            </div>
+          </div>       
+        </form>
         <div class="text-center">
           <a id="loginBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">登入</a>
           <span class="login-caution">繼續即表示您同意我們的 <a class="link-primary" href="">條款和條件</a> 以及 <a class="link-primary" href="">隱私權政策</a> 。</span>
@@ -159,6 +162,10 @@
 </footer>
     <!-- axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <!-- validate.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <!-- sweetalert2 -->
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.all.min.js "></script>
     <!-- customized js -->
     
     

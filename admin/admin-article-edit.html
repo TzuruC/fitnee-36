@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>後台-文章管理-編輯文章</title>
-    <script type="module" crossorigin src="/fitnee-36/assets/main-e394583a.js"></script>
-    <link rel="stylesheet" href="/fitnee-36/assets/main-3a1a2dc4.css">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>#36 後台 - 文章管理-編輯文章</title>
+      <script type="module" crossorigin src="/fitnee-36/assets/admin\\admin-article-edit-7e97514f.js"></script>
+      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-823c48ba.js">
+      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/config-afd6d7d3.js">
+      <link rel="stylesheet" href="/fitnee-36/assets/main-3a1a2dc4.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold py-4" href="admin-article-list.html"><img class="mb-1" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/logo-dark.png" alt="logo"><span class="fs-6 fw-normal">後台管理</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,12 +34,102 @@
         </div>
         </div>
     </div>
-    </nav>    <div class="container container-min-h pt-11 mb-12">
-      <h2 class="fw-bold fs-2 mb-4">文章管理-編輯文章</h2> 
-    </div>
-    <footer class="py-2 fs-6 text-center bg-secondary">copyright © 2023</footer>    <!-- axios -->
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <!-- customized js -->
-    
-  </body>
+    </nav>        <div class="container container-min-h pt-11 mb-12">
+            <div class="content-viewbox col-10 offset-1 row">
+                <h2 class="fw-bold fs-6 mb-5">文章管理-文章內容</h2>
+                <div class="col-8">
+                    <div class="admin-article-title mb-2 mb-lg-2">
+                        <span class="fw-bold">文章標題：</span>
+                        <input
+                            id="articleTitle"
+                            type="text"
+                            class="form-control d-inline"
+                            id="floatingInput"
+                            placeholder="FitNee 的精神"
+                            name="文章標題"
+                            value="FitNee 的精神"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="文章標題"></span>
+                    </div>
+
+                    <div class="admin-article-category mb-2 text-primary">
+                        <span class="fw-bold">文章分類：</span>
+                        <input
+                            id="articleType"
+                            type="text"
+                            class="form-control d-inline"
+                            id="floatingInput"
+                            placeholder="OK"
+                            name="文章分類"
+                            value="OK"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="文章分類"></span>
+                    </div>
+
+                    <div class="admin-article-author mb-2">
+                        <span class="fw-bold">文章作者：</span>
+                        <input
+                            id="articleAuthor"
+                            type="text"
+                            class="form-control d-inline"
+                            id="floatingInput"
+                            placeholder="(William) 賴威廉"
+                            name="文章作者"
+                            value="(William) 賴威廉"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="文章作者"></span>
+                    </div>
+                    <div class="admin-article-time mb-2"><span class="fw-bold">文章發布日期：</span></div>
+                    <div class="admin-article-article row justify-content-between">
+                        <div class="admin-article-breif mb-2 col-12 col-lg-8">
+                            <span class="fw-bold">文章簡介：</span>
+                            <p class="mb-4">
+                                歡迎來到我們的教練媒合平台！<br />
+                                我們的使命是為您提供一個優質的平台，幫助您找到最合適的重訓教練，實現健康和體能目標。
+                                <br />無論您是初學者還是經驗豐富的運動員，我們都致力於幫助您找到完美的訓練師，為您提供個性化的健身計畫。
+                            </p>
+                        </div>
+
+                        <div class="admin-article-content mb-2 col-12">
+                            <span class="fw-bold">文章內容：</span>
+                            <p class="mb-4">
+                                我們是一個充滿熱情的團隊，致力於連接運動愛好者和專業重訓教練。
+                                <br />我們明白，選擇合適的教練是取得成功的關鍵，因此我們建立了這個平台，讓您能夠輕鬆找到您所需要的教練。
+                                <br />每個人都應該擁有機會改善自己的生活品質，通過重訓實現健康、強壯和自信。因此在我們的平台上，您將能夠瀏覽數以百計的專業重訓教練的個人檔案。
+                            </p>
+                            <p class="mb-4">
+                                感謝您的信任：
+                                <br />感謝您選擇我們的重訓教練媒合平台。我們迫不及待地期待協助您開始您的健身旅程，實現更健康、更強壯的自己。
+                            </p>
+                            <p class="mb-4">如果您有任何疑問或建議，請隨時與我們聯繫。讓我們一起向更健康的未來邁進！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="admin-article-public text-end mb-2">
+                        <span class="fw-bold">文章狀態：</span><a href="#" class="btn btn-success btn-sm">公開</a>
+                        <a href="#" class="btn btn-secondary btn-sm">未公開</a>
+                    </div>
+                    <span class="fw-bold">封面圖片：</span>
+                    <div class="admin-article-img">
+                        <img
+                            class="w-100 img-fluid mb-4"
+                            src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article3.png"
+                            alt="article-img"
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="admin-article-list.html" class="btn btn-outline-primary my-5">返回文章列表</a>
+                <a href="admin-article-edit.html" class="btn btn-outline-primary my-5">修改文章內容</a>
+            </div>
+        </div>
+        <footer class="py-2 fs-6 text-center bg-secondary">copyright © 2023</footer>        <!-- axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <!-- customized js -->
+        
+        
+    </body>
 </html>

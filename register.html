@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>#36 FitNee - 註冊</title>
-    <script type="module" crossorigin src="/fitnee-36/assets/register-0273a55d.js"></script>
-    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-e394583a.js">
+    <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css " rel="stylesheet"> 
+
+    <script type="module" crossorigin src="/fitnee-36/assets/register-8378b138.js"></script>
+    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-823c48ba.js">
     <link rel="modulepreload" crossorigin href="/fitnee-36/assets/animation-2ea199e6.js">
+    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/config-afd6d7d3.js">
     <link rel="stylesheet" href="/fitnee-36/assets/main-3a1a2dc4.css">
   </head>
   <body>
@@ -83,47 +86,42 @@
     </div>
     
     <section class="page-list-section container my-lg-13 d-lg-block d-lg-flex col-lg-3 col-md-6 col-8">
-
       <div id="loginForm" class="container my-lg-5 my-13">
         <div class="text-center">
           <h2 class="fw-bold mb-5">建立會員帳戶</h2>
           <p class="mb-10">已經是會員？ 前往<a class="link-primary" href="member-login.html">登入頁面</a></p>
         </div>      
-        <form class="register-form">
-          <div class="ui-form-white my-5">
-            <div class="ui-placeholder ui-leftTop">            
-              <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*電子信箱 ( 將成為您的帳號 )"><span>*電子信箱 ( 將成為您的帳號 )</span>
-              <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
-            </div>
+        <form class="register-form text-secondary">
+          <div class="form-floating mb-3">
+            <input id="registMail" type="email" class="form-control" id="floatingInput" placeholder="*電子信箱 ( 將成為您的帳號 )" name="電子信箱">
+            <span class="alert-span text-danger d-block fs-7" data-message="電子信箱"></span>            
+            <label for="floatingInput">*電子信箱 ( 將成為您的帳號 )</label>
           </div>
-          
-          <div class="ui-form-white my-5">
-            <div class="ui-placeholder ui-leftTop">
-              <input id="loginMail" class="form-control ui-underline mb-7" name="email" type="text" placeholder="*會員名稱"><span>*會員暱稱</span>
-              <span id="alertEmail" class="alert-span text-danger d-block fs-6"></span>
-            </div>
-          </div>     
-          <div class="ui-form-white my-5">
-            <div class="ui-placeholder ui-leftTop">            
-              <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="tel" placeholder="*聯絡電話"><span>*聯絡電話</span>
-              <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
-            </div>
-          </div>  
-          <div class="ui-form-white my-5">
-            <div class="ui-placeholder ui-leftTop">            
-              <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*密碼"><span>*密碼</span>
-              <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
-            </div>
-          </div>  
-          <div class="ui-form-white my-5">
-            <div class="ui-placeholder ui-leftTop">            
-              <input id="loginPsw" class="form-control ui-underline mb-7" name="psw" type="password" placeholder="*確認密碼"><span>*確認密碼</span>
-              <span id="alertPsw" class="alert-span text-danger d-block fs-6"></span>
-            </div>
-          </div>      
+          <div class="form-floating mb-3">
+            <input id="registName" type="text" class="form-control" id="floatingInput" placeholder="*會員姓名" name="會員姓名">
+            <span class="alert-span text-danger d-block fs-7" data-message="會員姓名"></span>            
+            <label for="floatingInput">*會員姓名</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input id="registPhone" type="tel" class="form-control" id="floatingInput" placeholder="*聯絡電話" name="聯絡電話">
+            <span class="alert-span text-danger d-block fs-7" data-message="聯絡電話"></span>            
+            <label for="floatingInput">*聯絡電話</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input id="registPsw" type="password" class="form-control" id="floatingInput" placeholder="*密碼" name="密碼">
+            <span class="alert-span text-danger d-block fs-7" data-message="密碼"></span>            
+            <label for="floatingInput">*密碼</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input id="registConfirmPsw" type="password" class="form-control" id="floatingInput" placeholder="*確認密碼" name="確認密碼">
+            <span class="alert-span text-danger d-block fs-7" data-message="確認密碼"></span>            
+            <label for="floatingInput">*確認密碼</label>
+          </div>
+     
 
           <div class="text-center">
-            <a id="loginBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">立即加入</a>
+            <a id="registBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">立即加入</a>
             <span class="login-caution">繼續即表示您同意我們的 <a class="link-primary" href="">條款和條件</a> 以及 <a class="link-primary" href="">隱私權政策</a> 。</span>
           </div>
         </form>
@@ -195,6 +193,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
      <!-- axios -->
      <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+     <!-- validate.js -->
+     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+     <!-- sweetalert2 -->
+     <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.all.min.js "></script> 
      <!-- customized js -->
     
     

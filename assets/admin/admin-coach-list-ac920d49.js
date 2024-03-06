@@ -1,4 +1,4 @@
-import"../main-e394583a.js";import{a as o}from"../config-f552c1ba.js";function n(){d()}n();const r=document.querySelector(".js-coachList");let c=[];function d(){axios.get(`${o}/coaches?_expand=user`).then(function(t){c=t.data,console.log(c);let a="";c.forEach(e=>{a+=s(e)}),r.innerHTML=a}).catch(function(t){console.log(t)})}function s(t){return`
+import"../main-823c48ba.js";import{a as o}from"../config-afd6d7d3.js";function n(){d()}n();const r=document.querySelector(".js-coachList");let c=[];function d(){axios.get(`${o}/coaches?_expand=user`).then(function(t){c=t.data,console.log(c);let a="";c.forEach(e=>{a+=s(e)}),r.innerHTML=a}).catch(function(t){console.log(t)})}function s(t){return`
     <tr>
         <th scope="row">${t.id}</th>
         <td>${t.coachName}</td>
