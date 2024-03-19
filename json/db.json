@@ -156,51 +156,11 @@
     },
     {
       "email": "aaa@mail.com",
-      "password": "$2a$10$2pbi0Yx8ARAjy4Grwgvkq.0MuGny9hVwLm4Y7YM4kULNRzuAzQ3N2",
-      "name": "1",
-      "contact": "",
+      "password": "$2a$10$ne8N.FiIMa.BH/X7K38bdekpZzxKBsq7sAt2B.8eOGo.PmXptEK6O",
+      "name": "a",
+      "contact": "0000000000",
       "role": "user",
       "id": 25
-    },
-    {
-      "email": "aaa@mail.com",
-      "password": "$2a$10$dD8FFKJi5bUbVDDj3C6LdOOgub4IMlGmhmYKj6v3Xx/si96hIFTHq",
-      "name": "1",
-      "contact": "",
-      "role": "user",
-      "id": 26
-    },
-    {
-      "email": "888@mail.com",
-      "password": "$2a$10$u3tTgmHqmVnITnB9Nbirx.ucNXgFCHiLivqoOkd51Z0IbNqJR89.S",
-      "name": "8",
-      "contact": "8888888888",
-      "role": "user",
-      "id": 27
-    },
-    {
-      "email": "111@mail.com",
-      "password": "$2a$10$pOEr8VSJX6RL.SZl7AAMz.qMWWmN4GjTmgwYsZVhDOh9wi17JAgg6",
-      "name": "8",
-      "contact": "8888888888",
-      "role": "user",
-      "id": 28
-    },
-    {
-      "email": "222@mail.com",
-      "password": "$2a$10$kGRMJI4qAzIe4lokVRlPlOWU3JcbX4bI6C10BCa5Nr32PCzyqngpi",
-      "name": "222",
-      "contact": "222",
-      "role": "user",
-      "id": 29
-    },
-    {
-      "email": "333@mail.com",
-      "password": "$2a$10$P0OTGb12RKGeM7s6bFaNreEvLklAiDm/ekR8TfQsiFnbMWjn/fxm6",
-      "name": "222",
-      "contact": "222",
-      "role": "user",
-      "id": 30
     }
   ],
   "coaches": [
@@ -211,12 +171,12 @@
       "coachTalent": "體態調整",
       "coachName": "Kevin",
       "coachContact": "0954162485",
-      "coachProfile": "嗨，大家好！我是一位健身教練，雖然年輕，但我擁有豐富的指導學生經驗。我的教學風格強調個別化，注重每位學生的需求和目標。透過多年的指導，我深深體會到耐心和細心聆聽的重要性。每個人都有獨特的身體狀況和健康目標，因此我致力於提供量身定制的訓練計劃，以確保學生不僅達到理想的身體狀態，還能建立持久的健康生活方式。",
+      "coachProfile": "教練簡介",
       "coachPhoto": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach1.png",
       "coachTitle": "連鎖健身房教練",
       "coachRegion": "北部",
       "coachPricing": 1200,
-      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.jpg",
+      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.png",
       "coachAutherize": true,
       "coachPricingNTD": 2000
     },
@@ -245,7 +205,7 @@
       "coachTalent": "運動訓練",
       "coachProfile": "大家好，我是一位熱衷於高強度間歇訓練的教練。我的課程以動感融合科學訓練，旨在挑戰你的極限，同時提升身體潛力。",
       "coachPhoto": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach3.png",
-      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert2.jpg",
+      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert2.png",
       "coachAutherize": true,
       "coachPricing": 2000,
       "id": 3
@@ -260,7 +220,7 @@
       "coachPhoto": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach4.png",
       "coachTitle": "空中瑜伽老師",
       "coachRegion": "北部",
-      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.jpg",
+      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.png",
       "coachAutherize": true,
       "coachPricing": 2000,
       "id": 4
@@ -276,7 +236,7 @@
       "coachTitle": "哈達瑜伽教練",
       "coachRegion": "北部",
       "coachPricing": 2000,
-      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.jpg",
+      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.png",
       "coachAutherize": true,
       "id": 5
     },
@@ -291,7 +251,7 @@
       "coachTitle": "私人教練",
       "coachRegion": "北部",
       "coachPricing": 2000,
-      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert2.jpg",
+      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert2.png",
       "coachAutherize": true,
       "id": 6
     },
@@ -306,7 +266,7 @@
       "coachTitle": "田徑教練",
       "coachRegion": "中部",
       "coachPricing": 2000,
-      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert2.jpg",
+      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert2.png",
       "coachAutherize": true,
       "id": 7
     },
@@ -321,7 +281,7 @@
       "coachTitle": "國際健體協會講師",
       "coachRegion": "南部",
       "coachPricing": 2000,
-      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.jpg",
+      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.png",
       "coachAutherize": true,
       "id": 8
     },
@@ -336,7 +296,7 @@
       "coachTitle": "私人教練",
       "coachRegion": "中部",
       "coachPricing": 2000,
-      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.jpg",
+      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.png",
       "coachAutherize": true,
       "id": 9
     },
@@ -344,14 +304,14 @@
       "userId": "23",
       "coachExp": "6",
       "coachTalent": "運動訓練",
-      "coachName": "Tim",
-      "coachContact": "0921732345",
-      "coachProfile": "哈囉！我曾是健身比賽冠軍，擁有豐富的比賽經驗。我專注於競技性訓練和體脂控制，致力協助你達到頂尖狀態。",
-      "coachPhoto": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach10.png",
+      "coachName": "Sam",
+      "coachContact": "0917322345",
+      "coachProfile": "嘿，我是一位極限運動愛好者的教練。我的專攻是攀岩和爆發力訓練，透過挑戰極限，激發你的運動潛力。",
+      "coachPhoto": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/coach9.png",
       "coachTitle": "私人教練",
       "coachRegion": "中部",
       "coachPricing": 2000,
-      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert2.jpg",
+      "coachCert": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/cert1.png",
       "coachAutherize": true,
       "id": 10
     }
@@ -410,7 +370,7 @@
       "articleCategory": "學員心得",
       "articleAuther": "Johnny",
       "articleCreatTime": "2022/08/03",
-      "articleCoverImg": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article5.png",
+      "articleCoverImg": "https://placehold.jp/231E10/D79C05/306x260.png",
       "articlePublic": true,
       "articleBrief": "<p>在現代社會，人們對於健康和體能的重視越來越高，而重訓作為一種有效的鍛煉方式，正逐漸受到廣泛的認可和歡迎。對我而言，重訓不僅是一種運動，更是一種超越自我的生活態度，改善了我的身體狀態。</p><p>首先，重訓教給了我堅持不懈的品質。在開始進行重訓之前，我總是容易因為生活的瑣碎琐事而失去持之以恆的動力。然而，當我踏上重訓的征程時，我逐漸體會到成功的背後需要不斷的努力和耐心。每一次的舉重、每一組的訓練，都是對自己意志力的一種考驗。這種堅持不懈的精神不僅在重訓中養成，也潛移默化地影響著我的生活的方方面面。</p>"
     },
@@ -421,7 +381,7 @@
       "articleCategory": "體態調整",
       "articleAuther": "李良明",
       "articleCreatTime": "2023/11/17",
-      "articleCoverImg": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article6.png",
+      "articleCoverImg": "https://placehold.jp/231E10/D79C05/306x260.png",
       "articlePublic": true,
       "articleBrief": "<p>在現代社會，人們對於提升效能的重訓技巧有了更深的認識。重訓作為一種強化身體的有效方式，如何執行正確的技巧能夠最大程度地提升訓練效果。以下是一些提升效能的重訓技巧：</p><p>首先，注意姿勢。正確的姿勢是確保訓練效果和防止受傷的關鍵。無論是舉重還是器械訓練，保持良好的姿勢能夠更有效地刺激目標肌肉，同時減少不必要的壓力。</p>"
     },
@@ -432,7 +392,7 @@
       "articleCategory": "增肌減脂",
       "articleAuther": "陳志偉",
       "articleCreatTime": "2020/12/25",
-      "articleCoverImg": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article7.png",
+      "articleCoverImg": "https://placehold.jp/231E10/D79C05/306x260.png",
       "articlePublic": false,
       "articleBrief": "<p>在制定健身計畫時，訓練菜單的合理性至關重要。一個科學合理的訓練菜單能夠確保你在鍛煉中獲得最佳的效果。以下是一些建議，讓你的訓練菜單更合理：</p><p>首先，確保全身性的訓練。一個良好的訓練菜單應該包括全身各個部位的訓練，而不僅僅是偏向某一部分。這樣可以達到全面發展身體的效果，同時減少不平衡造成的損傷風險。</p>"
     },
@@ -443,7 +403,7 @@
       "articleCategory": "運動訓練",
       "articleAuther": "李良明",
       "articleCreatTime": "2023/02/09",
-      "articleCoverImg": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article8.png",
+      "articleCoverImg": "https://placehold.jp/231E10/D79C05/306x260.png",
       "articlePublic": true,
       "articleBrief": "<p>重訓一直以來都是肌肉建造的經典方法，它不僅能夠塑造健美身材，還能提升整體體能水平。以下是一些肌肉建造的經典原則，助你在重訓中取得更好的效果：</p><p>首先，複合運動是關鍵。複合運動涉及多個肌肉群的協同工作，如深蹲、卧推、硬舉等，這些運動能夠有效刺激全身多個部位的肌肉，是肌肉建造的基石。</p>"
     },
@@ -454,7 +414,7 @@
       "articleCategory": "強健身體",
       "articleAuther": "王妙娥",
       "articleCreatTime": "2021/06/30",
-      "articleCoverImg": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article9.png",
+      "articleCoverImg": "https://placehold.jp/231E10/D79C05/306x260.png",
       "articlePublic": true,
       "articleBrief": " <p>近年來的研究表明，年長者進行重訓不僅有助於保持肌肉質量和骨密度，還能有效提升身體活力，延緩衰老的速度。以下是一些科學證實的年長者重訓的益處：</p><p>首先，提升肌肉質量。隨著年齡的增長，肌肉質量會逐漸減少，這通常稱為肌肉流失。通過定期進行重訓，年長者可以增加肌肉質量，提高肌肉的力量和功能。</p>"
     },
@@ -465,7 +425,7 @@
       "articleCategory": "增肌減脂",
       "articleAuther": "王敏達",
       "articleCreatTime": "2022/09/21",
-      "articleCoverImg": "https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/article10.png",
+      "articleCoverImg": "https://placehold.jp/231E10/D79C05/306x260.png",
       "articlePublic": true,
       "articleBrief": "<p>全身重訓是一種極為有效的運動方式，不僅可以增強肌肉力量，還能在燃燒熱量的過程中塑造身形。以下是一些關於全身重訓燃燒熱量的重要信息：</p><p>首先，提高基礎代謝率。全身重訓涉及多個肌肉群的協同運動，這使得整個身體的代謝率在運動後得到提升。即使在訓練結束後，身體仍然繼續消耗熱量，有助於長時間燃燒脂肪。</p>"
     }

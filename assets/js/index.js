@@ -1,14 +1,55 @@
 import { api_url } from "./config.js";
-import { header } from "./component/header.js";
+import Swal from "sweetalert2";
 
-// 畫面初始化
-function init() {
-  header();
-  getCoaches();
-  getArticles();
-};
-init();
+// 判斷是否有登入
+let is_login = localStorage.getItem("userLoginToken");
 
+console.log(is_login ? "is login" : "logout");
+// AUTH
+// export const
+const header = (is_login) => {
+  const loginLink = document.querySelector(".loginLink");
+  const registLink = document.querySelector(".registLink");
+  const logoutBtn = document.querySelector(".logoutBtn");
+  if (is_login) {
+    loginLink.classList.add("d-none");
+    registLink.classList.add("d-none");
+    logoutBtn.classList.remove("d-none");
+  } else if (!is_login) {
+    loginLink.classList.remove("d-none");
+    registLink.classList.remove("d-none");
+    logoutBtn.classList.add("d-none");
+  }
+}
+
+
+// 登入
+
+// 登出
+const logoutBtns = document.querySelectorAll(".logoutBtn");
+
+logoutBtns.forEach(logoutBtn => {
+  logoutBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    localStorage.removeItem("token");
+    localStorage.removeItem("userId");
+    localStorage.removeItem("userRole");
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userLoginToken");
+    Swal.fire({
+      title: '已登出！',
+      icon: 'success',
+      confirmButtonText: '確認',
+      buttonsStyling: false,
+      customClass: {
+        confirmButton: 'btn btn-success py-3 px-10',
+      }
+    });
+    setTimeout(() => {
+      window.location.href = 'index.html';
+    }, 0);
+  });
+});
 
 // 取得教練列表
 const coachCards = document.querySelector('.coach-cards');
@@ -170,3 +211,15 @@ articleFilterItems.forEach((i) => {
     e.target.classList.add('link-primary', 'active');
   });
 });
+
+
+
+// 畫面初始化
+function init() {
+  getCoaches();
+  getArticles();
+  setTimeout(() => {
+    header(is_login);
+  }, 0);
+};
+init();
