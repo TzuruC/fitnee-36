@@ -1,5 +1,4 @@
 import Swal from "sweetalert2";
-import { init } from "./index.js";
 
 
 // 判斷是否有登入
@@ -43,3 +42,4 @@ logoutBtn.addEventListener('click', function (e) {
     });
 });
 
+header(is_login);

@@ -1,95 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>#36 FitNee - 精選文章</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
-    <!-- Page Banner -->
-    <div class="page-banner pt-12 pb-5 justify-content-between">
-      <div class="container py-lg-11">
-        <div class="d-lg-flex d-block justify-content-between">
-      <h2 class="fs-3 text-primary">精選文章 <span class="fs-5">/</span></h2>
-      <p class="fs-6 text-white text-end">
-        堅持不懈自己的選擇
-        <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
-      </p>
-        </div>
-      <div class="page-search-box d-flex d-lg-none justify-content-between align-items-center">
-        <span class="material-symbols-outlined">
-            search
-            </span>
-        <input type="search" class="form-control" placeholder="搜尋專業教練" aria-label="Search" aria-describedby="search-addon" />
-        
-      </div>
-    </div>
-    </div>
-
-
-
-    <!-- Main -->
-    <section class="page-list-section container my-lg-13 d-lg-block d-lg-flex justify-content-between">
-
-      <!-- pc filter -->
-      <div class="filter-group-lg d-lg-block d-none col-lg-2">
-        <h3 class="mb-7">請選擇篩選條件</h3>
-      
-        <div class="filter-opt-group0 mb-7">
-          <div class="mb-5 d-block fw-bold" for="">文章關鍵字搜尋</div>
-          <div class="aside-search-box mb-3 d-flex justify-content-between align-items-center">
-            <span class="material-symbols-outlined">
-              search
-            </span>
-            <input type="search" class="form-control" placeholder="搜尋精選文章" aria-label="Search"
-              aria-describedby="search-addon" />
-          </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>#36 FitNee - 精選文章</title>
+    </head>
+    <body>
+        <%- include('./layout/header'); -%>
+        <!-- Page Banner -->
+        <div class="page-banner pt-12 pb-5 justify-content-between">
+            <div class="container py-lg-11">
+                <div class="d-lg-flex d-block justify-content-between">
+                    <h2 class="fs-3 text-primary">精選文章 <span class="fs-5">/</span></h2>
+                    <p class="fs-6 text-white text-end">
+                        堅持不懈自己的選擇
+                        <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
+                    </p>
+                </div>
+                <div class="page-search-box d-flex d-lg-none justify-content-between align-items-center">
+                    <span class="material-symbols-outlined"> search </span>
+                    <input
+                        type="search"
+                        class="form-control"
+                        placeholder="搜尋專業教練"
+                        aria-label="Search"
+                        aria-describedby="search-addon"
+                    />
+                </div>
+            </div>
         </div>
 
-        <div class="filter-opt-group1 mb-7">
-          <div class="mb-5 d-block fw-bold" for="">文章分類</div>
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" value="" id="c1">
-            <label class="form-check-label" for="c1">
-              體態調整
-            </label>
-          </div>
-          <div class="form-check mb-3">
-            <input class="form-check-input" type="checkbox" value="" id="c2">
-            <label class="form-check-label" for="c2">
-              增肌減脂
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="c3">
-            <label class="form-check-label" for="c3">
-              運動訓練
-            </label>
-          </div>
-        </div>
-      
-        <div class="text-center">
-          <div class="btn btn-primary text-white rounded-1 px-9 w-100">搜尋</div>
-        </div>
-      
-      </div>
-      <!-- mobile filter -->
-      <div class="mb-5 pt-6 filter-group-sm d-lg-none d-block">
-        <h3>文章分類</h3>
-        <ul class="list-unstyled d-flex">
-          <li class="me-6"><a class="me-1 link-dark" href="">體態調整</a></li>
-          <li class="me-6"><a class="me-1 link-dark" href="">增肌減脂</a></li>
-          <li class="me-6"><a class="me-1 link-dark" href="">運動訓練</a></li>
-        </ul>  
-      </div>        
+        <!-- Main -->
+        <section class="page-list-section container my-lg-13 d-lg-block d-lg-flex justify-content-between">
+            <!-- pc filter -->
+            <div class="filter-group-lg d-lg-block d-none col-lg-2">
+                <h3 class="mb-7">請選擇篩選條件</h3>
 
-      <!-- coach cards -->
-      <div class="render-cards ms-auto col-lg-9">
+                <div class="filter-opt-group0 mb-7">
+                    <div class="mb-5 d-block fw-bold" for="">文章關鍵字搜尋</div>
+                    <div class="aside-search-box mb-3 d-flex justify-content-between align-items-center">
+                        <span class="material-symbols-outlined"> search </span>
+                        <input
+                            type="search"
+                            class="form-control"
+                            placeholder="搜尋精選文章"
+                            aria-label="Search"
+                            aria-describedby="search-addon"
+                        />
+                    </div>
+                </div>
 
-        <!-- Sort filter -->
-        <!-- <div class="coach-sort filter-opt-group4 mb-7 d-lg-block d-none">
+                <div class="filter-opt-group1 mb-7">
+                    <div class="mb-5 d-block fw-bold" for="">文章分類</div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="c1" />
+                        <label class="form-check-label" for="c1"> 體態調整 </label>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="c2" />
+                        <label class="form-check-label" for="c2"> 增肌減脂 </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="c3" />
+                        <label class="form-check-label" for="c3"> 運動訓練 </label>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div class="btn btn-primary text-white rounded-1 px-9 w-100">搜尋</div>
+                </div>
+            </div>
+            <!-- mobile filter -->
+            <div class="mb-5 pt-6 filter-group-sm d-lg-none d-block">
+                <h3>文章分類</h3>
+                <ul class="list-unstyled d-flex">
+                    <li class="me-6"><a class="me-1 link-dark" href="">體態調整</a></li>
+                    <li class="me-6"><a class="me-1 link-dark" href="">增肌減脂</a></li>
+                    <li class="me-6"><a class="me-1 link-dark" href="">運動訓練</a></li>
+                </ul>
+            </div>
+
+            <!-- coach cards -->
+            <div class="render-cards ms-auto col-lg-9">
+                <!-- Sort filter -->
+                <!-- <div class="coach-sort filter-opt-group4 mb-7 d-lg-block d-none">
           <select class="form-select" aria-label="Default select example">
             <option selected>- 排列順序 -</option>
             <option value="1">資歷從高至低</option>
@@ -98,41 +93,95 @@
           </select>
         </div> -->
 
-        <!-- Cards -->
-        <ul class="article-cards list-unstyled pb-lg-7 row">
+                <!-- Cards -->
+                <ul class="article-cards list-unstyled pb-lg-7 row">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        style="margin: auto; background: #fff; display: block"
+                        width="100px"
+                        height="100px"
+                        viewBox="0 0 100 100"
+                        preserveAspectRatio="xMidYMid"
+                    >
+                        <rect x="17.5" y="30" width="15" height="40" fill="#996f05">
+                            <animate
+                                attributeName="y"
+                                repeatCount="indefinite"
+                                dur="1s"
+                                calcMode="spline"
+                                keyTimes="0;0.5;1"
+                                values="18;30;30"
+                                keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                begin="-0.2s"
+                            ></animate>
+                            <animate
+                                attributeName="height"
+                                repeatCount="indefinite"
+                                dur="1s"
+                                calcMode="spline"
+                                keyTimes="0;0.5;1"
+                                values="64;40;40"
+                                keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                begin="-0.2s"
+                            ></animate>
+                        </rect>
+                        <rect x="42.5" y="30" width="15" height="40" fill="#d79c05">
+                            <animate
+                                attributeName="y"
+                                repeatCount="indefinite"
+                                dur="1s"
+                                calcMode="spline"
+                                keyTimes="0;0.5;1"
+                                values="20.999999999999996;30;30"
+                                keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                begin="-0.1s"
+                            ></animate>
+                            <animate
+                                attributeName="height"
+                                repeatCount="indefinite"
+                                dur="1s"
+                                calcMode="spline"
+                                keyTimes="0;0.5;1"
+                                values="58.00000000000001;40;40"
+                                keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                begin="-0.1s"
+                            ></animate>
+                        </rect>
+                        <rect x="67.5" y="30" width="15" height="40" fill="#f6bd2c">
+                            <animate
+                                attributeName="y"
+                                repeatCount="indefinite"
+                                dur="1s"
+                                calcMode="spline"
+                                keyTimes="0;0.5;1"
+                                values="20.999999999999996;30;30"
+                                keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                            ></animate>
+                            <animate
+                                attributeName="height"
+                                repeatCount="indefinite"
+                                dur="1s"
+                                calcMode="spline"
+                                keyTimes="0;0.5;1"
+                                values="58.00000000000001;40;40"
+                                keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                            ></animate>
+                        </rect>
+                    </svg>
+                </ul>
+            </div>
+        </section>
 
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#fff;display:block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-            <rect x="17.5" y="30" width="15" height="40" fill="#996f05">
-              <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="18;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
-              <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="64;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
-            </rect>
-            <rect x="42.5" y="30" width="15" height="40" fill="#d79c05">
-              <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
-              <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
-            </rect>
-            <rect x="67.5" y="30" width="15" height="40" fill="#f6bd2c">
-              <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
-              <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
-            </rect>
-            </svg>
+        <!-- fitnee-ad -->
+        <%- include('./layout/fitnee-ad'); -%> <%- include('./layout/footer'); -%>
 
-     
-        </ul>
-        
-      </div>
-    </section>
-
-    <!-- fitnee-ad -->
-    <%- include('./layout/fitnee-ad'); -%>  
-
-
-    <%- include('./layout/footer'); -%>
-
-    <!-- axios -->
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <!-- customized js -->
-    <script type="module" src="../main.js"></script>
-    <script type="module" src="../assets/js/animation.js"></script>
-    <script type="module" src="../assets/js/article-list.js"></script>
-  </body>
+        <!-- axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <!-- customized js -->
+        <script type="module" src="../main.js"></script>
+        <script type="module" src="../assets/js/animation.js"></script>
+        <script type="module" src="../assets/js/auth.js"></script>
+        <script type="module" src="../assets/js/article-list.js"></script>
+    </body>
 </html>

@@ -32,53 +32,69 @@
         </div>
 
         <!-- module -->
-        
+
         <!-- Fitnee App -->
         <div class="container">
             <div id="fitneehelper" class="fitneehelper-app text-center">
                 <!-- ##1 welcome -->
-                <div class="fn-welcome py-13" data-aos="fade-down"
-                data-aos-anchor-placement="top-center">
+                <div class="fn-welcome py-13" data-aos="fade-down" data-aos-anchor-placement="top-center">
                     <span class="d-block fs-4">歡迎使用</span><span class="d-block mb-7 fs-4">FitNee</span>
                     <h3 class="mb-10 welcome">訓練幫手</h3>
                     <span class="d-block mb-10 fs-6">輕鬆組織您的訓練內容</span>
                     <span class="d-block date-today">今天日期︰2023/11/02</span>
-                    <a id="startBtn" type="button" class="my-3 py-5 btn btn-primary text-white col-8" href="index.html">立即開始訓練</a>
+                    <a id="startBtn" type="button" class="my-3 py-5 btn btn-primary text-white col-8" href="index.html"
+                        >立即開始訓練</a
+                    >
                 </div>
 
                 <!-- ##2 新增 -->
                 <div class="fn-on-traning py-6 d-none">
-                <h3 class="text-start mb-5">訓練幫手</h3>
-                <div id="fitneehelperApp" class="fitneehelper-app text-center">
-                    <div class="js-renderTraining">
-                        
-                    
+                    <h3 class="text-start mb-5">訓練幫手</h3>
+                    <div id="fitneehelperApp" class="fitneehelper-app text-center">
+                        <div class="js-renderTraining"></div>
+                        <a
+                            id="addTrainingBtn"
+                            type="button"
+                            class="my-3 fs-6 py-2 btn btn-outline-primary rounded-pill col-12"
+                            href="index.html"
+                            >+ 新增訓練項目</a
+                        >
                     </div>
-                    <a id="addTrainingBtn" type="button" class="my-3 fs-6 py-2 btn btn-outline-primary rounded-pill col-12" href="index.html">+ 新增訓練項目</a>
-                </div>
                 </div>
 
-                <div class="js-breakModal m-0 modal fade modal-dialog modal-dialog-centered" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div
+                    class="js-breakModal m-0 modal fade modal-dialog modal-dialog-centered"
+                    id="staticBackdrop"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="staticBackdropLabel"
+                    aria-hidden="true"
+                >
                     <div class="modal-dialog fixed-top">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">組間休息倒數</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body text-center justify-content-between">
-                            <span id="defaultTime" class="js-countdown fs-1 fw-bold">
-                                1:00
-                            </span>
-                        </div>
-                        <div class="mathTimeBtn modal-footer text-center justify-content-between">
-                            <button type="button" class="btn btn-outline-primary">-5 秒</button>
-                            <button type="button" id="endBreak" class="btn btn-primary" data-bs-dismiss="modal">結束休息</button>
-                            <button type="button" class="btn btn-outline-primary">+5 秒</button>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">組間休息倒數</h5>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="modal-body text-center justify-content-between">
+                                <span id="defaultTime" class="js-countdown fs-1 fw-bold"> 1:00 </span>
+                            </div>
+                            <div class="mathTimeBtn modal-footer text-center justify-content-between">
+                                <button type="button" class="btn btn-outline-primary">-5 秒</button>
+                                <button type="button" id="endBreak" class="btn btn-primary" data-bs-dismiss="modal">
+                                    結束休息
+                                </button>
+                                <button type="button" class="btn btn-outline-primary">+5 秒</button>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                    </div>
-                
+                </div>
             </div>
         </div>
 
@@ -94,13 +110,14 @@
         <!-- aos-animation -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-            AOS.init();            
+            AOS.init();
         </script>
         <!-- axios -->
         <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
         <!-- customized js -->
         <script type="module" src="../main.js"></script>
         <script type="module" src="../assets/js/animation.js"></script>
+        <script type="module" src="../assets/js/auth.js"></script>
         <script type="module" src="../assets/js/fitneehelper.js"></script>
     </body>
 </html>

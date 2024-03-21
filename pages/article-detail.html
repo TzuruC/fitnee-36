@@ -1,60 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>#36 FitNee - 精選文章</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
-    <!-- Page Banner -->
-    <div class="page-banner pt-12 pb-5 justify-content-between">
-      <div class="container py-lg-11">
-        <div class="d-lg-flex d-block justify-content-between">
-      <h2 class="fs-3 text-primary">精選文章 <span class="fs-5">/</span></h2>
-      <p class="fs-6 text-white text-end">
-        堅持不懈自己的選擇
-        <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
-      </p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>#36 FitNee - 精選文章</title>
+    </head>
+    <body>
+        <%- include('./layout/header'); -%>
+        <!-- Page Banner -->
+        <div class="page-banner pt-12 pb-5 justify-content-between">
+            <div class="container py-lg-11">
+                <div class="d-lg-flex d-block justify-content-between">
+                    <h2 class="fs-3 text-primary">精選文章 <span class="fs-5">/</span></h2>
+                    <p class="fs-6 text-white text-end">
+                        堅持不懈自己的選擇
+                        <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
+                    </p>
+                </div>
+                <div class="page-search-box d-flex d-lg-none justify-content-between align-items-center">
+                    <span class="material-symbols-outlined"> search </span>
+                    <input
+                        type="search"
+                        class="form-control"
+                        placeholder="搜尋專業教練"
+                        aria-label="Search"
+                        aria-describedby="search-addon"
+                    />
+                </div>
+            </div>
         </div>
-      <div class="page-search-box d-flex d-lg-none justify-content-between align-items-center">
-        <span class="material-symbols-outlined">
-            search
-            </span>
-        <input type="search" class="form-control" placeholder="搜尋專業教練" aria-label="Search" aria-describedby="search-addon" />
-        
-      </div>
-    </div>
-    </div>
 
-    <section class="article-detail container py-lg-13 py-6 col-lg-7 col-md-9 col-12">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#fff;display:block;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-        <rect x="17.5" y="30" width="15" height="40" fill="#996f05">
-          <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="18;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
-          <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="64;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
-        </rect>
-        <rect x="42.5" y="30" width="15" height="40" fill="#d79c05">
-          <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
-          <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
-        </rect>
-        <rect x="67.5" y="30" width="15" height="40" fill="#f6bd2c">
-          <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
-          <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
-        </rect>
-        </svg>
-    </section>
-    
-    <!-- fitnee-ad -->
-    <%- include('./layout/fitnee-ad'); -%>
+        <section class="article-detail container py-lg-13 py-6 col-lg-7 col-md-9 col-12">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                style="margin: auto; background: #fff; display: block"
+                width="100px"
+                height="100px"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="xMidYMid"
+            >
+                <rect x="17.5" y="30" width="15" height="40" fill="#996f05">
+                    <animate
+                        attributeName="y"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        values="18;30;30"
+                        keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                        begin="-0.2s"
+                    ></animate>
+                    <animate
+                        attributeName="height"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        values="64;40;40"
+                        keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                        begin="-0.2s"
+                    ></animate>
+                </rect>
+                <rect x="42.5" y="30" width="15" height="40" fill="#d79c05">
+                    <animate
+                        attributeName="y"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        values="20.999999999999996;30;30"
+                        keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                        begin="-0.1s"
+                    ></animate>
+                    <animate
+                        attributeName="height"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        values="58.00000000000001;40;40"
+                        keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                        begin="-0.1s"
+                    ></animate>
+                </rect>
+                <rect x="67.5" y="30" width="15" height="40" fill="#f6bd2c">
+                    <animate
+                        attributeName="y"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        values="20.999999999999996;30;30"
+                        keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                    ></animate>
+                    <animate
+                        attributeName="height"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        calcMode="spline"
+                        keyTimes="0;0.5;1"
+                        values="58.00000000000001;40;40"
+                        keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                    ></animate>
+                </rect>
+            </svg>
+        </section>
 
-    <%- include('./layout/footer'); -%>
+        <!-- fitnee-ad -->
+        <%- include('./layout/fitnee-ad'); -%> <%- include('./layout/footer'); -%>
 
-    <!-- axios -->
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <!-- customized js -->
-    <script type="module" src="../main.js"></script>
-    <script type="module" src="../assets/js/animation.js"></script>
-    <script type="module" src="../assets/js/article-detail.js"></script>
-  </body>
+        <!-- axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <!-- customized js -->
+        <script type="module" src="../main.js"></script>
+        <script type="module" src="../assets/js/animation.js"></script>
+        <script type="module" src="../assets/js/auth.js"></script>
+        <script type="module" src="../assets/js/article-detail.js"></script>
+    </body>
 </html>

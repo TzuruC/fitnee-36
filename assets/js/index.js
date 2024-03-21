@@ -1,5 +1,4 @@
 import { api_url } from "./config.js";
-import { is_login, header } from "./auth.js";
 
 // 取得教練列表
 const coachCards = document.querySelector('.coach-cards');
@@ -162,22 +161,10 @@ articleFilterItems.forEach((i) => {
   });
 });
 
-
-
 // 畫面初始化
-// function init() {
-//   getCoaches();
-//   getArticles();
-//   setTimeout(() => {
-//     header(is_login);
-//   }, 0);
-// };
-export const init = () => {
+function init() {
   getCoaches();
   getArticles();
-  setTimeout(() => {
-    header(is_login);
-  }, 0);
-}
+};
 
 init();

@@ -1,96 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>#36 FitNee - 註冊</title>
-    <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css " rel="stylesheet"> 
-
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
-    <!-- Page Banner -->
-    <div class="page-banner pt-12 pb-5 justify-content-between">
-      <div class="container py-lg-11">
-        <div class="d-lg-flex d-block justify-content-between">
-      <h2 class="fs-3 text-primary">註冊 <span class="fs-5">/</span></h2>
-      <p class="fs-6 text-white text-end">
-        堅持不懈自己的選擇
-        <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
-      </p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>#36 FitNee - 註冊</title>
+        <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css " rel="stylesheet" />
+    </head>
+    <body>
+        <%- include('./layout/header'); -%>
+        <!-- Page Banner -->
+        <div class="page-banner pt-12 pb-5 justify-content-between">
+            <div class="container py-lg-11">
+                <div class="d-lg-flex d-block justify-content-between">
+                    <h2 class="fs-3 text-primary">註冊 <span class="fs-5">/</span></h2>
+                    <p class="fs-6 text-white text-end">
+                        堅持不懈自己的選擇
+                        <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
+                    </p>
+                </div>
+                <div class="page-search-box d-flex d-lg-none justify-content-between align-items-center">
+                    <span class="material-symbols-outlined"> search </span>
+                    <input
+                        type="search"
+                        class="form-control"
+                        placeholder="搜尋專業教練"
+                        aria-label="Search"
+                        aria-describedby="search-addon"
+                    />
+                </div>
+            </div>
         </div>
-      <div class="page-search-box d-flex d-lg-none justify-content-between align-items-center">
-        <span class="material-symbols-outlined">
-            search
-            </span>
-        <input type="search" class="form-control" placeholder="搜尋專業教練" aria-label="Search" aria-describedby="search-addon" />
-        
-      </div>
-    </div>
-    </div>
-    
-    <section class="page-list-section container my-lg-13 d-lg-block d-lg-flex col-lg-3 col-md-6 col-8">
-      <div id="loginForm" class="container my-lg-5 my-13">
-        <div class="text-center">
-          <h2 class="fw-bold mb-5">建立會員帳戶</h2>
-          <p class="mb-10">已經是會員？ 前往<a class="link-primary" href="member-login.html">登入頁面</a></p>
-        </div>      
-        <form class="register-form text-secondary">
-          <div class="form-floating mb-3">
-            <input id="registMail" type="email" class="form-control" id="floatingInput" placeholder="*電子信箱 ( 將成為您的帳號 )" name="電子信箱">
-            <span class="alert-span text-danger d-block fs-7" data-message="電子信箱"></span>            
-            <label for="floatingInput">*電子信箱 ( 將成為您的帳號 )</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input id="registName" type="text" class="form-control" id="floatingInput" placeholder="*會員姓名" name="會員姓名">
-            <span class="alert-span text-danger d-block fs-7" data-message="會員姓名"></span>            
-            <label for="floatingInput">*會員姓名</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input id="registPhone" type="tel" class="form-control" id="floatingInput" placeholder="*聯絡電話" name="聯絡電話">
-            <span class="alert-span text-danger d-block fs-7" data-message="聯絡電話"></span>            
-            <label for="floatingInput">*聯絡電話</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input id="registPsw" type="password" class="form-control" id="floatingInput" placeholder="*密碼" name="密碼">
-            <span class="alert-span text-danger d-block fs-7" data-message="密碼"></span>            
-            <label for="floatingInput">*密碼</label>
-          </div>
 
-          <div class="form-floating mb-3">
-            <input id="registConfirmPsw" type="password" class="form-control" id="floatingInput" placeholder="*確認密碼" name="確認密碼">
-            <span class="alert-span text-danger d-block fs-7" data-message="確認密碼"></span>            
-            <label for="floatingInput">*確認密碼</label>
-          </div>
-     
+        <section class="page-list-section container my-lg-13 d-lg-block d-lg-flex col-lg-3 col-md-6 col-8">
+            <div id="loginForm" class="container my-lg-5 my-13">
+                <div class="text-center">
+                    <h2 class="fw-bold mb-5">建立會員帳戶</h2>
+                    <p class="mb-10">已經是會員？ 前往<a class="link-primary" href="member-login.html">登入頁面</a></p>
+                </div>
+                <form class="register-form text-secondary">
+                    <div class="form-floating mb-3">
+                        <input
+                            id="registMail"
+                            type="email"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="*電子信箱 ( 將成為您的帳號 )"
+                            name="電子信箱"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="電子信箱"></span>
+                        <label for="floatingInput">*電子信箱 ( 將成為您的帳號 )</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input
+                            id="registName"
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="*會員姓名"
+                            name="會員姓名"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="會員姓名"></span>
+                        <label for="floatingInput">*會員姓名</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input
+                            id="registPhone"
+                            type="tel"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="*聯絡電話"
+                            name="聯絡電話"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="聯絡電話"></span>
+                        <label for="floatingInput">*聯絡電話</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input
+                            id="registPsw"
+                            type="password"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="*密碼"
+                            name="密碼"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="密碼"></span>
+                        <label for="floatingInput">*密碼</label>
+                    </div>
 
-          <div class="text-center">
-            <a id="registBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">立即加入</a>
-            <span class="login-caution">繼續即表示您同意我們的 <a class="link-primary" href="">條款和條件</a> 以及 <a class="link-primary" href="">隱私權政策</a> 。</span>
-          </div>
-        </form>
-      </div>
-      
-    </section>
+                    <div class="form-floating mb-3">
+                        <input
+                            id="registConfirmPsw"
+                            type="password"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="*確認密碼"
+                            name="確認密碼"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="確認密碼"></span>
+                        <label for="floatingInput">*確認密碼</label>
+                    </div>
 
+                    <div class="text-center">
+                        <a id="registBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html"
+                            >立即加入</a
+                        >
+                        <span class="login-caution"
+                            >繼續即表示您同意我們的 <a class="link-primary" href="">條款和條件</a> 以及
+                            <a class="link-primary" href="">隱私權政策</a> 。</span
+                        >
+                    </div>
+                </form>
+            </div>
+        </section>
 
-    <!-- fitnee-ad -->
-    <%- include('./layout/fitnee-ad'); -%>
+        <!-- fitnee-ad -->
+        <%- include('./layout/fitnee-ad'); -%> <%- include('./layout/footer'); -%>
 
-    <%- include('./layout/footer'); -%>
-
-    <!-- validate -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-     <!-- axios -->
-     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-     <!-- validate.js -->
-     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-     <!-- sweetalert2 -->
-     <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.all.min.js "></script> 
-     <!-- customized js -->
-    <script type="module" src="../main.js"></script>
-    <script type="module" src="../assets/js/animation.js"></script>
-    <script type="module" src="../assets/js/register.js"></script>
-  </body>
+        <!-- validate -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+        <!-- axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <!-- validate.js -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+        <!-- sweetalert2 -->
+        <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.all.min.js "></script>
+        <!-- customized js -->
+        <script type="module" src="../main.js"></script>
+        <script type="module" src="../assets/js/animation.js"></script>
+        <script type="module" src="../assets/js/auth.js"></script>
+        <script type="module" src="../assets/js/register.js"></script>
+    </body>
 </html>
