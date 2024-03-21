@@ -46,10 +46,11 @@ loginBtn.addEventListener('click', function (e) {
                     customClass: {
                         confirmButton: 'btn btn-success py-3 px-10',
                     }
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = 'index.html';
+                    }
                 });
-                setTimeout(() => {
-                    window.location.href = 'index.html';
-                }, 0);
 
             } else {
                 console.log("帳號或密碼錯誤");
