@@ -1,43 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>#36 後台 - 教練管理-詳細資料</title>
-    <script type="module" crossorigin src="/fitnee-36/assets/main-aa134d7c.js"></script>
-    <link rel="stylesheet" href="/fitnee-36/assets/main-d762a2ae.css">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>#36 後台 - 教練管理-詳細資料</title>
+      <script type="module" crossorigin src="/fitnee-36/assets/auth-0f4bca45.js"></script>
+      <link rel="stylesheet" href="/fitnee-36/assets/auth-d762a2ae.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold py-4" href="admin-article-list.html"><img class="mb-1" src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/logo-dark.png" alt="logo"><span class="fs-6 fw-normal">後台管理</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand fw-bold py-4" href="admin-article-list.html"
+            ><img
+                class="mb-1"
+                src="https://raw.githubusercontent.com/TzuruC/fitnee-36/main/assets/images/logo-dark.png"
+                alt="logo"
+            /><span class="fs-6 fw-normal">後台管理</span></a
+        >
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">    
-        <div id="adminUI" class="ms-11 d-flex align-items-center">             
-            
-            <a class="mx-4 link-dark" href="admin-article-list.html">回後台首頁</a>
-            <a class="mx-4 link-dark" href="admin-article-list.html">文章管理</a>
-            <a class="mx-4 link-dark" href="admin-member-list.html">會員管理</a>
-            <a class="mx-4 link-dark" href="admin-coach-list.html">教練管理</a>
-            <a class="mx-4 link-dark" href="admin-service-list.html">網站問題回報</a>           
-            
-        </div>
-        <div class="ms-auto">
-            <a class="mx-1 link-dark" href="../index.html">回到前台</a>
-            <span class="fs-6 px-5">管理員 admin666</span>
-            <a id="adminLogout" class="btn btn-outline-primary ml-2" href="admin-login.html">登出</a>
-        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div id="adminNav" class="adminNav ms-11 d-flex align-items-center">
+                <a class="mx-4 link-dark" href="admin-article-list.html">回後台首頁</a>
+                <a class="mx-4 link-dark" href="admin-article-list.html">文章管理</a>
+                <a class="mx-4 link-dark" href="admin-member-list.html">會員管理</a>
+                <a class="mx-4 link-dark" href="admin-coach-list.html">教練管理</a>
+                <a class="mx-4 link-dark" href="admin-service-list.html">網站問題回報</a>
+            </div>
+            <div class="ms-auto">
+                <a class="mx-1 link-dark d-inline-block" href="../index.html">回到前台</a>
+                <div class="adminLogoutUI d-inline-block">
+                    <span class="fs-6 px-5">管理員 admin666</span>
+                    <a id="adminLogout" class="btn btn-outline-primary ml-2" href="admin-login.html">登出</a>
+                </div>
+            </div>
         </div>
     </div>
-    </nav>    <div class="container container-min-h pt-11 mb-12">
-      <h2 class="fw-bold fs-2 mb-4">教練管理-詳細資料</h2> 
-    </div>
-    <footer class="py-2 fs-6 text-center bg-secondary">copyright © 2023</footer>    <!-- axios -->
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <!-- customized js -->
-    
-  </body>
+</nav>
+        <div class="container container-min-h pt-11 mb-12">
+            <h2 class="fw-bold fs-2 mb-4">教練管理-詳細資料</h2>
+        </div>
+        <footer class="py-2 fs-6 text-center bg-secondary">copyright © 2023</footer>        <!-- axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <!-- customized js -->
+        
+        
+    </body>
 </html>

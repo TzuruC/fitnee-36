@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>#36 FitNee - 訓練幫手</title>
-      <script type="module" crossorigin src="/fitnee-36/assets/fitneehelper-7547a860.js"></script>
-      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-aa134d7c.js">
+      <script type="module" crossorigin src="/fitnee-36/assets/fitneehelper-9d27f689.js"></script>
+      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/auth-0f4bca45.js">
       <link rel="modulepreload" crossorigin href="/fitnee-36/assets/animation-2ea199e6.js">
-      <link rel="stylesheet" href="/fitnee-36/assets/main-d762a2ae.css">
+      <link rel="stylesheet" href="/fitnee-36/assets/auth-d762a2ae.css">
     </head>
     <body>
         <header id="transNav" class="fixed-top trans-nav">
@@ -43,15 +43,24 @@
                     </ul>
                 </nav>
                 <div class="nav-btn d-flex flex-lg-row flex-column align-items-center" id="logUI">
-                    <!-- <a
-                        class="btn ms-lg-4 mb-lg-0 mb-6 btn-outline-primary rounded-1 fs-4 col-5"
+                    <a
+                        class="loginLink btn ms-lg-4 mb-lg-0 mb-6 btn-outline-primary rounded-1 fs-4 col-5"
                         href="member-login.html"
                         type="button"
                         >登入</a
                     >
-                    <a class="btn ms-lg-4 btn-outline-primary rounded-1 fs-4 col-5" href="register.html" type="button"
+                    <a
+                        class="registLink btn ms-lg-4 btn-outline-primary rounded-1 fs-4 col-5"
+                        href="register.html"
+                        type="button"
                         >註冊</a
-                    > -->
+                    >
+                    <a
+                        class="logoutBtn btn ms-lg-4 mb-lg-0 mb-6 btn-outline-primary rounded-1 fs-4 col-10 d-none"
+                        href="member-login.html"
+                        type="button"
+                        >登出</a
+                    >
                 </div>
             </div>
         </div>
@@ -90,53 +99,69 @@
         </div>
 
         <!-- module -->
-        
+
         <!-- Fitnee App -->
         <div class="container">
             <div id="fitneehelper" class="fitneehelper-app text-center">
                 <!-- ##1 welcome -->
-                <div class="fn-welcome py-13" data-aos="fade-down"
-                data-aos-anchor-placement="top-center">
+                <div class="fn-welcome py-13" data-aos="fade-down" data-aos-anchor-placement="top-center">
                     <span class="d-block fs-4">歡迎使用</span><span class="d-block mb-7 fs-4">FitNee</span>
                     <h3 class="mb-10 welcome">訓練幫手</h3>
                     <span class="d-block mb-10 fs-6">輕鬆組織您的訓練內容</span>
                     <span class="d-block date-today">今天日期︰2023/11/02</span>
-                    <a id="startBtn" type="button" class="my-3 py-5 btn btn-primary text-white col-8" href="index.html">立即開始訓練</a>
+                    <a id="startBtn" type="button" class="my-3 py-5 btn btn-primary text-white col-8" href="index.html"
+                        >立即開始訓練</a
+                    >
                 </div>
 
                 <!-- ##2 新增 -->
                 <div class="fn-on-traning py-6 d-none">
-                <h3 class="text-start mb-5">訓練幫手</h3>
-                <div id="fitneehelperApp" class="fitneehelper-app text-center">
-                    <div class="js-renderTraining">
-                        
-                    
+                    <h3 class="text-start mb-5">訓練幫手</h3>
+                    <div id="fitneehelperApp" class="fitneehelper-app text-center">
+                        <div class="js-renderTraining"></div>
+                        <a
+                            id="addTrainingBtn"
+                            type="button"
+                            class="my-3 fs-6 py-2 btn btn-outline-primary rounded-pill col-12"
+                            href="index.html"
+                            >+ 新增訓練項目</a
+                        >
                     </div>
-                    <a id="addTrainingBtn" type="button" class="my-3 fs-6 py-2 btn btn-outline-primary rounded-pill col-12" href="index.html">+ 新增訓練項目</a>
-                </div>
                 </div>
 
-                <div class="js-breakModal m-0 modal fade modal-dialog modal-dialog-centered" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div
+                    class="js-breakModal m-0 modal fade modal-dialog modal-dialog-centered"
+                    id="staticBackdrop"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="staticBackdropLabel"
+                    aria-hidden="true"
+                >
                     <div class="modal-dialog fixed-top">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">組間休息倒數</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body text-center justify-content-between">
-                            <span id="defaultTime" class="js-countdown fs-1 fw-bold">
-                                1:00
-                            </span>
-                        </div>
-                        <div class="mathTimeBtn modal-footer text-center justify-content-between">
-                            <button type="button" class="btn btn-outline-primary">-5 秒</button>
-                            <button type="button" id="endBreak" class="btn btn-primary" data-bs-dismiss="modal">結束休息</button>
-                            <button type="button" class="btn btn-outline-primary">+5 秒</button>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">組間休息倒數</h5>
+                                <button
+                                    type="button"
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"
+                                ></button>
+                            </div>
+                            <div class="modal-body text-center justify-content-between">
+                                <span id="defaultTime" class="js-countdown fs-1 fw-bold"> 1:00 </span>
+                            </div>
+                            <div class="mathTimeBtn modal-footer text-center justify-content-between">
+                                <button type="button" class="btn btn-outline-primary">-5 秒</button>
+                                <button type="button" id="endBreak" class="btn btn-primary" data-bs-dismiss="modal">
+                                    結束休息
+                                </button>
+                                <button type="button" class="btn btn-outline-primary">+5 秒</button>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                    </div>
-                
+                </div>
             </div>
         </div>
 
@@ -194,11 +219,12 @@
         <!-- aos-animation -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-            AOS.init();            
+            AOS.init();
         </script>
         <!-- axios -->
         <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
         <!-- customized js -->
+        
         
         
         

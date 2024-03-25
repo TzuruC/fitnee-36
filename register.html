@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>#36 FitNee - 註冊</title>
-    <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css " rel="stylesheet"> 
-
-    <script type="module" crossorigin src="/fitnee-36/assets/register-13646616.js"></script>
-    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/main-aa134d7c.js">
-    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/animation-2ea199e6.js">
-    <link rel="modulepreload" crossorigin href="/fitnee-36/assets/config-afd6d7d3.js">
-    <link rel="stylesheet" href="/fitnee-36/assets/main-d762a2ae.css">
-  </head>
-  <body>
-    <header id="transNav" class="fixed-top trans-nav">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>#36 FitNee - 註冊</title>
+        <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.min.css " rel="stylesheet" />
+      <script type="module" crossorigin src="/fitnee-36/assets/register-ff79e974.js"></script>
+      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/auth-0f4bca45.js">
+      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/animation-2ea199e6.js">
+      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/config-f552c1ba.js">
+      <link rel="stylesheet" href="/fitnee-36/assets/auth-d762a2ae.css">
+    </head>
+    <body>
+        <header id="transNav" class="fixed-top trans-nav">
     <div class="container d-flex d-lg-block justify-content-between align-items-center">
         <div class="py-4 d-flex justify-content-between align-items-center flex-lg-row">
             <div class="logo-wrap">
@@ -46,15 +45,24 @@
                     </ul>
                 </nav>
                 <div class="nav-btn d-flex flex-lg-row flex-column align-items-center" id="logUI">
-                    <!-- <a
-                        class="btn ms-lg-4 mb-lg-0 mb-6 btn-outline-primary rounded-1 fs-4 col-5"
+                    <a
+                        class="loginLink btn ms-lg-4 mb-lg-0 mb-6 btn-outline-primary rounded-1 fs-4 col-5"
                         href="member-login.html"
                         type="button"
                         >登入</a
                     >
-                    <a class="btn ms-lg-4 btn-outline-primary rounded-1 fs-4 col-5" href="register.html" type="button"
+                    <a
+                        class="registLink btn ms-lg-4 btn-outline-primary rounded-1 fs-4 col-5"
+                        href="register.html"
+                        type="button"
                         >註冊</a
-                    > -->
+                    >
+                    <a
+                        class="logoutBtn btn ms-lg-4 mb-lg-0 mb-6 btn-outline-primary rounded-1 fs-4 col-10 d-none"
+                        href="member-login.html"
+                        type="button"
+                        >登出</a
+                    >
                 </div>
             </div>
         </div>
@@ -69,73 +77,113 @@
         </a>
     </div>
 </header>
-    <!-- Page Banner -->
-    <div class="page-banner pt-12 pb-5 justify-content-between">
-      <div class="container py-lg-11">
-        <div class="d-lg-flex d-block justify-content-between">
-      <h2 class="fs-3 text-primary">註冊 <span class="fs-5">/</span></h2>
-      <p class="fs-6 text-white text-end">
-        堅持不懈自己的選擇
-        <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
-      </p>
+        <!-- Page Banner -->
+        <div class="page-banner pt-12 pb-5 justify-content-between">
+            <div class="container py-lg-11">
+                <div class="d-lg-flex d-block justify-content-between">
+                    <h2 class="fs-3 text-primary">註冊 <span class="fs-5">/</span></h2>
+                    <p class="fs-6 text-white text-end">
+                        堅持不懈自己的選擇
+                        <span class="d-block d-lg-inline ms-lg-4">讓身體追上你心理的強悍</span>
+                    </p>
+                </div>
+                <div class="page-search-box d-flex d-lg-none justify-content-between align-items-center">
+                    <span class="material-symbols-outlined"> search </span>
+                    <input
+                        type="search"
+                        class="form-control"
+                        placeholder="搜尋專業教練"
+                        aria-label="Search"
+                        aria-describedby="search-addon"
+                    />
+                </div>
+            </div>
         </div>
-      <div class="page-search-box d-flex d-lg-none justify-content-between align-items-center">
-        <span class="material-symbols-outlined">
-            search
-            </span>
-        <input type="search" class="form-control" placeholder="搜尋專業教練" aria-label="Search" aria-describedby="search-addon" />
-        
-      </div>
-    </div>
-    </div>
-    
-    <section class="page-list-section container my-lg-13 d-lg-block d-lg-flex col-lg-3 col-md-6 col-8">
-      <div id="loginForm" class="container my-lg-5 my-13">
-        <div class="text-center">
-          <h2 class="fw-bold mb-5">建立會員帳戶</h2>
-          <p class="mb-10">已經是會員？ 前往<a class="link-primary" href="member-login.html">登入頁面</a></p>
-        </div>      
-        <form class="register-form text-secondary">
-          <div class="form-floating mb-3">
-            <input id="registMail" type="email" class="form-control" id="floatingInput" placeholder="*電子信箱 ( 將成為您的帳號 )" name="電子信箱">
-            <span class="alert-span text-danger d-block fs-7" data-message="電子信箱"></span>            
-            <label for="floatingInput">*電子信箱 ( 將成為您的帳號 )</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input id="registName" type="text" class="form-control" id="floatingInput" placeholder="*會員姓名" name="會員姓名">
-            <span class="alert-span text-danger d-block fs-7" data-message="會員姓名"></span>            
-            <label for="floatingInput">*會員姓名</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input id="registPhone" type="tel" class="form-control" id="floatingInput" placeholder="*聯絡電話" name="聯絡電話">
-            <span class="alert-span text-danger d-block fs-7" data-message="聯絡電話"></span>            
-            <label for="floatingInput">*聯絡電話</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input id="registPsw" type="password" class="form-control" id="floatingInput" placeholder="*密碼" name="密碼">
-            <span class="alert-span text-danger d-block fs-7" data-message="密碼"></span>            
-            <label for="floatingInput">*密碼</label>
-          </div>
 
-          <div class="form-floating mb-3">
-            <input id="registConfirmPsw" type="password" class="form-control" id="floatingInput" placeholder="*確認密碼" name="確認密碼">
-            <span class="alert-span text-danger d-block fs-7" data-message="確認密碼"></span>            
-            <label for="floatingInput">*確認密碼</label>
-          </div>
-     
+        <section class="page-list-section container my-lg-13 d-lg-block d-lg-flex col-lg-3 col-md-6 col-8">
+            <div id="loginForm" class="container my-lg-5 my-13">
+                <div class="text-center">
+                    <h2 class="fw-bold mb-5">建立會員帳戶</h2>
+                    <p class="mb-10">已經是會員？ 前往<a class="link-primary" href="member-login.html">登入頁面</a></p>
+                </div>
+                <form class="register-form text-secondary">
+                    <div class="form-floating mb-3">
+                        <input
+                            id="registMail"
+                            type="email"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="*電子信箱 ( 將成為您的帳號 )"
+                            name="電子信箱"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="電子信箱"></span>
+                        <label for="floatingInput">*電子信箱 ( 將成為您的帳號 )</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input
+                            id="registName"
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="*會員姓名"
+                            name="會員姓名"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="會員姓名"></span>
+                        <label for="floatingInput">*會員姓名</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input
+                            id="registPhone"
+                            type="tel"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="*聯絡電話"
+                            name="聯絡電話"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="聯絡電話"></span>
+                        <label for="floatingInput">*聯絡電話</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input
+                            id="registPsw"
+                            type="password"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="*密碼"
+                            name="密碼"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="密碼"></span>
+                        <label for="floatingInput">*密碼</label>
+                    </div>
 
-          <div class="text-center">
-            <a id="registBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html">立即加入</a>
-            <span class="login-caution">繼續即表示您同意我們的 <a class="link-primary" href="">條款和條件</a> 以及 <a class="link-primary" href="">隱私權政策</a> 。</span>
-          </div>
-        </form>
-      </div>
-      
-    </section>
+                    <div class="form-floating mb-3">
+                        <input
+                            id="registConfirmPsw"
+                            type="password"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="*確認密碼"
+                            name="確認密碼"
+                        />
+                        <span class="alert-span text-danger d-block fs-7" data-message="確認密碼"></span>
+                        <label for="floatingInput">*確認密碼</label>
+                    </div>
 
+                    <div class="text-center">
+                        <a id="registBtn" type="button" class="my-3 btn btn-primary text-white col-12" href="index.html"
+                            >立即加入</a
+                        >
+                        <span class="login-caution"
+                            >繼續即表示您同意我們的 <a class="link-primary" href="">條款和條件</a> 以及
+                            <a class="link-primary" href="">隱私權政策</a> 。</span
+                        >
+                    </div>
+                </form>
+            </div>
+        </section>
 
-    <!-- fitnee-ad -->
-    <div class="fitnee-ad py-10">
+        <!-- fitnee-ad -->
+        <div class="fitnee-ad py-10">
     <div class="container text-white">
     <div class="page-slogan mb-lg-7 mb-5 text-center">
     <span class="d-block mb-lg-3 mb-0 fs-2">訓練幫手 免費體驗</span>
@@ -148,8 +196,7 @@
     <span class="d-block text-center">掌握訓練品質精確，讓我們為您準備</span>
     </div>
 </div>
-</div>    
-    <footer>
+</div>     <footer>
     <div class="sitemap bg-dark">
     <div class="container">
         <div class="row d-md-flex align-items-center">
@@ -193,17 +240,18 @@
 
     
 </footer>
-    <!-- validate -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-     <!-- axios -->
-     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-     <!-- validate.js -->
-     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-     <!-- sweetalert2 -->
-     <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.all.min.js "></script> 
-     <!-- customized js -->
-    
-    
-    
-  </body>
+        <!-- validate -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+        <!-- axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <!-- validate.js -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+        <!-- sweetalert2 -->
+        <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.10.2/dist/sweetalert2.all.min.js "></script>
+        <!-- customized js -->
+        
+        
+        
+        
+    </body>
 </html>
