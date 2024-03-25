@@ -1,90 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>#36 後台 - 教練管理</title>
-    
-  </head>
-  <body>
-    <%- include('././layout/admin-header'); -%>
-    
-    <div class="container container-min-h pt-11">
-      <h2 class="fw-bold fs-2 mb-4">教練管理</h2>
-      <div class="list-action text-end mb-4 d-flex justify-content-between">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>#36 後台 - 教練管理</title>
+    </head>
+    <body>
+        <%- include('././layout/admin-header'); -%>
 
-        <div class="admin-coach-filter filter-opt-group4 btn-sm">
-          <select class="form-select" aria-label="Default select example">
-            <option>- 所有分類 -</option>
-            <option value="1">增肌減脂</option>
-            <option value="2">運動訓練</option>
-            <option value="3">學員心得</option>
-          </select>
+        <div class="container container-min-h pt-11">
+            <h2 class="fw-bold fs-2 mb-4">教練管理</h2>
+            <div class="list-action text-end mb-4 d-flex justify-content-between">
+                <div class="admin-coach-filter filter-opt-group4 btn-sm">
+                    <select class="form-select" aria-label="Default select example">
+                        <option>- 所有分類 -</option>
+                        <option value="1">增肌減脂</option>
+                        <option value="2">運動訓練</option>
+                        <option value="3">學員心得</option>
+                    </select>
+                </div>
+
+                <!-- <button type="button" class="btn btn-outline-warning btn-sm"> + 新增文章</button> -->
+            </div>
+            <table class="table">
+                <thead class="table-secondary">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">教練暱稱</th>
+                        <th scope="col">會員名稱</th>
+                        <th scope="col">資歷</th>
+                        <th scope="col">聯絡電話</th>
+                        <th scope="col" class="text-center">審核狀態</th>
+                        <th scope="col" class="text-center">管理操作</th>
+                    </tr>
+                </thead>
+                <tbody class="js-coachList">
+                    <th colspan="7">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            style="margin: auto; background: #fff; display: block"
+                            width="50px"
+                            height="50px"
+                            viewBox="0 0 100 100"
+                            preserveAspectRatio="xMidYMid"
+                        >
+                            <rect x="17.5" y="30" width="15" height="40" fill="#666666">
+                                <animate
+                                    attributeName="y"
+                                    repeatCount="indefinite"
+                                    dur="1s"
+                                    calcMode="spline"
+                                    keyTimes="0;0.5;1"
+                                    values="18;30;30"
+                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                    begin="-0.2s"
+                                ></animate>
+                                <animate
+                                    attributeName="height"
+                                    repeatCount="indefinite"
+                                    dur="1s"
+                                    calcMode="spline"
+                                    keyTimes="0;0.5;1"
+                                    values="64;40;40"
+                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                    begin="-0.2s"
+                                ></animate>
+                            </rect>
+                            <rect x="42.5" y="30" width="15" height="40" fill="#999999">
+                                <animate
+                                    attributeName="y"
+                                    repeatCount="indefinite"
+                                    dur="1s"
+                                    calcMode="spline"
+                                    keyTimes="0;0.5;1"
+                                    values="20.999999999999996;30;30"
+                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                    begin="-0.1s"
+                                ></animate>
+                                <animate
+                                    attributeName="height"
+                                    repeatCount="indefinite"
+                                    dur="1s"
+                                    calcMode="spline"
+                                    keyTimes="0;0.5;1"
+                                    values="58.00000000000001;40;40"
+                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                    begin="-0.1s"
+                                ></animate>
+                            </rect>
+                            <rect x="67.5" y="30" width="15" height="40" fill="#cccccc">
+                                <animate
+                                    attributeName="y"
+                                    repeatCount="indefinite"
+                                    dur="1s"
+                                    calcMode="spline"
+                                    keyTimes="0;0.5;1"
+                                    values="20.999999999999996;30;30"
+                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                ></animate>
+                                <animate
+                                    attributeName="height"
+                                    repeatCount="indefinite"
+                                    dur="1s"
+                                    calcMode="spline"
+                                    keyTimes="0;0.5;1"
+                                    values="58.00000000000001;40;40"
+                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                ></animate>
+                            </rect>
+                        </svg>
+                    </th>
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-chevron-left"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-chevron-right"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
-        <!-- <button type="button" class="btn btn-outline-warning btn-sm"> + 新增文章</button> -->
-
-      </div>
-      <table class="table">
-        <thead class=" table-secondary">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">教練暱稱</th>
-            <th scope="col">會員名稱</th>
-            <th scope="col">資歷</th>
-            <th scope="col">聯絡電話</th>
-            <th scope="col" class="text-center">審核狀態</th>
-            <th scope="col" class="text-center">管理操作</th>
-          </tr>
-        </thead>
-        <tbody class="js-coachList">
-          <th colspan="7">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#fff;display:block;" width="50px" height="50px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-              <rect x="17.5" y="30" width="15" height="40" fill="#666666">
-              <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="18;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
-              <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="64;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.2s"></animate>
-          </rect>
-          <rect x="42.5" y="30" width="15" height="40" fill="#999999">
-              <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
-              <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1" begin="-0.1s"></animate>
-          </rect>
-          <rect x="67.5" y="30" width="15" height="40" fill="#cccccc">
-              <animate attributeName="y" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="20.999999999999996;30;30" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
-              <animate attributeName="height" repeatCount="indefinite" dur="1s" calcMode="spline" keyTimes="0;0.5;1" values="58.00000000000001;40;40" keySplines="0 0.5 0.5 1;0 0.5 0.5 1"></animate>
-          </rect>
-          </svg>
-          </th>
-        </tbody>
-      </table>
-      <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-              </svg>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <%- include('././layout/admin-footer'); -%>
-    <!-- axios -->
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <!-- customized js -->
-    <script type="module" src="/./main.js"></script>
-    <script type="module" src="/./assets/js/admin-coach-list.js"></script>
-  </body>
+        <%- include('././layout/admin-footer'); -%>
+        <!-- axios -->
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <!-- customized js -->
+        <script type="module" src="/./main.js"></script>
+        <script type="module" src="/./assets/js/auth.js"></script>
+        <script type="module" src="/./assets/js/admin-coach-list.js"></script>
+    </body>
 </html>
