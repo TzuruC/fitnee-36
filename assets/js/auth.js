@@ -1,11 +1,9 @@
 import Swal from "sweetalert2";
 
-
-
-
-
 //判斷後台權限
 if (window.location.href.includes('admin')) {
+    const adminNav = document.querySelector(".adminNav");
+    const adminLogoutUI = document.querySelector(".adminLogoutUI");
     console.log('admin');
 } else {
     // 判斷是否有登入
