@@ -40,47 +40,52 @@ loginBtn.addEventListener('click', function (e) {
                 localStorage.setItem("userRole", userRole);
                 localStorage.setItem("userName", userName);
                 localStorage.setItem("userId", userId);
-                alert("登入成功!");
-                window.location.href = 'admin-article-list.html';
+                Swal.fire({
+                    title: '登入成功！',
+                    icon: 'success',
+                    confirmButtonText: '確認',
+                    buttonsStyling: false,
+                    customClass: {
+                        confirmButton: 'btn btn-success py-3 px-10',
+                    }
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = 'admin-article-list.html';
+                    }
+                });
             } else if (token && userRole !== 'admin') {
-                alert("您沒有權限進入!");
+                Swal.fire({
+                    title: '您沒有權限進入',
+                    icon: 'warning',
+                    confirmButtonText: '確認',
+                    buttonsStyling: false,
+                    customClass: {
+                        confirmButton: 'btn btn-success py-3 px-10',
+                    }
+                })
             } else {
+                Swal.fire({
+                    title: '帳號或密碼錯誤',
+                    icon: 'warning',
+                    confirmButtonText: '確認',
+                    buttonsStyling: false,
+                    customClass: {
+                        confirmButton: 'btn btn-success py-3 px-10',
+                    }
+                })
                 console.log("帳號或密碼錯誤");
             }
-            // if (token) {
-            //     localStorage.setItem("userLoginToken", token);
-            //     localStorage.setItem("userRole", userRole);
-            //     localStorage.setItem("userId", userId);
-            //     localStorage.setItem("userName", userName);
-
-            //     Swal.fire({
-            //         title: '登入成功！',
-            //         icon: 'success',
-            //         confirmButtonText: '確認',
-            //         buttonsStyling: false,
-            //         customClass: {
-            //             confirmButton: 'btn btn-success py-3 px-10',
-            //         }
-            //     }).then((result) => {
-            //         if (result.isConfirmed) {
-            //             window.location.href = 'index.html';
-            //         }
-            //     });
-
-            // } else {
-            //     console.log("帳號或密碼錯誤");
-            //     Swal.fire({
-            //         title: '帳號或密碼錯誤',
-            //         icon: 'warning',
-            //         confirmButtonText: '確認',
-            //         buttonsStyling: false,
-            //         customClass: {
-            //             confirmButton: 'btn btn-success py-3 px-10',
-            //         }
-            //     })
-            // }
         })
         .catch(function (err) {
+            Swal.fire({
+                title: '帳號或密碼錯誤',
+                icon: 'error',
+                confirmButtonText: '確認',
+                buttonsStyling: false,
+                customClass: {
+                    confirmButton: 'btn btn-success py-3 px-10',
+                }
+            })
             console.log(err);
         })
 });
