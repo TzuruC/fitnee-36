@@ -5,13 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>#36 後台 - 文章管理</title>
-      <script type="module" crossorigin src="/fitnee-36/assets/admin\\admin-article-list-12e20744.js"></script>
-      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/auth-0f4bca45.js">
+      <script type="module" crossorigin src="/fitnee-36/assets/admin\\admin-article-list-c32c4f3b.js"></script>
+      <link rel="modulepreload" crossorigin href="/fitnee-36/assets/auth-01860cba.js">
       <link rel="modulepreload" crossorigin href="/fitnee-36/assets/config-f552c1ba.js">
-      <link rel="stylesheet" href="/fitnee-36/assets/auth-d762a2ae.css">
+      <link rel="stylesheet" href="/fitnee-36/assets/auth-b3a8be16.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <div class="wrapper d-flex flex-column justify-content-between">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold py-4" href="admin-article-list.html"
             ><img
@@ -42,142 +43,122 @@
             <div class="ms-auto">
                 <a class="mx-1 link-dark d-inline-block" href="../index.html">回到前台</a>
                 <div class="adminLogoutUI d-inline-block">
-                    <span class="fs-6 px-5">管理員 admin666</span>
-                    <a id="adminLogout" class="btn btn-outline-primary ml-2" href="admin-login.html">登出</a>
+                    <span class="adminName fs-6 px-5"></span>
+                    <a id="adminLogout" class="adminLogout btn btn-outline-primary ml-2" href="admin-login.html"
+                        >登出</a
+                    >
                 </div>
             </div>
         </div>
     </div>
 </nav>
 
-        <div class="container container-min-h pt-11 mb-12">
-            <h2 class="fw-bold fs-2 mb-4">文章管理</h2>
-            <div class="list-action text-end mb-4 d-flex justify-content-between">
-                <div class="admin-article-filter filter-opt-group4 btn-sm">
-                    <select class="form-select" aria-label="Default select example">
-                        <option>- 所有分類 -</option>
-                    </select>
+            <div class="container container-min-h pt-11 mb-12">
+                <h2 class="fw-bold fs-2 mb-4">文章管理</h2>
+                <div class="list-action text-end mb-4 d-flex justify-content-between">
+                    <div class="admin-article-filter filter-opt-group4 btn-sm">
+                        <select class="form-select" aria-label="Default select example">
+                            <option>- 所有分類 -</option>
+                        </select>
+                    </div>
+
+                    <a href="admin-article-new.html" class="btn btn-outline-warning lh-lg btn-sm"> + 新增文章</a>
                 </div>
-
-                <a href="admin-article-new.html" class="btn btn-outline-warning lh-lg btn-sm"> + 新增文章</a>
+                <table class="table">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">文章標題</th>
+                            <th scope="col">文章分類</th>
+                            <th scope="col">作者</th>
+                            <th scope="col" class="text-center">發布時間</th>
+                            <th scope="col" class="text-center">文章狀態</th>
+                            <th scope="col" class="text-center">管理操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="js-articleList">
+                        <th colspan="7">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                style="margin: auto; background: #fff; display: block"
+                                width="50px"
+                                height="50px"
+                                viewBox="0 0 100 100"
+                                preserveAspectRatio="xMidYMid"
+                            >
+                                <rect x="17.5" y="30" width="15" height="40" fill="#666666">
+                                    <animate
+                                        attributeName="y"
+                                        repeatCount="indefinite"
+                                        dur="1s"
+                                        calcMode="spline"
+                                        keyTimes="0;0.5;1"
+                                        values="18;30;30"
+                                        keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                        begin="-0.2s"
+                                    ></animate>
+                                    <animate
+                                        attributeName="height"
+                                        repeatCount="indefinite"
+                                        dur="1s"
+                                        calcMode="spline"
+                                        keyTimes="0;0.5;1"
+                                        values="64;40;40"
+                                        keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                        begin="-0.2s"
+                                    ></animate>
+                                </rect>
+                                <rect x="42.5" y="30" width="15" height="40" fill="#999999">
+                                    <animate
+                                        attributeName="y"
+                                        repeatCount="indefinite"
+                                        dur="1s"
+                                        calcMode="spline"
+                                        keyTimes="0;0.5;1"
+                                        values="20.999999999999996;30;30"
+                                        keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                        begin="-0.1s"
+                                    ></animate>
+                                    <animate
+                                        attributeName="height"
+                                        repeatCount="indefinite"
+                                        dur="1s"
+                                        calcMode="spline"
+                                        keyTimes="0;0.5;1"
+                                        values="58.00000000000001;40;40"
+                                        keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                        begin="-0.1s"
+                                    ></animate>
+                                </rect>
+                                <rect x="67.5" y="30" width="15" height="40" fill="#cccccc">
+                                    <animate
+                                        attributeName="y"
+                                        repeatCount="indefinite"
+                                        dur="1s"
+                                        calcMode="spline"
+                                        keyTimes="0;0.5;1"
+                                        values="20.999999999999996;30;30"
+                                        keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                    ></animate>
+                                    <animate
+                                        attributeName="height"
+                                        repeatCount="indefinite"
+                                        dur="1s"
+                                        calcMode="spline"
+                                        keyTimes="0;0.5;1"
+                                        values="58.00000000000001;40;40"
+                                        keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
+                                    ></animate>
+                                </rect>
+                            </svg>
+                        </th>
+                    </tbody>
+                </table>
             </div>
-            <table class="table">
-                <thead class="table-secondary">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">文章標題</th>
-                        <th scope="col">文章分類</th>
-                        <th scope="col">作者</th>
-                        <th scope="col" class="text-center">發布時間</th>
-                        <th scope="col" class="text-center">文章狀態</th>
-                        <th scope="col" class="text-center">管理操作</th>
-                    </tr>
-                </thead>
-                <tbody class="js-articleList">
-                    <th colspan="7">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            style="margin: auto; background: #fff; display: block"
-                            width="50px"
-                            height="50px"
-                            viewBox="0 0 100 100"
-                            preserveAspectRatio="xMidYMid"
-                        >
-                            <rect x="17.5" y="30" width="15" height="40" fill="#666666">
-                                <animate
-                                    attributeName="y"
-                                    repeatCount="indefinite"
-                                    dur="1s"
-                                    calcMode="spline"
-                                    keyTimes="0;0.5;1"
-                                    values="18;30;30"
-                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
-                                    begin="-0.2s"
-                                ></animate>
-                                <animate
-                                    attributeName="height"
-                                    repeatCount="indefinite"
-                                    dur="1s"
-                                    calcMode="spline"
-                                    keyTimes="0;0.5;1"
-                                    values="64;40;40"
-                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
-                                    begin="-0.2s"
-                                ></animate>
-                            </rect>
-                            <rect x="42.5" y="30" width="15" height="40" fill="#999999">
-                                <animate
-                                    attributeName="y"
-                                    repeatCount="indefinite"
-                                    dur="1s"
-                                    calcMode="spline"
-                                    keyTimes="0;0.5;1"
-                                    values="20.999999999999996;30;30"
-                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
-                                    begin="-0.1s"
-                                ></animate>
-                                <animate
-                                    attributeName="height"
-                                    repeatCount="indefinite"
-                                    dur="1s"
-                                    calcMode="spline"
-                                    keyTimes="0;0.5;1"
-                                    values="58.00000000000001;40;40"
-                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
-                                    begin="-0.1s"
-                                ></animate>
-                            </rect>
-                            <rect x="67.5" y="30" width="15" height="40" fill="#cccccc">
-                                <animate
-                                    attributeName="y"
-                                    repeatCount="indefinite"
-                                    dur="1s"
-                                    calcMode="spline"
-                                    keyTimes="0;0.5;1"
-                                    values="20.999999999999996;30;30"
-                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
-                                ></animate>
-                                <animate
-                                    attributeName="height"
-                                    repeatCount="indefinite"
-                                    dur="1s"
-                                    calcMode="spline"
-                                    keyTimes="0;0.5;1"
-                                    values="58.00000000000001;40;40"
-                                    keySplines="0 0.5 0.5 1;0 0.5 0.5 1"
-                                ></animate>
-                            </rect>
-                        </svg>
-                    </th>
-                </tbody>
-            </table>
 
-            <!-- 文章載入分頁 -->
-            <!-- <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-              </svg>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav> -->
-        </div>
-
-        <footer class="py-2 fs-6 text-center bg-secondary">copyright © 2023</footer>        <!-- axios -->
+            <footer class="py-2 fs-6 text-center bg-secondary">copyright © 2023</footer>        </div>
+        <!-- axios -->
         <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
         <!-- customized js -->
         
