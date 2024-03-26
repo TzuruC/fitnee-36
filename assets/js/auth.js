@@ -33,6 +33,9 @@ if (window.location.href.includes('admin')
     } else if (is_login
         && roleCheck === 'admin') {
         const adminLogoutBtn = document.querySelector(".adminLogout");
+        const adminName = document.querySelector(".adminName");
+        console.log(adminName);
+        adminName.innerHTML = `管理員 ${localStorage.getItem("userName")}`;
         adminLogoutBtn.addEventListener('click', function (e) {
             e.preventDefault();
             localStorage.removeItem("token");
