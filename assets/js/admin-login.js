@@ -43,16 +43,14 @@ loginBtn.addEventListener('click', function (e) {
                 Swal.fire({
                     title: '登入成功！',
                     icon: 'success',
-                    confirmButtonText: '確認',
-                    buttonsStyling: false,
-                    customClass: {
-                        confirmButton: 'btn btn-success py-3 px-10',
-                    }
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.location.href = 'admin-article-list.html';
-                    }
+                    text: `歡迎回來，管理員${userName}`,
+                    showConfirmButton: false,
+                    timer: 2000,
+                    timerProgressBar: true,
                 });
+                setTimeout(() => {
+                    window.location.href = 'admin-article-list.html';
+                }, 2000);
             } else if (token && userRole !== 'admin') {
                 Swal.fire({
                     title: '您沒有權限進入',
