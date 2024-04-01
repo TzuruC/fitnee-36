@@ -97,3 +97,17 @@ if (window.location.href.includes('admin')
     });
     header(is_login);
 }
+
+//申請教練頁面檢查登入
+
+if (window.location.href.includes('coach-audit')) {
+    const auditLogin = document.querySelector(".audit-login");
+    const auditLogout = document.querySelector(".audit-logout");
+    if (!is_login) {
+        auditLogin.classList.add("d-none");
+
+    } else if (is_login) {
+        auditLogout.classList.add("d-none");
+
+    }
+}
