@@ -1,4 +1,4 @@
-import{a as f}from"../auth-99677de4.js";import{a as l}from"../config-f552c1ba.js";let n;function m(){s()}m();const o=document.querySelector(".js-articleList");let c=[];function s(){axios.get(`${l}/articles`).then(function(t){c=t.data;let e="";c.forEach(r=>{e+=d(r)}),o.innerHTML=e,h(t)}).then(function(t){n=document.querySelectorAll(".delete-btn"),n.forEach(e=>{e.addEventListener("click",r=>{r.preventDefault();const a=e.getAttribute("data-id");g(a)})})}).catch(function(t){console.log(t)})}function d(t){return`<tr>
+import{a as f}from"../auth-99677de4.js";import{a as l}from"../config-afd6d7d3.js";let n;function m(){s()}m();const o=document.querySelector(".js-articleList");let c=[];function s(){axios.get(`${l}/articles`).then(function(t){c=t.data;let e="";c.forEach(r=>{e+=d(r)}),o.innerHTML=e,h(t)}).then(function(t){n=document.querySelectorAll(".delete-btn"),n.forEach(e=>{e.addEventListener("click",r=>{r.preventDefault();const a=e.getAttribute("data-id");g(a)})})}).catch(function(t){console.log(t)})}function d(t){return`<tr>
         <th scope="row">${t.id}</th>
         <td>${t.articleName}</td>
         <td>${t.articleCategory}</td>
