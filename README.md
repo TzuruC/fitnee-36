@@ -1,6 +1,6 @@
 # 關於 Fitnee 36
 
-本專案目標為 JavaScript 獨立開發專題作品，
+本專案目標為 JavaScript 獨立開發專題作品。
 
 # 使用技術
 
