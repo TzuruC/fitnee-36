@@ -1,4 +1,4 @@
-import { is_login } from "../auth";
+import { is_login } from "../auth.js";
 import Swal from "sweetalert2";
 
 //登出按鈕
