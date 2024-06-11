@@ -1,4 +1,4 @@
-import"./auth-5ce1de3b.js";import"./animation-2ea199e6.js";import{a as i}from"./config-afd6d7d3.js";const a=new URLSearchParams(window.location.search),c=a.get("id"),l=document.querySelector(".article-detail");axios.get(`${i}/articles/${c}`).then(function(e){const t=e.data;l.innerHTML=`
+import"./main-76cd2f60.js";import"./animation-2ea199e6.js";import"./auth-4e215fa2.js";import{a as i}from"./config-afd6d7d3.js";const a=new URLSearchParams(window.location.search),c=a.get("id"),l=document.querySelector(".article-detail");axios.get(`${i}/articles/${c}`).then(function(e){const t=e.data;l.innerHTML=`
     <h3 class="article-title mb-2 mb-lg-2 fw-bold">${t.articleName}</h3>
       <div class="article-category mb-2 text-primary">${t.articleCategory}</div>
       <div class="article-create mb-2 d-flex justify-content-between">
