@@ -7,8 +7,7 @@ export const logoutBtn = document.querySelector(".logoutBtn");
 
 export const logout = () => {
     let adminLogout;
-    console.log(logoutBtn);
-    if (islogin) {
+    if (is_login) {
         if (window.location.href.includes('admin')) {
             adminLogout = document.querySelector('#adminLogout');
             logoutBtn.addEventListener('click', function (e) {
