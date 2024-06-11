@@ -1,4 +1,4 @@
-import"./sweetalert2.all-90bd8eba.js";import"./animation-2ea199e6.js";import"./auth-2e0db44e.js";import{a as i}from"./config-afd6d7d3.js";function s(){c()}s();const r=document.querySelector(".render-cards");let e=[];function c(){axios.get(`${i}/articles`).then(function(a){e=a.data;let l="";e.forEach(t=>{l+=n(t)}),r.innerHTML=`
+import"./auth-5ce1de3b.js";import"./animation-2ea199e6.js";import{a as i}from"./config-afd6d7d3.js";function s(){c()}s();const r=document.querySelector(".render-cards");let e=[];function c(){axios.get(`${i}/articles`).then(function(a){e=a.data;let l="";e.forEach(t=>{l+=n(t)}),r.innerHTML=`
     <ul class="article-cards list-unstyled pb-lg-7 row">
     ${l}
     </ul>

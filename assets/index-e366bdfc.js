@@ -1,4 +1,4 @@
-import"./sweetalert2.all-90bd8eba.js";import"./animation-2ea199e6.js";import"./auth-2e0db44e.js";import{a as u}from"./config-afd6d7d3.js";const i=document.querySelector(".coach-cards");let o=[];function C(){axios.get(`${u}/coaches`).then(function(t){o=t.data;let e="",a=0;o.forEach(c=>{a<4&&(e+=s(c),a+=1)}),i.innerHTML=e}).catch(function(t){console.log(t)})}function s(t){return`
+import"./auth-5ce1de3b.js";import"./animation-2ea199e6.js";import{a as u}from"./config-afd6d7d3.js";const i=document.querySelector(".coach-cards");let o=[];function C(){axios.get(`${u}/coaches`).then(function(t){o=t.data;let e="",a=0;o.forEach(c=>{a<4&&(e+=s(c),a+=1)}),i.innerHTML=e}).catch(function(t){console.log(t)})}function s(t){return`
   <li class="coach-card mb-lg-0 mb-7 px-2" data-aos="flip-left" data-aos-delay="50" data-aos-once="true">
       <a href="coach-detail.html?id=${t.id}">
       <div class="img-gradient">
